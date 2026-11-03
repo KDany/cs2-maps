@@ -1,0 +1,17 @@
+# Ignore compiled game files (only save content)
+game/
+
+# Ignore Hammer automatic backups
+*.bak
+*.bak[0-9]
+*_bak.vmap
+
+# Ignore compile logs and preview files
+*.log
+*/preview/
+*.vrmanifest
+
+# Ignore system and editor temp files
+.vs/
+*.suo
+*.user
