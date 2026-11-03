@@ -1,5 +1,7 @@
 # KDany's CS2 map source files
 
+![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-brightgreen?logo=creative-commons&logoColor=brightgreen&link=https%3A%2F%2Fcreativecommons.org%2Flicenses%2Fby-nc-sa%2F4.0%2F)
+
 Welcome to my central repository for Counter-Strike 2 mapping projects. This repository serves as a personal portfolio and a public archive containing the raw source files, geometry, and custom assets for my custom maps built using the Source 2 Hammer Editor.
 
 Feel free to explore the files, learn from the geometry setup, or use the source files to create your own community variants of my maps!
