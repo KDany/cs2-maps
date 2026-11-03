@@ -1,17 +1,22 @@
 # Ignore compiled game files (only save content)
 game/
+*.vpk
 
-# Ignore Hammer automatic backups
+# Ignore Hammer automatic backups / autosaves
 *.bak
 *.bak[0-9]
 *_bak.vmap
+**/maps/autosave/
 
 # Ignore compile logs and preview files
 *.log
-*/preview/
+**/preview/
 *.vrmanifest
 
 # Ignore system and editor temp files
 .vs/
 *.suo
 *.user
+Thumbs.db
+desktop.ini
+.DS_Store
