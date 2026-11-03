@@ -1,4 +1,4 @@
-[![License](https://img.shields.io/github/license/KDany/cs2-maps?logo=creativecommons&logoColor=white&color=brightgreen)](./LICENSE)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-brightgreen?logo=creativecommons&logoColor=white)](./LICENSE)
 [![Game: Counter-Strike 2](https://img.shields.io/badge/Game-Counter--Strike%202-orange?logo=counterstrike&logoColor=white)](https://www.counter-strike.net/)
 [![Forks](https://img.shields.io/github/forks/KDany/cs2-maps?logo=github&style=flat)](https://github.com/KDany/cs2-maps/forks)
 [![Last commit](https://img.shields.io/github/last-commit/KDany/cs2-maps?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyBmaWxsPSJ3aGl0ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiI%2BPHBhdGggZD0iTTExLjkzIDguNWE0LjAwMiA0LjAwMiAwIDAgMS03Ljg2IDBILjc1YS43NS43NSAwIDAgMSAwLTEuNWgzLjMyYTQuMDAyIDQuMDAyIDAgMCAxIDcuODYgMGgzLjMyYS43NS43NSAwIDAgMSAwIDEuNVptLTEuNDMtLjc1YTIuNSAyLjUgMCAxIDAtNSAwIDIuNSAyLjUgMCAwIDAgNSAwWiIvPjwvc3ZnPg%3D%3D)](https://github.com/KDany/cs2-maps/commits)
