@@ -1,0 +1,76 @@
+name: Permission Request
+description: Ask for permission to use a map beyond the CC BY-NC-SA 4.0 license (e.g. commercial use).
+title: "[Permission]: "
+labels:
+  - Permission request
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form if you would like to use one of my maps in a way the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license does not allow — most often **commercial use** (selling, paid server features, paid-entry events, sponsored content, etc.).
+
+        Non-commercial use (playing, streaming, videos, community variants with credit) does **not** need permission.
+
+        ⚠️ This issue is public. Do not post private contact details here — if needed, I will reach out to you.
+        Please write in **English**.
+
+  - type: input
+    id: map_name
+    attributes:
+      label: Map name
+      description: Which map do you want to use?
+      placeholder: "Example: de_mymap"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: usage_type
+    attributes:
+      label: Type of use
+      options:
+        - Paid / premium server feature
+        - Tournament or event with entry fee or prize money
+        - Sponsored or monetized content
+        - Selling or bundling the map or its files
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: requester
+    attributes:
+      label: Who is asking?
+      description: Your name, organization, server or event name.
+      placeholder: "Example: XYZ Esports League"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Intended use
+      description: Describe how, where and for how long you would like to use the map, and how money is involved.
+    validations:
+      required: true
+
+  - type: textarea
+    id: modifications
+    attributes:
+      label: Modifications
+      description: Will you modify the map? If yes, describe the changes.
+
+  - type: input
+    id: link
+    attributes:
+      label: Website or link
+      description: Optional link to your server, event or organization.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I have read the license section of the README and understand that this use is not covered by it.
+          required: true
+        - label: I will give credit to the original author as described in the README.
+          required: true
