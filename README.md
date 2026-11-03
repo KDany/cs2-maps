@@ -13,24 +13,31 @@ Feel free to explore the files, learn from the geometry setup, or use the source
 
 ## 📂 Repository Structure
 
-This repository only stores the raw, uncompiled development source files that live under the engine's `content/` directory. Compiled game files (the `game/` directory with `.vpk` / `_c` files) and temporary compiler output are excluded via `.gitignore`.
+This repository only stores the raw, uncompiled development source files of each map (the content of the map's addon folder under the engine's `content/csgo_addons/` directory). Compiled game files (the `game/` directory with `.vpk` / `_c` files) and temporary compiler output are excluded via `.gitignore`.
 
-Each map project has its own dedicated addon directory, mirroring the CS2 folder layout:
+Maps are grouped by **game mode prefix**, and each map has its own folder that matches the CS2 addon folder layout:
 
 ```
-content/csgo_addons/<map_name>/
+<prefix>/<map_name>/
 ├── maps/        -> the primary .vmap file(s)
 ├── materials/   -> custom materials and textures (if any)
 ├── models/      -> custom models (if any)
 └── sounds/      -> custom sounds (if any)
 ```
 
+| Prefix | Game mode |
+| :--- | :--- |
+| `de/` | Defusal (bomb) |
+| `cs/` | Hostage rescue |
+| `ar/` | Arms Race |
+| `surf/` | Surf |
+
 > **Large files:** Textures, models and audio are stored with [Git LFS](https://git-lfs.com/). Run `git lfs install` once before cloning, otherwise you will only get small pointer files instead of the real assets. Alternatively, use GitHub's **Code > Download ZIP**, which includes the LFS files.
 
 ## 🛠️ How to Open a Map in Hammer
 
 1. Open the **CS2 Workshop Tools** and create a new addon. Give it **the same name** as the map's folder in this repository (e.g. `de_mymap`).
-2. Close the tools, then copy the **entire contents** of `content/csgo_addons/<map_name>/` from this repository into your own
+2. Close the tools, then copy the **entire contents** of `<prefix>/<map_name>/` from this repository (e.g. `de/de_mymap/`) into your own
    `.../steamapps/common/Counter-Strike Global Offensive/content/csgo_addons/<map_name>/` folder (merge/overwrite when asked).
 3. Launch the Workshop Tools with your addon, open Hammer, choose **File > Open**, and select the `.vmap` file from the `maps/` folder.
 
@@ -44,7 +51,7 @@ Copying the whole folder (not just the `.vmap`) makes sure that every custom mat
 
 <!--
 Template row — copy it above when a map is uploaded:
-| **de_mymap** | Defusal (5v5) | [Open Folder](./content/csgo_addons/de_mymap/) | [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=XXXXXXXXXX) | 🟢 Released |
+| **de_mymap** | Defusal (5v5) | [Open Folder](./de/de_mymap/) | [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=XXXXXXXXXX) | 🟢 Released |
 Status legend: 🟢 Released · 🟡 Beta · 🔴 Alpha / Testing
 -->
 
