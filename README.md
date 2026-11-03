@@ -47,7 +47,7 @@ Copying the whole folder (not just the `.vmap`) makes sure that every custom mat
 
 | Map Name | Game Mode | Raw Source Files (GitHub) | Playable Version (Steam Workshop) | Status / Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| *Coming soon* | | | | |
+| **de_dust2_long** | Defusal | [Open Folder](./de/de_dust2_long/) | [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227) | 🟢 Released · Based on Valve's Dust II ([see note](#maps-based-on-valve-maps)) |
 
 <!--
 Template row — copy it above when a map is uploaded:
@@ -89,11 +89,23 @@ Playing the map on regular community servers, streaming it, or making videos abo
 ### Third-party content
 The license only covers my own work. Stock Counter-Strike 2 materials, models, prefabs and other assets referenced by these maps belong to **Valve Corporation** and are subject to Valve's own terms. This project is not affiliated with or endorsed by Valve.
 
+### Maps based on Valve maps
+Some maps in this repository are derived from official Valve maps. For example, **de_dust2_long** was created from a decompiled version of Valve's **Dust II**, with parts of the original map removed and modified.
+
+- The original Dust II layout, geometry and assets are the property of **Valve Corporation** and are **not** covered by the CC BY-NC-SA 4.0 license.
+- The CC BY-NC-SA 4.0 license only applies to my own changes and additions.
+- If you create a variant of such a map, the Valve-owned parts remain subject to Valve's terms, and you must also credit Valve as the author of the original map.
+- If Valve Corporation requests it, the affected source files will be removed from this repository.
+
 ## 📝 How to Credit Me
 
 If you use assets from this repository or publish a modified community version of any map found here (e.g. on the Steam Workshop), please copy and paste the following line into your description:
 
 > *Based on the original CS2 map by KDany — https://github.com/KDany/cs2-maps — licensed under CC BY-NC-SA 4.0. Changes were made.*
+
+For maps based on a Valve map (e.g. de_dust2_long), please also credit Valve:
+
+> *Based on de_dust2_long by KDany — https://github.com/KDany/cs2-maps — licensed under CC BY-NC-SA 4.0, derived from Dust II by Valve Corporation. Changes were made.*
 
 ## 🐞 Bug Reports & Feedback
 
