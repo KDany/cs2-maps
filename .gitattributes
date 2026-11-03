@@ -1,7 +1,17 @@
-# Normalize line endings for text files
-* text=auto
+# Keep every file byte-for-byte as Hammer / the Workshop Tools wrote it:
+# no line ending conversion (Source 2 assets such as .vmdl, .vmat, .vsndevts
+# are text files, but they must not be touched by Git).
+* -text
 
-# Hammer map files: never touch line endings, no text diffs
+# Repository documentation and config: always LF
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+LICENSE text eol=lf
+
+# Hammer map files: no text diffs
 *.vmap binary
 
 # Large binary assets -> Git LFS (run `git lfs install` once)
