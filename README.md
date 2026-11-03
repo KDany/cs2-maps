@@ -20,6 +20,14 @@ To open and edit any of these maps in your own CS2 Workshop Tools:
 4. Open the Hammer Editor, hit **File > Open**, and select the `.vmap` file. 
 *(Note: If a map utilizes custom, non-valve materials or models, you will also need to copy their respective source assets into the matching `materials/` or `models/` folders inside your content directory).*
 
+## 🗺️ My CS2 Maps Portfolio
+
+| Map Name | Game Mode | Raw Source Files (GitHub) | Playable Version (Steam Workshop) | Status / Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| **de_example** | Defusal (5v5) | [Open Folder](./content/csgo_addons/de_example/) | [Steam Workshop Link](https://steamcommunity.com...) | 🟢 Completed / Released |
+| **cs_sample** | Hostage | [Open Folder](./content/csgo_addons/cs_sample/) | [Steam Workshop Link](https://steamcommunity.com...) | 🟡 In Progress (Beta) |
+| **ar_test** | Arms Race | [Open Folder](./content/csgo_addons/ar_test/) | *Not uploaded yet* | 🔴 Alpha Layout / Testing |
+
 ## 📜 License & Community Usage
 
 All projects and source files within this repository are licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** License. 
