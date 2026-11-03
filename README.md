@@ -1,4 +1,9 @@
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-brightgreen?logo=creative-commons&logoColor=white)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![License](https://img.shields.io/github/license/KDany/cs2-maps?logo=creativecommons&logoColor=white&color=brightgreen)](./LICENSE)
+[![Game: Counter-Strike 2](https://img.shields.io/badge/Game-Counter--Strike%202-orange?logo=counterstrike&logoColor=white)](https://www.counter-strike.net/)
+[![Forks](https://img.shields.io/github/forks/KDany/cs2-maps?logo=github)](https://github.com/KDany/cs2-maps/forks)
+[![Last commit](https://img.shields.io/github/last-commit/KDany/cs2-maps)](https://github.com/KDany/cs2-maps/commits)
+[![PRs: not accepted](https://img.shields.io/badge/PRs-not%20accepted-red)](./CONTRIBUTING.md)
+[![Bugs: report here](https://img.shields.io/badge/Bugs-report%20here-yellow?logo=github)](https://github.com/KDany/steam-workshop/issues/new/choose)
 
 # KDany's CS2 map source files
 
