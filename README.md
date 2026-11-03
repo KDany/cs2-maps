@@ -53,7 +53,7 @@ Made a Wingman cut, a night/winter version, a retake setup or any other variant 
 
 ## 📜 License & Community Usage
 
-Copyright (c) 2026 KDany.
+Copyright (c) 2026 KDany ([GitHub: KDany](https://github.com/KDany), [Steam ID: 76561198011807358](https://steamcommunity.com/profiles/76561198011807358))
 
 All of my own work in this repository (map geometry, layouts and custom assets) is licensed under the **[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)** license. The summary below is for convenience only — the legally binding terms are in the [`LICENSE`](./LICENSE) file.
 
