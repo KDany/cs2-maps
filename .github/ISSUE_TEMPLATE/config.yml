@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Map bug report or gameplay feedback
+    url: https://github.com/KDany/steam-workshop/issues/new/choose
+    about: Bugs and feedback about released maps go to the dedicated Steam Workshop issue tracker.

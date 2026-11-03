@@ -83,13 +83,22 @@ If you use assets from this repository or publish a modified community version o
 
 > *Based on the original CS2 map by KDany — https://github.com/KDany/cs2-maps — licensed under CC BY-NC-SA 4.0. Changes were made.*
 
+## 🐞 Bug Reports & Feedback
+
+Found a bug or have feedback about one of my **released maps** (getting stuck, clipping, missing textures, visibility, balance, etc.)? Please report it in my dedicated issue tracker:
+
+👉 **[KDany/steam-workshop — Issue Tracker](https://github.com/KDany/steam-workshop/issues/new/choose)**
+
+Use this repository's [issues](https://github.com/KDany/cs2-maps/issues) only for things related to the **source files** themselves (e.g. a map does not open in Hammer, missing source assets), for getting your community variant listed, or for permission requests.
+
 ## 🤝 Contributing
 
 Fixes and improvements to the original maps are welcome via pull requests. Please read [CONTRIBUTING.md](./CONTRIBUTING.md) first.
 
 ## 📬 Contact
 
-- GitHub: [open an issue](https://github.com/KDany/cs2-maps/issues)
+- Map bugs & feedback: [KDany/steam-workshop](https://github.com/KDany/steam-workshop/issues/new/choose)
+- Source files, variants & permissions: [open an issue here](https://github.com/KDany/cs2-maps/issues)
 - Steam: [KDany](https://steamcommunity.com/profiles/76561198011807358)
 
 Thank you for respecting the hundreds of hours that went into these projects! Good luck with your mapping!
