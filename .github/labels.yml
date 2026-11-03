@@ -1,0 +1,7 @@
+labels:
+  - name: Permission request
+    color: 5319e7
+    description: Request to use a map beyond the CC BY-NC-SA 4.0 license.
+  - name: Community variant
+    color: 0e8a16
+    description: Request to list a community variant in the README.

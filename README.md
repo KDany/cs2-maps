@@ -45,7 +45,7 @@ Status legend: 🟢 Released · 🟡 Beta · 🔴 Alpha / Testing
 
 ## 🌍 Community Variants
 
-Made a Wingman cut, a night/winter version, a retake setup or any other variant of one of these maps? Open an [issue](https://github.com/KDany/cs2-maps/issues) with a link to your fork and/or Workshop item and I will happily list it here!
+Made a Wingman cut, a night/winter version, a retake setup or any other variant of one of these maps? Open a [Community variant listing](https://github.com/KDany/cs2-maps/issues/new?template=variant_listing.yml) issue with a link to your fork and/or Workshop item and I will happily list it here!
 
 | Variant | Based on | Author | Links |
 | :--- | :--- | :--- | :--- |
@@ -72,7 +72,7 @@ In practice, I consider the following to be commercial use, and they require my 
 - using the map as a paid / premium feature of a server (e.g. VIP-only access),
 - using the map in events or productions where money is made from it (e.g. paid-entry tournaments, sponsored content).
 
-Playing the map on regular community servers, streaming it, or making videos about it is totally fine. **If you are unsure, just ask** — see [Contact](#-contact).
+Playing the map on regular community servers, streaming it, or making videos about it is totally fine. **If you are unsure, just ask** by opening a [Permission request](https://github.com/KDany/cs2-maps/issues/new?template=permission_request.yml).
 
 ### Third-party content
 The license only covers my own work. Stock Counter-Strike 2 materials, models, prefabs and other assets referenced by these maps belong to **Valve Corporation** and are subject to Valve's own terms. This project is not affiliated with or endorsed by Valve.
@@ -89,16 +89,17 @@ Found a bug or have feedback about one of my **released maps** (getting stuck, c
 
 👉 **[KDany/steam-workshop — Issue Tracker](https://github.com/KDany/steam-workshop/issues/new/choose)**
 
-Use this repository's [issues](https://github.com/KDany/cs2-maps/issues) only for things related to the **source files** themselves (e.g. a map does not open in Hammer, missing source assets), for getting your community variant listed, or for permission requests.
+This also includes problems with the source files themselves (e.g. a map does not open in Hammer, or source assets are missing). All fixes to the original maps are made by me, based on the reports in the tracker.
 
-## 🤝 Contributing
+## 🚫 No Pull Requests
 
-Fixes and improvements to the original maps are welcome via pull requests. Please read [CONTRIBUTING.md](./CONTRIBUTING.md) first.
+This repository is a download archive, not a collaborative project. **Pull requests are not accepted** and will be closed without review. If you want to change a map, download or fork it and maintain your own version — that is exactly what the license allows. See [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## 📬 Contact
 
 - Map bugs & feedback: [KDany/steam-workshop](https://github.com/KDany/steam-workshop/issues/new/choose)
-- Source files, variants & permissions: [open an issue here](https://github.com/KDany/cs2-maps/issues)
+- Permission requests (e.g. commercial use): [Permission request](https://github.com/KDany/cs2-maps/issues/new?template=permission_request.yml)
+- Getting your variant listed: [Community variant listing](https://github.com/KDany/cs2-maps/issues/new?template=variant_listing.yml)
 - Steam: [KDany](https://steamcommunity.com/profiles/76561198011807358)
 
 Thank you for respecting the hundreds of hours that went into these projects! Good luck with your mapping!

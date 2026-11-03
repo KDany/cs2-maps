@@ -1,0 +1,63 @@
+name: Community Variant Listing
+description: Get your community variant of one of my maps listed in the README.
+title: "[Variant]: "
+labels:
+  - Community variant
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Made a variant of one of my maps? Great! Fill in this form and I will add it to the **Community Variants** list in the README.
+        Please write in **English**.
+
+  - type: input
+    id: variant_name
+    attributes:
+      label: Variant name
+      placeholder: "Example: de_mymap_winter"
+    validations:
+      required: true
+
+  - type: input
+    id: based_on
+    attributes:
+      label: Based on
+      description: Which original map is it based on?
+      placeholder: "Example: de_mymap"
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: Author
+      description: The name you want to be credited with.
+    validations:
+      required: true
+
+  - type: textarea
+    id: links
+    attributes:
+      label: Links
+      description: Link to your fork and/or Steam Workshop item.
+      placeholder: "Example:\nhttps://github.com/you/cs2-maps\nhttps://steamcommunity.com/sharedfiles/filedetails/?id=..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What did you change?
+      description: Short description of the variant (e.g. Wingman cut, winter theme, retake setup).
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: My variant credits the original author and is published under CC BY-NC-SA 4.0.
+          required: true
+        - label: My variant is not used for commercial purposes.
+          required: true
