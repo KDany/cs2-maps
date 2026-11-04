@@ -20,7 +20,7 @@ Steam Workshop: [Dust II Long](https://steamcommunity.com/sharedfiles/filedetail
 ### [Unreleased] — v1.1 (Optimization patch)
 - First raw source files added to this repository.
 - Removed unused decompiled data (world collision, compiled world data, unused models and template files) — smaller download, no gameplay changes.
-- Added a minimap (radar), generated automatically on build.
+- Added a minimap (radar), generated automatically on build — a more detailed version is planned.
 
 ### v1.0 — 2026-05-22
 - Initial Steam Workshop release.
