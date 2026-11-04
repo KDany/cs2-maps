@@ -15,29 +15,30 @@ Feel free to explore the files, learn from the geometry setup, or use the source
 
 This repository only stores the raw, uncompiled development source files of each map (the content of the map's addon folder under the engine's `content/csgo_addons/` directory). Compiled game files (the `game/` directory with `.vpk` / `_c` files) and temporary compiler output are excluded via `.gitignore`.
 
-Maps are grouped by **game mode prefix**, and each map has its own folder that matches the CS2 addon folder layout:
+Each map has its own folder in the root of the repository, named after the map (the name already contains the game mode prefix, e.g. `de_` for Defusal). The folder matches the CS2 addon folder layout:
 
 ```
-<prefix>/<map_name>/
+<map_name>/
 ├── maps/        -> the primary .vmap file(s)
 ├── materials/   -> custom materials and textures (if any)
 ├── models/      -> custom models (if any)
+├── panorama/    -> radar / overview images (if any)
 └── sounds/      -> custom sounds (if any)
 ```
 
-| Prefix | Game mode |
-| :--- | :--- |
-| `de/` | Defusal (bomb) |
-| `cs/` | Hostage rescue |
-| `ar/` | Arms Race |
-| `surf/` | Surf |
-
-> **Large files:** Textures, models and audio are stored with [Git LFS](https://git-lfs.com/). Run `git lfs install` once before cloning, otherwise you will only get small pointer files instead of the real assets. Alternatively, use GitHub's **Code > Download ZIP**, which includes the LFS files.
+> **Downloading:** All map files are stored as regular Git files, so a simple `git clone` or GitHub's **Code > Download ZIP** gives you everything you need — no extra tools required.
+>
+> **Tip:** If you only need one map, you can use a [sparse checkout](https://git-scm.com/docs/git-sparse-checkout) to download just that map's folder:
+> ```
+> git clone --filter=blob:none --sparse https://github.com/KDany/cs2-maps
+> cd cs2-maps
+> git sparse-checkout set de_dust2_long
+> ```
 
 ## 🛠️ How to Open a Map in Hammer
 
 1. Open the **CS2 Workshop Tools** and create a new addon. Give it **the same name** as the map's folder in this repository (e.g. `de_mymap`).
-2. Close the tools, then copy the **entire contents** of `<prefix>/<map_name>/` from this repository (e.g. `de/de_mymap/`) into your own
+2. Close the tools, then copy the **entire contents** of `<map_name>/` from this repository (e.g. `de_mymap/`) into your own
    `.../steamapps/common/Counter-Strike Global Offensive/content/csgo_addons/<map_name>/` folder (merge/overwrite when asked).
 3. Launch the Workshop Tools with your addon, open Hammer, choose **File > Open**, and select the `.vmap` file from the `maps/` folder.
 
@@ -47,11 +48,11 @@ Copying the whole folder (not just the `.vmap`) makes sure that every custom mat
 
 | Map Name | Game Mode | Raw Source Files (GitHub) | Playable Version (Steam Workshop) | Status / Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| *Coming soon* | | | | |
+| **de_dust2_long** | Defusal | [Open Folder](./de_dust2_long/) | [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227) | 🟢 Released · Based on Valve's Dust II ([see note](#maps-based-on-valve-maps)) |
 
 <!--
 Template row — copy it above when a map is uploaded:
-| **de_mymap** | Defusal (5v5) | [Open Folder](./de/de_mymap/) | [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=XXXXXXXXXX) | 🟢 Released |
+| **de_mymap** | Defusal (5v5) | [Open Folder](./de_mymap/) | [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=XXXXXXXXXX) | 🟢 Released |
 Status legend: 🟢 Released · 🟡 Beta · 🔴 Alpha / Testing
 -->
 
@@ -89,11 +90,23 @@ Playing the map on regular community servers, streaming it, or making videos abo
 ### Third-party content
 The license only covers my own work. Stock Counter-Strike 2 materials, models, prefabs and other assets referenced by these maps belong to **Valve Corporation** and are subject to Valve's own terms. This project is not affiliated with or endorsed by Valve.
 
+### Maps based on Valve maps
+Some maps in this repository are derived from official Valve maps. For example, **de_dust2_long** was created from a decompiled version of Valve's **Dust II**, with parts of the original map removed and modified.
+
+- The original Dust II layout, geometry and assets are the property of **Valve Corporation** and are **not** covered by the CC BY-NC-SA 4.0 license.
+- The CC BY-NC-SA 4.0 license only applies to my own changes and additions.
+- If you create a variant of such a map, the Valve-owned parts remain subject to Valve's terms, and you must also credit Valve as the author of the original map.
+- If Valve Corporation requests it, the affected source files will be removed from this repository.
+
 ## 📝 How to Credit Me
 
 If you use assets from this repository or publish a modified community version of any map found here (e.g. on the Steam Workshop), please copy and paste the following line into your description:
 
 > *Based on the original CS2 map by KDany — https://github.com/KDany/cs2-maps — licensed under CC BY-NC-SA 4.0. Changes were made.*
+
+For maps based on a Valve map (e.g. de_dust2_long), please also credit Valve:
+
+> *Based on de_dust2_long by KDany — https://github.com/KDany/cs2-maps — licensed under CC BY-NC-SA 4.0, derived from Dust II by Valve Corporation. Changes were made.*
 
 ## 🐞 Bug Reports & Feedback
 

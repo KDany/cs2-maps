@@ -20,3 +20,9 @@ game/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Decompiled world data inside maps/<map_name>/ (not needed to open the .vmap)
+**/maps/*/world.vwrld
+
+# Decompiled world collision (regenerated from the .vmap on build)
+**/maps/*/world_physics*

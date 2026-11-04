@@ -14,20 +14,10 @@ LICENSE text eol=lf
 # Hammer map files: no text diffs
 *.vmap binary
 
-# Large binary assets -> Git LFS (run `git lfs install` once)
-# Textures / images
-*.tga filter=lfs diff=lfs merge=lfs -text
+# Git LFS only for very large working files that can exceed GitHub's 100 MB
+# file limit (run `git lfs install` once). Everything else is stored as
+# regular Git files: no LFS bandwidth quota, simple clone / ZIP download.
 *.psd filter=lfs diff=lfs merge=lfs -text
-*.png filter=lfs diff=lfs merge=lfs -text
-*.jpg filter=lfs diff=lfs merge=lfs -text
-*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.blend filter=lfs diff=lfs merge=lfs -text
 *.exr filter=lfs diff=lfs merge=lfs -text
 *.hdr filter=lfs diff=lfs merge=lfs -text
-# Models
-*.fbx filter=lfs diff=lfs merge=lfs -text
-*.obj filter=lfs diff=lfs merge=lfs -text
-*.dmx filter=lfs diff=lfs merge=lfs -text
-*.blend filter=lfs diff=lfs merge=lfs -text
-# Audio
-*.wav filter=lfs diff=lfs merge=lfs -text
-*.mp3 filter=lfs diff=lfs merge=lfs -text
