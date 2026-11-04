@@ -26,9 +26,14 @@ Each map has its own folder in the root of the repository, named after the map (
 └── sounds/      -> custom sounds (if any)
 ```
 
-> **Large files:** Textures, models and audio are stored with [Git LFS](https://git-lfs.com/). Run `git lfs install` once before cloning, otherwise you will only get small pointer files instead of the real assets. Alternatively, use GitHub's **Code > Download ZIP**, which includes the LFS files.
+> **Downloading:** All map files are stored as regular Git files, so a simple `git clone` or GitHub's **Code > Download ZIP** gives you everything you need — no extra tools required.
 >
-> **Download not working?** This repository uses GitHub's free Git LFS quota, which is limited each month. If the quota is used up, the large files cannot be downloaded (you only get small pointer files) until the quota resets **at the beginning of the next month** — please try again then. In the meantime, you can still **play** the maps via the Steam Workshop links in the **My CS2 Maps Portfolio** table below (the Workshop only contains the playable, compiled version, not the source files).
+> **Tip:** If you only need one map, you can use a [sparse checkout](https://git-scm.com/docs/git-sparse-checkout) to download just that map's folder:
+> ```
+> git clone --filter=blob:none --sparse https://github.com/KDany/cs2-maps
+> cd cs2-maps
+> git sparse-checkout set de_dust2_long
+> ```
 
 ## 🛠️ How to Open a Map in Hammer
 
