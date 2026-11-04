@@ -30,6 +30,7 @@ In playtest: `v1.1-beta.1`
 - First raw source files added to this repository.
 - Removed unused decompiled data (world collision, compiled world data, unused models and template files) — download size reduced from ~154 MB to ~101 MB, no gameplay changes.
 - Added a minimap (radar), generated automatically on build — a more detailed version is planned.
+- Fixed too dark player and viewmodel lighting at A Short: replaced a broken light probe volume and removed two duplicate ones ([steam-workshop#3](https://github.com/KDany/steam-workshop/issues/3)).
 
 ### v1.0 — 2026-05-22
 - Initial Steam Workshop release.
