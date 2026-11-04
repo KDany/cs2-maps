@@ -56,6 +56,17 @@ Template row — copy it above when a map is uploaded:
 Status legend: 🟢 Released · 🟡 Beta · 🔴 Alpha / Testing
 -->
 
+## 🏷️ Versions
+
+Every Steam Workshop update of a map gets a version number, and the matching source state is tagged in this repository:
+
+| Map | Latest version | Source (Git tag) | Changes |
+| :--- | :--- | :--- | :--- |
+| **de_dust2_long** | v1.0 | *not tagged (released before this repository)* | [CHANGELOG](./CHANGELOG.md#de_dust2_long) |
+
+- Tags are named `<map_name>-v<version>` (e.g. `de_dust2_long-v1.1`). Browse them under [Tags](https://github.com/KDany/cs2-maps/tags), or download a release's compiled `.vpk` from [Releases](https://github.com/KDany/cs2-maps/releases).
+- The full history of every map is in [CHANGELOG.md](./CHANGELOG.md).
+
 ## 🌍 Community Variants
 
 Made a Wingman cut, a night/winter version, a retake setup or any other variant of one of these maps? Open a [Community variant listing](https://github.com/KDany/cs2-maps/issues/new?template=variant_listing.yml) issue with a link to your fork and/or Workshop item and I will happily list it here!
