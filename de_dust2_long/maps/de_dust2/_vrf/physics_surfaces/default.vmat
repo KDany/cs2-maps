@@ -1,0 +1,17 @@
+"Layer0"
+{
+	"shader"	"generic.vfx"
+	"F_TRANSLUCENT"	"1"
+	"TextureTranslucency"	"[0.700000 0.700000 0.700000 0.000000]"
+	"TextureColor"	"maps/de_dust2/_vrf/physics_surfaces/default.png"
+	"Attributes"
+	{
+		"mapbuilder.nodraw"	"1"
+		"tools.toolsmaterial"	"1"
+		"physics.nodefaultsimplification"	"1"
+	}
+	"SystemAttributes"
+	{
+		"PhysicsSurfaceProperties"	"default"
+	}
+}
