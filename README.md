@@ -66,6 +66,11 @@ Every map has a **release** Workshop item and a separate **playtest** Workshop i
 
 - Release tags are named `<map_name>-v<version>` (e.g. `de_dust2_long-v1.1`), playtest tags `<map_name>_dev-v<version>-beta.<n>` (e.g. `de_dust2_long_dev-v1.1-beta.2`). Browse them under [Tags](https://github.com/KDany/cs2-maps/tags), or download a release's compiled `.vpk` from [Releases](https://github.com/KDany/cs2-maps/releases).
 - The playtest version uses the map name `<map_name>_dev` (e.g. `de_dust2_long_dev`), so it can be installed next to the release version.
+- To create or update the local `_dev` addon from this repository (and back), use [`tools/sync-dev-addon.ps1`](./tools/sync-dev-addon.ps1):
+  ```
+  powershell -ExecutionPolicy Bypass -File .\tools\sync-dev-addon.ps1 -Map de_dust2_long          # repo -> <map>_dev addon
+  powershell -ExecutionPolicy Bypass -File .\tools\sync-dev-addon.ps1 -Map de_dust2_long -ToRepo  # <map>_dev addon -> repo
+  ```
 - The full history of every map is in [CHANGELOG.md](./CHANGELOG.md).
 
 ## 🌍 Community Variants

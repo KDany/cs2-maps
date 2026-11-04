@@ -11,7 +11,7 @@ Versioning:
 - The source state of every upload is marked with a Git tag:
   - release: `<map_name>-v<version>` (e.g. `de_dust2_long-v1.1`),
   - playtest: `<map_name>_dev-v<version>-beta.<n>` (e.g. `de_dust2_long_dev-v1.1-beta.2`).
-- The repository only contains the release map files (e.g. `de_dust2_long/`). The playtest build is made from the same source, with the `.vmap` saved under the `_dev` map name in a separate local addon.
+- The repository only contains the release map files (e.g. `de_dust2_long/`). The playtest build is made from the same source, with the `.vmap` saved under the `_dev` map name in a separate local addon (see `tools/sync-dev-addon.ps1`).
 - The compiled `.vpk` of each release is attached to the matching [GitHub Release](https://github.com/KDany/cs2-maps/releases), so older versions can be restored if needed.
 
 Version numbers:
