@@ -24,7 +24,7 @@ Version numbers:
 
 Steam Workshop: [Dust II Long](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227) · Playtest: [Dust II Long (Playtest)](https://steamcommunity.com/sharedfiles/filedetails/?id=3730701113)
 
-### [Unreleased] — v1.1 (Optimization patch)
+### [Unreleased] — v1.1 (Optimization & bugfixes)
 In playtest: `v1.1-beta.1`
 
 - First raw source files added to this repository.
