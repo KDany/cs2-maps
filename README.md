@@ -33,6 +33,8 @@ Maps are grouped by **game mode prefix**, and each map has its own folder that m
 | `surf/` | Surf |
 
 > **Large files:** Textures, models and audio are stored with [Git LFS](https://git-lfs.com/). Run `git lfs install` once before cloning, otherwise you will only get small pointer files instead of the real assets. Alternatively, use GitHub's **Code > Download ZIP**, which includes the LFS files.
+>
+> **Download not working?** This repository uses GitHub's free Git LFS quota, which is limited each month. If the quota is used up, the large files cannot be downloaded (you only get small pointer files) until the quota resets **at the beginning of the next month** — please try again then. In the meantime, you can still **play** the maps via the Steam Workshop links in the [portfolio table](#️-my-cs2-maps-portfolio) (the Workshop only contains the playable, compiled version, not the source files).
 
 ## 🛠️ How to Open a Map in Hammer
 
