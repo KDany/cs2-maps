@@ -64,7 +64,7 @@ Every map has a **release** Workshop item and a separate **playtest** Workshop i
 | :--- | :--- | :--- | :--- |
 | **de_dust2_long** | v1.0 · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227) · *not tagged (released before this repository)* | v1.1-beta.3 · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730701113) | [CHANGELOG](./CHANGELOG.md#de_dust2_long) |
 
-- Release tags are named `<map_name>-v<version>` (e.g. `de_dust2_long-v1.1`), playtest tags `<map_name>_dev-v<version>-beta.<n>` (e.g. `de_dust2_long_dev-v1.1-beta.2`). Browse them under [Tags](https://github.com/KDany/cs2-maps/tags), or download a release's compiled `.vpk` from [Releases](https://github.com/KDany/cs2-maps/releases).
+- Releases are tagged as `<map_name>-v<version>` (e.g. `de_dust2_long-v1.1`); playtest betas are not tagged. Browse them under [Tags](https://github.com/KDany/cs2-maps/tags), or download a release's compiled `.vpk` from [Releases](https://github.com/KDany/cs2-maps/releases).
 - The playtest version uses the map name `<map_name>_dev` (e.g. `de_dust2_long_dev`), so it can be installed next to the release version.
 - To create or update the local `_dev` addon from this repository (and back), use [`tools/sync-dev-addon.ps1`](./tools/sync-dev-addon.ps1):
   ```
