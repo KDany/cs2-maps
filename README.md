@@ -62,7 +62,7 @@ Every map has a **release** Workshop item and a separate **playtest** Workshop i
 
 | Map | Release | In playtest | Changes |
 | :--- | :--- | :--- | :--- |
-| **de_dust2_long** | v1.0 · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227) · *not tagged (released before this repository)* | v1.1-beta.3 · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730701113) | [CHANGELOG](./CHANGELOG.md#de_dust2_long) |
+| **de_dust2_long** | v1.1 · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227) · [`de_dust2_long-v1.1`](https://github.com/KDany/cs2-maps/releases/tag/de_dust2_long-v1.1) | *none* · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730701113) | [CHANGELOG](./CHANGELOG.md#de_dust2_long) |
 
 - Releases are tagged as `<map_name>-v<version>` (e.g. `de_dust2_long-v1.1`); playtest betas are not tagged. Browse them under [Tags](https://github.com/KDany/cs2-maps/tags), or download a release's compiled `.vpk` from [Releases](https://github.com/KDany/cs2-maps/releases).
 - The playtest version uses the map name `<map_name>_dev` (e.g. `de_dust2_long_dev`), so it can be installed next to the release version.
