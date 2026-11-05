@@ -66,8 +66,9 @@ Every map has a **release** Workshop item and a separate **playtest** Workshop i
 
 - Releases are tagged as `<map_name>-v<version>` (e.g. `de_dust2_long-v1.1`); playtest betas are not tagged. Browse them under [Tags](https://github.com/KDany/cs2-maps/tags), or download a release's compiled `.vpk` from [Releases](https://github.com/KDany/cs2-maps/releases).
 - The playtest version uses the map name `<map_name>_dev` (e.g. `de_dust2_long_dev`), so it can be installed next to the release version.
-- To create or update the local `_dev` addon from this repository (and back), use [`tools/sync-dev-addon.ps1`](./tools/sync-dev-addon.ps1):
+- To create or update the local `_dev` addon from this repository (and back), use [`tools/sync-dev-addon.ps1`](./tools/sync-dev-addon.ps1). It renames every file named after the map (`.vmap`, radar images, `.vpdi`, `.vpost`, ...) and replaces the map name inside text files (e.g. the radar path in the `.vpdi`):
   ```
+  powershell -ExecutionPolicy Bypass -File .\tools\sync-dev-addon.ps1 -Map de_dust2_long -DryRun  # preview only, changes nothing
   powershell -ExecutionPolicy Bypass -File .\tools\sync-dev-addon.ps1 -Map de_dust2_long          # repo -> <map>_dev addon
   powershell -ExecutionPolicy Bypass -File .\tools\sync-dev-addon.ps1 -Map de_dust2_long -ToRepo  # <map>_dev addon -> repo
   ```
