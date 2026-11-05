@@ -22,8 +22,8 @@ Version numbers:
 
 Steam Workshop: [Dust II Long](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227) · Playtest: [Dust II Long (Playtest)](https://steamcommunity.com/sharedfiles/filedetails/?id=3730701113)
 
-### [Unreleased] — v1.1 (Optimization & bugfixes)
-In playtest: `v1.1-beta.3` (`v1.1-beta.1`: optimization and generated minimap · `v1.1-beta.2`: + radar, lighting and collision fixes · `v1.1-beta.3`: minimap CT spawn wall position)
+### v1.1 — 2026-11-05 (Optimization & bugfixes)
+Playtested as `v1.1-beta.1` – `v1.1-beta.3`. Source: tag [`de_dust2_long-v1.1`](https://github.com/KDany/cs2-maps/releases/tag/de_dust2_long-v1.1).
 
 - First raw source files added to this repository.
 - Removed unused decompiled data (world collision, compiled world data, unused models and template files) — download size reduced from ~154 MB to ~101 MB, no gameplay changes.
