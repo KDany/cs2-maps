@@ -56,6 +56,23 @@ Template row — copy it above when a map is uploaded:
 Status legend: 🟢 Released · 🟡 Beta · 🔴 Alpha / Testing
 -->
 
+## 🏷️ Versions
+
+Every map has a **release** Workshop item and a separate **playtest** Workshop item for testing upcoming versions. Each upload gets a version number, and the matching source state is tagged in this repository:
+
+| Map | Release | In playtest | Changes |
+| :--- | :--- | :--- | :--- |
+| **de_dust2_long** | v1.0 · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227) · *not tagged (released before this repository)* | v1.1-beta.3 · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730701113) | [CHANGELOG](./CHANGELOG.md#de_dust2_long) |
+
+- Releases are tagged as `<map_name>-v<version>` (e.g. `de_dust2_long-v1.1`); playtest betas are not tagged. Browse them under [Tags](https://github.com/KDany/cs2-maps/tags), or download a release's compiled `.vpk` from [Releases](https://github.com/KDany/cs2-maps/releases).
+- The playtest version uses the map name `<map_name>_dev` (e.g. `de_dust2_long_dev`), so it can be installed next to the release version.
+- To create or update the local `_dev` addon from this repository (and back), use [`tools/sync-dev-addon.ps1`](./tools/sync-dev-addon.ps1):
+  ```
+  powershell -ExecutionPolicy Bypass -File .\tools\sync-dev-addon.ps1 -Map de_dust2_long          # repo -> <map>_dev addon
+  powershell -ExecutionPolicy Bypass -File .\tools\sync-dev-addon.ps1 -Map de_dust2_long -ToRepo  # <map>_dev addon -> repo
+  ```
+- The full history of every map is in [CHANGELOG.md](./CHANGELOG.md).
+
 ## 🌍 Community Variants
 
 Made a Wingman cut, a night/winter version, a retake setup or any other variant of one of these maps? Open a [Community variant listing](https://github.com/KDany/cs2-maps/issues/new?template=variant_listing.yml) issue with a link to your fork and/or Workshop item and I will happily list it here!
