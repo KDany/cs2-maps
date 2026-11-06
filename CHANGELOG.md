@@ -13,8 +13,9 @@ Versioning:
 - The compiled `.vpk` of each release is attached to the matching [GitHub Release](https://github.com/KDany/cs2-maps/releases), so older versions can be restored if needed.
 
 Version numbers:
-- **MAJOR** — layout or gameplay changes (e.g. new routes, moved spawns or bombsites).
-- **MINOR** — fixes, visual changes and optimizations without gameplay impact.
+- **MAJOR** — changes to the map's design that affect how it is played: layout, routes, spawns or bombsites of the existing game modes.
+- **MINOR** — new game modes or features, adopting CS2 game updates (e.g. the new bomb explosion), fixes, visual changes and optimizations.
+- After `v1.9` comes `v1.10` — the parts are separate numbers, not decimals.
 
 ---
 
