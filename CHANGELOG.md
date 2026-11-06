@@ -22,6 +22,13 @@ Version numbers:
 
 Steam Workshop: [Dust II Long](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227) · Playtest: [Dust II Long (Playtest)](https://steamcommunity.com/sharedfiles/filedetails/?id=3730701113)
 
+### [Unreleased] — v1.2 (Aftershock)
+
+- Added the **Retakes** game mode: custom CT and T spawns and bomb plant positions for bombsite A.
+- Added the new CS2 bomb explosion: the blast now spreads as a shockwave that is blocked by walls, and the blast preview under the health bar works (navigation mesh added) ([steam-workshop#9](https://github.com/KDany/steam-workshop/issues/9)).
+- Removed the leftover bombsite B of the original Dust II: rounds no longer pick bombsite B in Retakes, and the "B" marker is gone from the radar.
+- Removed an invisible leftover mesh face that players could collide with.
+
 ### v1.1 — 2026-11-05 (Optimization & bugfixes)
 Playtested as `v1.1-beta.1` – `v1.1-beta.3`. Source: tag [`de_dust2_long-v1.1`](https://github.com/KDany/cs2-maps/releases/tag/de_dust2_long-v1.1).
 
