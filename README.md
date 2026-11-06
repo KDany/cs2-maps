@@ -26,6 +26,8 @@ Each map has its own folder in the root of the repository, named after the map (
 └── sounds/      -> custom sounds (if any)
 ```
 
+> **`game_files/`:** a few files are not compiled from the sources but read by the game directly (e.g. the Retakes spawns `maps/<map_name>_retake.txt` and the radar position `resource/overviews/<map_name>.txt`). Copy the contents of `<map_name>/game_files/` into `.../Counter-Strike Global Offensive/game/csgo_addons/<map_name>/`.
+
 > **Downloading:** All map files are stored as regular Git files, so a simple `git clone` or GitHub's **Code > Download ZIP** gives you everything you need — no extra tools required.
 >
 > **Tip:** If you only need one map, you can use a [sparse checkout](https://git-scm.com/docs/git-sparse-checkout) to download just that map's folder:
@@ -62,7 +64,7 @@ Every map has a **release** Workshop item and a separate **playtest** Workshop i
 
 | Map | Release | In playtest | Changes |
 | :--- | :--- | :--- | :--- |
-| **de_dust2_long** | v1.1 · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227) · [`de_dust2_long-v1.1`](https://github.com/KDany/cs2-maps/releases/tag/de_dust2_long-v1.1) | *none* · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730701113) | [CHANGELOG](./CHANGELOG.md#de_dust2_long) |
+| **de_dust2_long** | v1.2 · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227) · [`de_dust2_long-v1.2`](https://github.com/KDany/cs2-maps/releases/tag/de_dust2_long-v1.2) | *none* · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730701113) | [CHANGELOG](./CHANGELOG.md#de_dust2_long) |
 
 - Releases are tagged as `<map_name>-v<version>` (e.g. `de_dust2_long-v1.1`); playtest betas are not tagged. Browse them under [Tags](https://github.com/KDany/cs2-maps/tags), or download a release's compiled `.vpk` from [Releases](https://github.com/KDany/cs2-maps/releases).
 - The playtest version uses the map name `<map_name>_dev` (e.g. `de_dust2_long_dev`), so it can be installed next to the release version.
