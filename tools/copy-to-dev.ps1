@@ -33,9 +33,8 @@
     Safety:
       - The target must be the "<map><suffix>" addon; the script refuses to write to
         any other folder, and there is no option to copy in the other direction.
-      - If the dev .vmap is newer than the release .vmap, the dev map was probably
-        edited by hand and those edits would be lost, so the script stops.
-        Use -Force to overwrite it anyway.
+      - The dev addon is disposable: it is only built and uploaded, never edited,
+        so it is always overwritten without asking.
       - -DryRun only prints what would be copied, renamed, edited or deleted.
 
 .EXAMPLE
@@ -53,7 +52,6 @@ param(
     [Parameter(Mandatory = $true)] [string] $Map,
     [string] $Suffix = "_dev",
     [string] $InstallDir = "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive",
-    [switch] $Force,
     [switch] $DryRun
 )
 
@@ -81,15 +79,7 @@ if ((Split-Path -Leaf $dstContent) -ne $devName -or $dstContent -ieq $srcContent
 }
 
 $srcVmap = Join-Path $srcContent "maps\$Map.vmap"
-$dstVmap = Join-Path $dstContent "maps\$devName.vmap"
 if (-not (Test-Path -LiteralPath $srcVmap)) { throw "Release map not found: $srcVmap" }
-if ((Test-Path -LiteralPath $dstVmap) -and -not $Force) {
-    $srcTime = (Get-Item -LiteralPath $srcVmap).LastWriteTime
-    $dstTime = (Get-Item -LiteralPath $dstVmap).LastWriteTime
-    if ($dstTime -gt $srcTime) {
-        throw "The dev map is newer than the release map (edited by hand?):`n  release: $srcVmap ($srcTime)`n  dev:     $dstVmap ($dstTime)`nNothing was copied. Use -Force to overwrite the dev addon anyway."
-    }
-}
 
 # --- Helpers -----------------------------------------------------------------
 # "de_dust2_long" -> "de_dust2_long_dev", but leave an existing "de_dust2_long_dev" alone
