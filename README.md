@@ -48,6 +48,17 @@ Each map has its own folder in the root of the repository, named after the map (
 
 Copying the whole folder (not just the `.vmap`) makes sure that every custom material, model and sound the map depends on is in place.
 
+### 🌙 Day and night variants
+
+Some maps have a night variant next to the regular (day) map, e.g. `de_dust2_long_night`. Both are built from the same source:
+
+- `maps/<map_name>.vmap` contains the map itself. Everything that differs between day and night (sun/moon, sky, fog, post-processing, fill lights, dust and smoke cards, rain) lives in an environment prefab: `maps/prefabs/env_summer.vmap` or `maps/prefabs/env_night.vmap`. The main map references `env_summer`.
+- `maps/<map_name>_night.vmap` is **not stored in this repository** — it is generated before each release and must never be edited by hand:
+  1. Open `maps/<map_name>.vmap` in Hammer and **File > Save As** `maps/<map_name>_night.vmap`.
+  2. Select the environment prefab instance and change its **Target Map Path** to `maps/prefabs/env_night.vmap`. Save.
+  3. Build both maps. Each one is compiled into its own `.vpk`, and uploading the addon publishes both.
+- The night map needs its own copies of the files named after the map: the radar images and `.vpdi` (with the radar path inside renamed), and in `game_files/` the Retakes spawns `maps/<map_name>_night_retake.txt` and the overview `resource/overviews/<map_name>_night.txt` (with the map name on its first line renamed).
+
 ## 🗺️ My CS2 Maps Portfolio
 
 | Map Name | Game Mode | Raw Source Files (GitHub) | Playable Version (Steam Workshop) | Status / Notes |
