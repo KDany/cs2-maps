@@ -70,6 +70,11 @@ Every map has a **release** Workshop item. Each release gets a version number, a
 
 - Releases are tagged as `<map_name>-v<version>` (e.g. `de_dust2_long-v1.2`). Browse them under [Tags](https://github.com/KDany/cs2-maps/tags), or download a release's compiled `.vpk` from [Releases](https://github.com/KDany/cs2-maps/releases).
 - Occasionally a pre-release build may be uploaded to a separate **playtest** Workshop item (e.g. [Dust II Long (Playtest)](https://steamcommunity.com/sharedfiles/filedetails/?id=3730701113)). It uses the map name `<map_name>_dev`, so it can be installed next to the release version. Playtest builds are not part of this repository.
+- The playtest addon is created from the release addon with [`tools/copy-to-dev.ps1`](./tools/copy-to-dev.ps1). It copies one way only (release → `_dev`), renames every file named after the map (`.vmap`, radar images, `.vpdi`, the Retakes and overview `.txt` files) and replaces the map name inside text files:
+  ```
+  powershell -ExecutionPolicy Bypass -File .\tools\copy-to-dev.ps1 -Map de_dust2_long -DryRun  # preview only, changes nothing
+  powershell -ExecutionPolicy Bypass -File .\tools\copy-to-dev.ps1 -Map de_dust2_long          # <map> addon -> <map>_dev addon
+  ```
 - The full history of every map is in [CHANGELOG.md](./CHANGELOG.md).
 
 ## 🌍 Community Variants
