@@ -10,8 +10,8 @@
     addon you are working in:
 
       1. CONTENT addon (content\csgo_addons\<map> -> content\csgo_addons\<map>_dev)
-         - Every file is copied. Files and folders named after the map are copied
-           under the dev name, e.g.
+         - Every file is copied. Files named after the map are copied under the
+           dev name (folders keep their names, so asset paths in the .vmap stay valid), e.g.
              maps\de_dust2_long.vmap                    -> maps\de_dust2_long_dev.vmap
              ...\overheadmaps\de_dust2_long_radar.tga   -> ...\de_dust2_long_dev_radar.tga
              panorama\dynamic_image_de_dust2_long.vpdi  -> ...\dynamic_image_de_dust2_long_dev.vpdi
@@ -82,9 +82,11 @@ $srcVmap = Join-Path $srcContent "maps\$Map.vmap"
 if (-not (Test-Path -LiteralPath $srcVmap)) { throw "Release map not found: $srcVmap" }
 
 # --- Helpers -----------------------------------------------------------------
-# "de_dust2_long" -> "de_dust2_long_dev", but leave an existing "de_dust2_long_dev" alone
+# "de_dust2_long" -> "de_dust2_long_dev", but leave an existing "de_dust2_long_dev" alone.
+# A folder named after the map (e.g. "materials/de_dust2_long/") is NOT renamed: the binary
+# .vmap references assets by path and cannot be edited, so asset folders keep their names.
 $rx = New-Object System.Text.RegularExpressions.Regex(
-    ([regex]::Escape($Map) + "(?!" + [regex]::Escape($Suffix) + ")"),
+    ([regex]::Escape($Map) + "(?!" + [regex]::Escape($Suffix) + "|[/\\])"),
     [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
 
 # Text formats whose content may reference the map name
@@ -96,8 +98,11 @@ $textExt = @(".txt", ".vpdi", ".vpost", ".vsndevts", ".vmat", ".vmdl", ".vdata",
 $latin1 = [System.Text.Encoding]::GetEncoding(28591)
 $prefix = if ($DryRun) { "[dry run] " } else { "" }
 
+# Only the file name is renamed; folders keep their names (see above).
 function Convert-RelativePath([string] $rel) {
-    return (($rel -split '\\') | ForEach-Object { $rx.Replace($_, $devName) }) -join '\'
+    $dir  = Split-Path -Parent $rel
+    $name = $rx.Replace((Split-Path -Leaf $rel), $devName)
+    if ($dir) { return Join-Path $dir $name } else { return $name }
 }
 
 function Get-EditedBytes([System.IO.FileInfo] $file) {
