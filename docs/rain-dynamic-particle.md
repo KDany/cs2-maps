@@ -1,8 +1,8 @@
-# Rain particle (`rain_medium.vpcf`)
+# Dynamic rain particle (`rain_dynamic.vpcf`)
 
 A single rain particle that is reused for every rain area of a map. Each `info_particle_system` in Hammer tells the particle **how large its area is** and **how many drops it emits**, so all areas share one `.vpcf` file and the rain has the same density everywhere.
 
-- File: `particles/rain_medium.vpcf` (in the addon's content folder)
+- File: `particles/rain_dynamic.vpcf` (in the addon's content folder)
 - Used by: the night environment prefab (`maps/prefabs/env_night.vmap`)
 - Inputs: control point **1**, set per entity with **Data CP** / **Data CP Value**
 
@@ -15,7 +15,8 @@ A single rain particle that is reused for every rain area of a map. Each `info_p
 | Z | emission rate (drops per second) |
 
 - The drops are created on a horizontal rectangle of `2·X × 2·Y` units, centred on the entity, **at the entity's height**.
-- They fall until they hit the ground or a roof (*Collision via traces*), so the height of the area does not need to be set: place the entity at the **top** of the area.
+- They fall straight down at a **constant speed** (1400 units/s) until they hit the ground or a roof (*Collision via traces*), so the height of the area does not need to be set: place the entity at the **top** of the area.
+- Put the tops of all areas of a map at the **same height** (like a cloud base). How dense the rain looks also depends on how much open air there is above the player, so equal tops keep it consistent.
 - The emission rate comes from the Z value, so a small and a large area get the same density when the rate is scaled with the area (see [Emission rate](#emission-rate)).
 
 ## Particle setup (Particle Editor)
@@ -25,8 +26,17 @@ A single rain particle that is reused for every rain area of a map. Each `info_p
 | :--- | :--- | :--- |
 | max particles | `1000` | Upper limit of live drops per system. With the default `250` the large areas hit the limit and look sparser than the small ones. |
 
-### Pre Emission Operator: Set control point positions (preview only)
-Gives control point 1 a value in the Particle Editor, where no Hammer entity sets it. **Disabled in the game**, so it never overrides the values from Hammer.
+### Preview-only functions
+Two functions exist only to preview the particle in the Particle Editor, where no Hammer entity gives control point 1 a value:
+
+- *Set control point positions* (Pre Emission Operator)
+- *Position modify offset random* (Initializer)
+
+> **Important:** *Only Enabled in Tools* is **not** enough to keep them out of the game: they also run in a game started from the Workshop Tools. There they override the values from Hammer (every area gets the preview size and rate, and the drops start 512 units too high).
+>
+> **Keep both unchecked** (the checkbox in front of the function) in the saved file. Check them only while previewing in the Particle Editor, and uncheck them again before saving.
+
+### Pre Emission Operator: Set control point positions (preview only, unchecked)
 
 | Property | Value |
 | :--- | :--- |
@@ -35,7 +45,7 @@ Gives control point 1 a value in the Particle Editor, where no Hammer entity set
 | second / third / fourth control point number | `5`, `6`, `7` (unused points) |
 | control point to offset positions | `0` |
 | set positions in world space | off |
-| **operator enabled in tools or game** | **Only Enabled in Tools** |
+| operator enabled in tools or game | Only Enabled in Tools |
 
 ### Emitter: Emit continuously
 | Property | Value |
@@ -51,19 +61,35 @@ Gives control point 1 a value in the Particle Editor, where no Hammer entity set
 
 The Z scale is `0`, so the drops are created at the entity's height and the Z value of control point 1 is free for the emission rate.
 
-### Initializer: Position modify offset random (preview only)
-Lifts the drops 512 units above the grid in the Particle Editor, otherwise they are created on the ground and the collision removes them immediately. **Disabled in the game**: there the entity is already at the top of the area.
+### Initializer: Velocity random
+| Property | Value |
+| :--- | :--- |
+| random speed min / max | `0` |
+| speed in local coordinate system min / max | `0 0 -1400` |
+
+Every drop gets the same downward speed, so the trails have the same length everywhere.
+
+### Initializer: Position modify offset random (preview only, unchecked)
+Lifts the drops 512 units above the grid in the Particle Editor, otherwise they are created on the ground and the collision removes them immediately. In the game the entity is already at the top of the area, so no offset is needed.
 
 | Property | Value |
 | :--- | :--- |
 | offset min / max | `0 0 512` |
 | offset in local space | off |
-| **operator enabled in tools or game** | **Only Enabled in Tools** |
+| operator enabled in tools or game | Only Enabled in Tools |
 
 It must be **below** *Position within box random* (initializers run from top to bottom).
 
+### Operator: Movement basic
+| Property | Value |
+| :--- | :--- |
+| gravity | `0 0 0` |
+| drag | `0` |
+
+No gravity and no drag: the drops keep the speed from *Velocity random* for their whole fall.
+
 ### Other functions
-Kept from the original rain particle: *Velocity random*, *Movement basic*, *Lifespan decay*, *Alpha decay for tracers*, *Collision via traces* (stops the drops on the ground and on roofs) and *Render sprite trail*.
+Kept from the original rain particle: *Lifespan decay*, *Alpha decay for tracers*, *Collision via traces* (stops the drops on the ground and on roofs) and *Render sprite trail* (`materials/particle/rain.vtex`, radius scale `0.1`, max trail length `100`).
 
 ## Using it in Hammer
 
@@ -72,7 +98,7 @@ Add one `info_particle_system` per rain area:
 | Property | Value |
 | :--- | :--- |
 | Name | the area's name, e.g. `Rain.Area.Pit` |
-| Particle System Name | `particles/rain_medium.vpcf` |
+| Particle System Name | `particles/rain_dynamic.vpcf` |
 | Start Active | on |
 | Origin | centre of the area horizontally, **top** of the area vertically |
 | Data CP | `1` |
@@ -96,9 +122,10 @@ An area of 640 × 640 units whose centre is at `-384 -640 320` and which is 640 
 - **Data CP Value:** `320 320 117` (300 × 640 × 640 / 1048576 ≈ 117)
 
 ### Live drops and the max particles limit
-A system holds about `rate × lifetime` drops at the same time (a drop lives until it reaches the ground, roughly 2–3 seconds from 640 units). Keep this below **max particles** (`1000`); otherwise new drops are not created and the area looks sparser. The largest area of `de_dust2_long` emits 84 drops per second, far below the limit.
+A system holds about `rate × fall time` drops at the same time (a drop lives until it reaches the ground; at 1400 units/s that is under a second even from 896 units). Keep this below **max particles** (`1000`); otherwise new drops are not created and the area looks sparser. The largest area of `de_dust2_long` emits 84 drops per second, far below the limit.
 
 ### Placement tips
+- Put the top of every area at the same height.
 - Areas may touch but should not overlap, otherwise the rain is twice as dense there.
 - Leave out covered places (balconies, tunnels, roofed parts); the drops do not need to be created where they can never fall.
 - Do not place rain far outside the playable space: every system that is on screen is simulated.
@@ -108,10 +135,12 @@ A system holds about `rate × lifetime` drops at the same time (a drop lives unt
 | Symptom | Cause / fix |
 | :--- | :--- |
 | No rain in the Particle Editor, `[Inactive]` in the viewport | The preview is stopped: press **Play / Restart**. |
-| No rain in the Particle Editor, preview running | Control point 1 has no value (check *Set control point positions*), the box uses CP# `0` instead of `1`, or both box scales are the same (min must be `-1 -1 0`). |
-| Rain far above the area in the game | *Position modify offset random* is not set to *Only Enabled in Tools*. |
-| Every area has the size of the preview area in the game | *Set control point positions* is not set to *Only Enabled in Tools*. |
+| No rain in the Particle Editor, preview running | The preview functions are unchecked (check them while previewing), the box uses CP# `0` instead of `1`, or both box scales are the same (min must be `-1 -1 0`). |
+| It still rains with Data CP Value Z = `0` | *Set control point positions* is checked and overrides Hammer's values. Uncheck it. |
+| Every area has the same size in the game | Same cause: *Set control point positions* is checked. |
+| Rain starts far above the area in the game | *Position modify offset random* is checked. Uncheck it. |
 | Small areas are much denser than large ones | The emission rate is not read from CP 1 `.Z`, or the large areas hit **max particles**. |
+| A small test area looks sparser than a large one | Usually not a bug: with the same density per area you look through less rain in a small, isolated area, and a lower top means less rain above you. Test with areas that touch and have the same top height, as on the real map. |
 | Rain under roofs | *Collision via traces* is missing or disabled, or the area reaches under the roof. |
 
 ## Rain areas of `de_dust2_long`
