@@ -26,3 +26,9 @@ desktop.ini
 
 # Decompiled world collision (regenerated from the .vmap on build)
 **/maps/*/world_physics*
+
+# Local test addon (not part of the repository)
+playground/
+
+# Generated night variant of a map (see README)
+**/maps/*_night.vmap
