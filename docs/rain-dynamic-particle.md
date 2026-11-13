@@ -88,8 +88,17 @@ It must be **below** *Position within box random* (initializers run from top to 
 
 No gravity and no drag: the drops keep the speed from *Velocity random* for their whole fall.
 
+### Operator: Alpha decay for tracers
+| Property | Value |
+| :--- | :--- |
+| start fade in / end fade in | `0` / `0.05` |
+| start fade out / end fade out | `0.8` / `2` |
+| start alpha / end alpha | `0` / `0` |
+
+A new drop fades in over **0.05 s** (about 70 units of fall), so it is fully visible almost right below the top of the area. The original `0.5 s` fade-in took about 700 units: drops in low areas reached the ground half transparent and the rain looked much sparser there. The fade-out never starts, because a drop reaches the ground in under a second.
+
 ### Other functions
-Kept from the original rain particle: *Lifespan decay*, *Alpha decay for tracers*, *Collision via traces* (stops the drops on the ground and on roofs) and *Render sprite trail* (`materials/particle/rain.vtex`, radius scale `0.1`, max trail length `100`).
+Kept from the original rain particle: *Lifespan decay*, *Collision via traces* (stops the drops on the ground and on roofs) and *Render sprite trail* (`materials/particle/rain.vtex`, radius scale `0.1`, max trail length `100`).
 
 ## Using it in Hammer
 
@@ -140,6 +149,7 @@ A system holds about `rate × fall time` drops at the same time (a drop lives un
 | Every area has the same size in the game | Same cause: *Set control point positions* is checked. |
 | Rain starts far above the area in the game | *Position modify offset random* is checked. Uncheck it. |
 | Small areas are much denser than large ones | The emission rate is not read from CP 1 `.Z`, or the large areas hit **max particles**. |
+| Rain in a low area looks much sparser and slower than in a high one | The fade-in of *Alpha decay for tracers* is too long, so the drops are still transparent when they reach the ground. Keep *end fade in* at `0.05`. |
 | A small test area looks sparser than a large one | Usually not a bug: with the same density per area you look through less rain in a small, isolated area, and a lower top means less rain above you. Test with areas that touch and have the same top height, as on the real map. |
 | Rain under roofs | *Collision via traces* is missing or disabled, or the area reaches under the roof. |
 
