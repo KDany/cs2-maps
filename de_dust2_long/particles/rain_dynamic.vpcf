@@ -1663,6 +1663,7 @@
 				m_vRandomMax = [ 0.0, 0.0, 0.0 ]
 			}
 			m_nToolsState = "PARTICLE_TOOLS_STATE_TOOLS_ONLY"
+			m_bDisableOperator = true
 		},
 	]
 	m_Operators = 
