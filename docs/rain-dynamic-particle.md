@@ -100,6 +100,22 @@ A new drop fades in over **0.05 s** (about 70 units of fall), so it is fully vis
 ### Other functions
 Kept from the original rain particle: *Lifespan decay*, *Collision via traces* (stops the drops on the ground and on roofs) and *Render sprite trail* (`materials/particle/rain.vtex`, radius scale `0.1`, max trail length `100`).
 
+### Child: `rain_ground_dynamic.vpcf` (splashes)
+`rain_dynamic` has one child system (*Children*), which draws a splash where a drop hits the ground. A child gets the parent's control points, so it needs no extra settings in Hammer.
+
+| Function | Setting | Why |
+| :--- | :--- | :--- |
+| Emit continuously | emission rate: **CP Component**, CP# `1`, `.Z` | about one splash per drop, the same rate as the parent |
+| Init from parent killed | event: *killed on collision* | the splash is created where a drop was removed by *Collision via traces* (`m_bKillonContact` in the parent) |
+| Velocity random | `0 0 -900` | **keep it**: the splash is thrown onto the surface and stays there; with `0` or an upward speed the splashes disappear |
+| Collision via traces | per-particle trace | stops the splash on the ground |
+| Fade and kill | fade in `0` → `0.05`, fade out `0.1` → `0.25` | the splash appears right at the impact and is gone after a quarter of a second |
+| Ramp scalar linear simple | rate `10`, start time `0` | the splash grows from the moment of impact |
+| Remap speed | alpha by speed | a moving splash is transparent, it shows when it has landed |
+| Render sprites | `materials/effects/splashwake1.vtex`, radius scale `0.3` | |
+
+To get fewer splashes, lower **Multiply By** of the child's emission rate (e.g. `0.5`).
+
 ## Using it in Hammer
 
 Add one `info_particle_system` per rain area:
@@ -148,6 +164,7 @@ A system holds about `rate × fall time` drops at the same time (a drop lives un
 | It still rains with Data CP Value Z = `0` | *Set control point positions* is checked and overrides Hammer's values. Uncheck it. |
 | Every area has the same size in the game | Same cause: *Set control point positions* is checked. |
 | Rain starts far above the area in the game | *Position modify offset random* is checked. Uncheck it. |
+| Splashes appear late or not at all | Check the child: fade-in must start at `0`, the emission rate must come from CP 1 `.Z`, and the velocity must stay `0 0 -900`. |
 | Small areas are much denser than large ones | The emission rate is not read from CP 1 `.Z`, or the large areas hit **max particles**. |
 | Rain in a low area looks much sparser and slower than in a high one | The fade-in of *Alpha decay for tracers* is too long, so the drops are still transparent when they reach the ground. Keep *end fade in* at `0.05`. |
 | A small test area looks sparser than a large one | Usually not a bug: with the same density per area you look through less rain in a small, isolated area, and a lower top means less rain above you. Test with areas that touch and have the same top height, as on the real map. |
