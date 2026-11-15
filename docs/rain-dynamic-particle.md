@@ -5,6 +5,7 @@ A single rain particle that is reused for every rain area of a map. Each `info_p
 - File: `particles/rain_dynamic.vpcf` (in the addon's content folder)
 - Used by: the night environment prefab (`maps/prefabs/env_night.vmap`)
 - Inputs: control point **1**, set per entity with **Data CP** / **Data CP Value**
+- See also: [Lightning and thunder](./lightning.md)
 
 ## How it works
 
