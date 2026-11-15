@@ -5,6 +5,8 @@
 [![PRs: not accepted](https://img.shields.io/badge/PRs-not%20accepted-red?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyBmaWxsPSJ3aGl0ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiI%2BPHBhdGggZD0iTTMuMjUgMUEyLjI1IDIuMjUgMCAwIDEgNCA1LjM3MnY1LjI1NmEyLjI1MSAyLjI1MSAwIDEgMS0xLjUgMFY1LjM3MkEyLjI1MSAyLjI1MSAwIDAgMSAzLjI1IDFabTkuNSA1LjVhLjc1Ljc1IDAgMCAxIC43NS43NXYzLjM3OGEyLjI1MSAyLjI1MSAwIDEgMS0xLjUgMFY3LjI1YS43NS43NSAwIDAgMSAuNzUtLjc1Wm0tMi4wMy01LjI3M2EuNzUuNzUgMCAwIDEgMS4wNiAwbC45Ny45Ny45Ny0uOTdhLjc0OC43NDggMCAwIDEgMS4yNjUuMzMyLjc1Ljc1IDAgMCAxLS4yMDUuNzI5bC0uOTcuOTcuOTcuOTdhLjc1MS43NTEgMCAwIDEtLjAxOCAxLjA0Mi43NTEuNzUxIDAgMCAxLTEuMDQyLjAxOGwtLjk3LS45Ny0uOTcuOTdhLjc0OS43NDkgMCAwIDEtMS4yNzUtLjMyNi43NDkuNzQ5IDAgMCAxIC4yMTUtLjczNGwuOTctLjk3LS45Ny0uOTdhLjc1Ljc1IDAgMCAxIDAtMS4wNlpNMi41IDMuMjVhLjc1Ljc1IDAgMSAwIDEuNSAwIC43NS43NSAwIDAgMC0xLjUgMFpNMy4yNSAxMmEuNzUuNzUgMCAxIDAgMCAxLjUuNzUuNzUgMCAwIDAgMC0xLjVabTkuNSAwYS43NS43NSAwIDEgMCAwIDEuNS43NS43NSAwIDAgMCAwLTEuNVoiLz48L3N2Zz4%3D)](./CONTRIBUTING.md)
 [![Bugs: report here](https://img.shields.io/badge/Bugs-report%20here-yellow?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyBmaWxsPSJ3aGl0ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiI%2BPHBhdGggZD0iTTQuNzIuMjJhLjc1Ljc1IDAgMCAxIDEuMDYgMGwxIC45OTlhMy40ODggMy40ODggMCAwIDEgMi40NDEgMGwuOTk5LTFhLjc0OC43NDggMCAwIDEgMS4yNjUuMzMyLjc1Ljc1IDAgMCAxLS4yMDUuNzI5bC0uNzc1Ljc3NmMuNjE2LjYzLjk5NSAxLjQ5My45OTUgMi40NDR2LjMyN2MwIC4xLS4wMDkuMTk3LS4wMjUuMjkyLjQwOC4xNC43NjQuMzkyIDEuMDI5LjcyMmwxLjk2OC0uNzg3YS43NS43NSAwIDAgMSAuNTU2IDEuMzkyTDEzIDcuMjU4VjloMi4yNWEuNzUuNzUgMCAwIDEgMCAxLjVIMTN2LjVjMCAuNDA5LS4wNDkuODA2LS4xNDEgMS4xODZsMi4xNy44NjhhLjc1Ljc1IDAgMCAxLS41NTcgMS4zOTJsLTIuMTg0LS44NzNBNC45OTcgNC45OTcgMCAwIDEgOCAxNmE0Ljk5NyA0Ljk5NyAwIDAgMS00LjI4OC0yLjQyN2wtMi4xODMuODczYS43NS43NSAwIDAgMS0uNTU4LTEuMzkybDIuMTctLjg2OEE1LjAzNiA1LjAzNiAwIDAgMSAzIDExdi0uNUguNzVhLjc1Ljc1IDAgMCAxIDAtMS41SDNWNy4yNThMLjk3MSA2LjQ0NmEuNzUuNzUgMCAwIDEgLjU1OC0xLjM5MmwxLjk2Ny43ODdjLjI2NS0uMzMuNjItLjU4MyAxLjAzLS43MjJhMS42NzcgMS42NzcgMCAwIDEtLjAyNi0uMjkyVjQuNWMwLS45NTEuMzgtMS44MTQuOTk1LTIuNDQ0TDQuNzIgMS4yOGEuNzUuNzUgMCAwIDEgMC0xLjA2Wm0uNTMgNi4yOGEuNzUuNzUgMCAwIDAtLjc1Ljc1VjExYTMuNSAzLjUgMCAxIDAgNyAwVjcuMjVhLjc1Ljc1IDAgMCAwLS43NS0uNzVaTTYuMTczIDVoMy42NTRBLjE3Mi4xNzIgMCAwIDAgMTAgNC44MjdWNC41YTIgMiAwIDEgMC00IDB2LjMyN2MwIC4wOTYuMDc3LjE3My4xNzMuMTczWiIvPjwvc3ZnPg%3D%3D)](https://github.com/KDany/steam-workshop/issues/new/choose)
 
+![CS2 Maps – Raw Hammer source files of my Counter-Strike 2 maps](./docs/images/banner.png)
+
 # KDany's CS2 map source files
 
 Welcome to my central repository for Counter-Strike 2 mapping projects. This repository serves as a personal portfolio and a public archive containing the raw source files, geometry, and custom assets for my custom maps built using the Source 2 Hammer Editor.
@@ -46,6 +48,17 @@ Each map has its own folder in the root of the repository, named after the map (
 
 Copying the whole folder (not just the `.vmap`) makes sure that every custom material, model and sound the map depends on is in place.
 
+### 🌙 Day and night variants
+
+Some maps have a night variant next to the regular (day) map, e.g. `de_dust2_long_night`. Both are built from the same source:
+
+- `maps/<map_name>.vmap` contains the map itself. Everything that differs between day and night (sun/moon, sky, fog, post-processing, fill lights, dust and smoke cards, rain) lives in an environment prefab: `maps/prefabs/env_summer.vmap` or `maps/prefabs/env_night.vmap`. The main map references `env_summer`.
+- `maps/<map_name>_night.vmap` is **not stored in this repository** — it is generated before each release and must never be edited by hand:
+  1. Open `maps/<map_name>.vmap` in Hammer and **File > Save As** `maps/<map_name>_night.vmap`.
+  2. Select the environment prefab instance and change its **Target Map Path** to `maps/prefabs/env_night.vmap`. Save.
+  3. Build both maps. Each one is compiled into its own `.vpk`, and uploading the addon publishes both.
+- The night map needs its own copies of the files named after the map: the radar images and `.vpdi` (with the radar path inside renamed), and in `game_files/` the Retakes spawns `maps/<map_name>_night_retake.txt` and the overview `resource/overviews/<map_name>_night.txt` (with the map name on its first line renamed).
+
 ## 🗺️ My CS2 Maps Portfolio
 
 | Map Name | Game Mode | Raw Source Files (GitHub) | Playable Version (Steam Workshop) | Status / Notes |
@@ -60,19 +73,18 @@ Status legend: 🟢 Released · 🟡 Beta · 🔴 Alpha / Testing
 
 ## 🏷️ Versions
 
-Every map has a **release** Workshop item and a separate **playtest** Workshop item for testing upcoming versions. Each upload gets a version number, and the matching source state is tagged in this repository:
+Every map has a **release** Workshop item. Each release gets a version number, and the matching source state is tagged in this repository:
 
-| Map | Release | In playtest | Changes |
-| :--- | :--- | :--- | :--- |
-| **de_dust2_long** | v1.2 · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227) · [`de_dust2_long-v1.2`](https://github.com/KDany/cs2-maps/releases/tag/de_dust2_long-v1.2) | *none* · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730701113) | [CHANGELOG](./CHANGELOG.md#de_dust2_long) |
+| Map | Release | Changes |
+| :--- | :--- | :--- |
+| **de_dust2_long** | v1.2 · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227) · [`de_dust2_long-v1.2`](https://github.com/KDany/cs2-maps/releases/tag/de_dust2_long-v1.2) | [CHANGELOG](./CHANGELOG.md#de_dust2_long) |
 
-- Releases are tagged as `<map_name>-v<version>` (e.g. `de_dust2_long-v1.1`); playtest betas are not tagged. Browse them under [Tags](https://github.com/KDany/cs2-maps/tags), or download a release's compiled `.vpk` from [Releases](https://github.com/KDany/cs2-maps/releases).
-- The playtest version uses the map name `<map_name>_dev` (e.g. `de_dust2_long_dev`), so it can be installed next to the release version.
-- To create or update the local `_dev` addon from this repository (and back), use [`tools/sync-dev-addon.ps1`](./tools/sync-dev-addon.ps1). It renames every file named after the map (`.vmap`, radar images, `.vpdi`, `.vpost`, ...) and replaces the map name inside text files (e.g. the radar path in the `.vpdi`):
+- Releases are tagged as `<map_name>-v<version>` (e.g. `de_dust2_long-v1.2`). Browse them under [Tags](https://github.com/KDany/cs2-maps/tags), or download a release's compiled `.vpk` from [Releases](https://github.com/KDany/cs2-maps/releases).
+- Occasionally a pre-release build may be uploaded to a separate **playtest** Workshop item (e.g. [Dust II Long (Playtest)](https://steamcommunity.com/sharedfiles/filedetails/?id=3730701113)). It uses the map name `<map_name>_dev`, so it can be installed next to the release version. Playtest builds are not part of this repository.
+- The playtest addon is created from the release addon with [`tools/copy-to-dev.ps1`](./tools/copy-to-dev.ps1). It copies one way only (release → `_dev`), renames every file named after the map (`.vmap`, radar images, `.vpdi`, the Retakes and overview `.txt` files) and replaces the map name inside text files:
   ```
-  powershell -ExecutionPolicy Bypass -File .\tools\sync-dev-addon.ps1 -Map de_dust2_long -DryRun  # preview only, changes nothing
-  powershell -ExecutionPolicy Bypass -File .\tools\sync-dev-addon.ps1 -Map de_dust2_long          # repo -> <map>_dev addon
-  powershell -ExecutionPolicy Bypass -File .\tools\sync-dev-addon.ps1 -Map de_dust2_long -ToRepo  # <map>_dev addon -> repo
+  powershell -ExecutionPolicy Bypass -File .\tools\copy-to-dev.ps1 -Map de_dust2_long -DryRun  # preview only, changes nothing
+  powershell -ExecutionPolicy Bypass -File .\tools\copy-to-dev.ps1 -Map de_dust2_long          # <map> addon -> <map>_dev addon
   ```
 - The full history of every map is in [CHANGELOG.md](./CHANGELOG.md).
 
