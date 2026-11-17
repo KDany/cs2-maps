@@ -46,7 +46,7 @@ Layer0
 	g_fPuddleRoughness "0.010"
 	g_fPuddleSedimentHeight "1.000"
 	g_fPuddleSedimentOpacity "0.500"
-	g_fPuddleStrength "1.000"
+	g_fPuddleStrength "0.000" // no puddles on the CT gate transition
 	g_fRainStrength "1.000"
 	g_fRippleStrength "1.000"
 	g_fWetEdgeSpread "0.200"
