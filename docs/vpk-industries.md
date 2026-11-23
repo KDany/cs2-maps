@@ -138,6 +138,24 @@ VPK Industries sells its weather. Motto: *"The darkness is free. The light costs
 - **Merchandise:** the VPK Industries umbrella, sold separately. *"Because we know what's coming."*
 - **Patents:** *"Patent pending: Wet."*
 
+## Branding
+
+| Logo | Description | Files ([`docs/images/vpk-industries/`](./images/vpk-industries/)) |
+| :--- | :--- | :--- |
+| **VPK Industries** | A square partitioned like a BSP tree; the first two splits draw a yellow **V**. A nod to the company's BSP Industries past. | `vpk-industries_logo_2048x640.png` (with name and slogan), `vpk-industries_logo_icon_1024.png` (transparent), `vpk-industries_logo_icon_navy_1024.png` |
+| **Nonvis Division** | A wireframe cube with its hidden edges dashed ("never rendered") and an eye in the middle (it sees everything). | `nonvis-division_logo_2048x640.png`, `nonvis-division_logo_icon_1024.png`, `nonvis-division_logo_icon_navy_1024.png` |
+
+| Colour | Hex | Use |
+| :--- | :--- | :--- |
+| Nonvis Navy | `#18223A` | background of logos and signs |
+| Enamel White | `#ECEEF0` | text, logo lines |
+| Hazard Yellow | `#E0B030` | the V, the eye, highlights, warnings |
+| Signal Red | `#B2221E` | "CLASSIFIED", incidents |
+| Terminal Teal | `#96D4C7` | screens, the Nonvis slogan |
+
+- **Fonts:** Bebas Neue for names and titles, JetBrains Mono for technical text.
+- **Voice:** short, confident sentences, ™ on every product, friendly menace (*"Thank you for not kicking the server."*).
+
 ## Texts used in the rooms
 
 | Where | Text |
@@ -151,7 +169,7 @@ VPK Industries sells its weather. Motto: *"The darkness is free. The light costs
 | Cooled tank | `KD-PX-005 · Kd₂O(s) · CRYSTALLINE PHASE · KEEP BELOW 0 °K… WAIT, NO.` (the wrong unit is on purpose) |
 | Periodic table tile | a large **Kd**, `404` in the corner, *Kdanium* below |
 | Warning sign | `KDANIUM STORAGE · CONTAINS UNSTABLE WEATHER` |
-| Door sign | `NONVIS-001 FACILITY · CODE NAME: OASIS · SECTOR: DUST II · AUTHORIZED PERSONNEL ONLY · IF YOU CAN READ THIS, SOMETHING WENT WRONG.` (one number per facility) |
+| Door sign | `NONVIS-001 FACILITY · CODE NAME: OASIS · SECTOR: DUST II · AUTHORIZED PERSONNEL ONLY · PLEASE RETURN TO THE PLAYABLE AREA!`, with both logos (one number per facility) |
 
 ## Screens
 
