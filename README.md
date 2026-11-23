@@ -28,6 +28,10 @@ Each map has its own folder in the root of the repository, named after the map (
 └── sounds/      -> custom sounds (if any)
 ```
 
+> **`docs/`:** setup notes for the more complex effects, shared by all maps:
+> - [Dynamic rain particle](./docs/rain-dynamic-particle.md) — `rain_dynamic` and its splash child particle: sizing the rain boxes, the emission rate formula and troubleshooting.
+> - [Lightning and thunder](./docs/lightning.md) — the lightning flash, sky particles and thunder sound, driven by a random timer.
+
 > **`game_files/`:** a few files are not compiled from the sources but read by the game directly (e.g. the Retakes spawns `maps/<map_name>_retake.txt` and the radar position `resource/overviews/<map_name>.txt`). Copy the contents of `<map_name>/game_files/` into `.../Counter-Strike Global Offensive/game/csgo_addons/<map_name>/`.
 
 > **Downloading:** All map files are stored as regular Git files, so a simple `git clone` or GitHub's **Code > Download ZIP** gives you everything you need — no extra tools required.
