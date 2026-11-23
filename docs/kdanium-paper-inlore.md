@@ -54,7 +54,7 @@ All experiments were carried out in NONVIS-001 "Oasis", a facility located in a 
 | Melting point | yes |
 | Boiling point | depends on the active season module |
 | Density | 1 Kd per Kd |
-| Half-life | one round |
+| Half-Life | 3 |
 | Smell | wet sand |
 | Taste | do not |
 
