@@ -229,14 +229,19 @@ Ideas for props and textures:
 - a framed one-pint banknote on the wall: *"In Cow We Trust"*,
 - a poster: *"Report all milk hoarding."*
 
-Newspaper front pages from the crisis (1024×1448, in [`docs/images/vpk-industries/`](./images/vpk-industries/)):
+Newspaper front pages from the crisis (1024×1448, in [`docs/images/vpk-industries/`](./images/vpk-industries/)). The photos were generated with an image AI from a single prompt as a 3×3 grid, then cut apart and printed onto the pages with a newspaper halftone.
 
 | File | Front page |
 | :--- | :--- |
-| `newspaper_daily-pint_milk-overtakes-gold_1024x1448.png` | *The Daily Pint*: "Milk overtakes gold", a chart of milk against gold |
-| `newspaper_dairy-herald_soft-drinks-go-flat_1024x1448.png` | *The Dairy Herald*: "Soft drinks go flat", the last bottle of cola |
+| `newspaper_daily-pint_milk-overtakes-gold_1024x1448.png` | *The Daily Pint*: "Milk overtakes gold", a glass of milk on a stack of gold bars |
+| `newspaper_dairy-herald_soft-drinks-go-flat_1024x1448.png` | *The Dairy Herald*: "Soft drinks go flat", empty shelves, shoppers queuing for dairy |
 | `newspaper_udder-times_great-fridge-heist_1024x1448.png` | *The Udder Times*: "Great fridge heist", the empty milk reserve and a KD-PX crate |
-| `newspaper_evening-moo_long-may-she-reign_1024x1448.png` | *The Evening Moo*: "Long may she reign", the coronation of Bessie IV; side box: LactoKd™ recalled |
+| `newspaper_evening-moo_long-may-she-reign_1024x1448.png` | *The Evening Moo*: "Long may she reign", Bessie IV crowned; side box: LactoKd™ recalled |
+| `newspaper_daily-pint_lactose-accords-signed_1024x1448.png` | *The Daily Pint*: "Lactose Accords signed", diplomats and their cows |
+| `newspaper_udder-times_oat-milk-rebellion_1024x1448.png` | *The Udder Times*: "Oat milk rebellion ends" |
+| `newspaper_dairy-herald_bovine-reserve-raises-rate_1024x1448.png` | *The Dairy Herald*: "Rate raised to 4% cream", the Bovine Reserve press conference |
+| `newspaper_evening-moo_milk-rationed_1024x1448.png` | *The Evening Moo*: "Milk rationed", one glass per person per day |
+| `newspaper_daily-pint_vpk-denies-everything_1024x1448.png` | *The Daily Pint*: "VPK denies everything", a spokesperson with a glass of milk on the podium |
 
 ### What comes next
 
