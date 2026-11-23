@@ -229,6 +229,15 @@ Ideas for props and textures:
 - a framed one-pint banknote on the wall: *"In Cow We Trust"*,
 - a poster: *"Report all milk hoarding."*
 
+Newspaper front pages from the crisis (1024×1448, in [`docs/images/vpk-industries/`](./images/vpk-industries/)):
+
+| File | Front page |
+| :--- | :--- |
+| `newspaper_daily-pint_milk-overtakes-gold_1024x1448.png` | *The Daily Pint*: "Milk overtakes gold", a chart of milk against gold |
+| `newspaper_dairy-herald_soft-drinks-go-flat_1024x1448.png` | *The Dairy Herald*: "Soft drinks go flat", the last bottle of cola |
+| `newspaper_udder-times_great-fridge-heist_1024x1448.png` | *The Udder Times*: "Great fridge heist", the empty milk reserve and a KD-PX crate |
+| `newspaper_evening-moo_long-may-she-reign_1024x1448.png` | *The Evening Moo*: "Long may she reign", the coronation of Bessie IV; side box: LactoKd™ recalled |
+
 ### What comes next
 
 The crisis has never officially ended; VPK Industries considers it *"stable"*. A **Second Milk Crisis** is planned for the winter version: DynaSnow™ freezes the world's milk reserves solid.
@@ -276,7 +285,7 @@ Posters (1024×1536) for the walls of the rooms, same folder:
 | `poster_employee-of-the-month_1024x1536.png` | Employee of the Month: Daniel K., "photo unavailable", every month |
 | `poster_the-darkness-is-free_1024x1536.png` | *"The darkness is free. The light costs extra."*: Light Subscription™, a street lamp with a price tag |
 | `poster_kdanium_1024x1536.png` | *"The element of perfection."*: the Kd 404 periodic table tile |
-| `poster_days-without-an-incident_1024x1536.png` | Days without an incident: **0**, the three incident reports, *"Safety is our number two priority."* |
+| `poster_days-without-an-incident_1024x1536.png` | Days without an incident: **0**, the four incident reports, *"Safety is our number two priority."* |
 | `poster_do-not-kick-the-server_1024x1536.png` | *"Do not kick the server. Again."*: the S.T.R.A.T.O.S. cabinet and a crossed-out boot (Incident Report #002) |
 | `poster_we-are-not-hiring_1024x1536.png` | *"Join the Nonvis Division"* with a "POSITION FILLED" stamp; every position: Daniel K. |
 | `poster_clear-sky-unlock_1024x1536.png` | *"Miss the sun?"*: Clear Sky Unlock for 4.99, locked sun, "UNAVAILABLE" stamp |
