@@ -172,6 +172,17 @@ Posters (1024×1536) for the walls of the rooms, same folder:
 | `poster_dynasnow-coming-soon_1024x1536.png` | DynaSnow™ coming soon: flake No. 000 000 001, *"Store below 0 °K… wait, no."*, *"Do not lick."* |
 | `poster_incident-report-001_1024x1536.png` | Incident Report #001 as a redacted paper document with a "CLASSIFIED" stamp |
 | `poster_lightning-loot-box_1024x1536.png` | *"Feeling lucky?"*: Lightning Loot Box™, 0.01% chance of gold |
+| `poster_wash-your-hands_1024x1536.png` | *"Wash your hands."*: Kdanium residue may cause local rain, mild glowing, unscheduled weather |
+| `poster_playable-area-this-way_1024x1536.png` | Green wayfinding sign: playable area →, *"You are here: nowhere"*, route: noclip |
+| `poster_thunder-plus_1024x1536.png` | *"Thunder+. Now ad-free."* |
+
+Nonvis Division posters (with the Nonvis logo in the footer):
+
+| File | Poster |
+| :--- | :--- |
+| `poster_nonvis_this-area-does-not-exist_1024x1536.png` | *"This area does not exist."*: a dashed, "not rendered" room |
+| `poster_nonvis_clearance-levels_1024x1536.png` | Clearance levels 0–4: player, spectator, noclip, Hammer, Daniel K. *"Your current level: 2. Please leave."* |
+| `poster_nonvis_never-rendered_1024x1536.png` | *"Never rendered. Always running."*: a dashed wireframe figure, *"Be the edge nobody draws."* |
 
 ## Texts used in the rooms
 
