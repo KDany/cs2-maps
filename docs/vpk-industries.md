@@ -353,6 +353,12 @@ Posters (1024×1536) for the walls of the rooms, same folder:
 | `poster_feeling-the-urge_1024x1536.png` | *"Feeling the urge?"*: the AWP in the buy menu for $4,750 with $1,400 in the bank, *"Insufficient funds. Buy anyway?"*; buying it on an eco round *"is a completely normal decision.\*"*, *"not related to DynaSnow™ consumption. Probably."* |
 | `poster_great-global-milk-crisis_1024x1536.png` | The Great Global Milk Crisis: a crowned glass of milk on a pile of gold bars, *"Milk: now worth more than gold. VPK Industries had nothing to do with it.\*"* |
 | `poster_milk-crisis-public-notice_1024x1536.png` | A public notice from the first days of the crisis: what is happening, what you can do (*"one glass per person per day"*), and a statement from VPK Industries: *"This is a coincidence. VPK Industries had nothing to do with it."* |
+| `poster_notice_milk-rationing_1024x1536.png` | Public notice no. 2 of 404, milk rationing: *"VPK Industries has never caused anything."* |
+| `poster_notice_beware-counterfeit-milk_1024x1536.png` | Public notice no. 7 of 404, counterfeit milk: *"All VPK milk is 100% synthetic. That is a completely different thing."* |
+| `poster_notice_respect-the-cow_1024x1536.png` | Public notice no. 19 of 404, respect the cow: *"They were always sacred. We checked."* |
+| `poster_notice_soft-drinks-farewell_1024x1536.png` | Public notice no. 42 of 404, a farewell to soft drinks: *"We were somewhere else at the time."* |
+| `poster_notice_moolah-update_1024x1536.png` | Public notice no. 128 of 404, an update on your Moolah: *"Technically, neither did you: you never had any."* |
+| `poster_notice_frozen-milk-advisory_1024x1536.png` | Public notice no. 403 of 404, frozen milk advisory: *"Winter happens every year."* |
 
 Nonvis Division posters (with the Nonvis logo in the footer):
 
