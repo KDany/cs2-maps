@@ -84,6 +84,8 @@ Every street light, every door, every asset in the world, watched at all times. 
 
 Discovered by our Chief Scientist, **Daniel K.**, **Kdanium** is the most versatile substance in any world. With the right catalyst, it becomes rain, snow, fire, smoke, or anything else a world might need. You will not find it in any periodic table. *That is not a mistake.*
 
+Kdanium is the most perfect element ever created.¹ Handle it with the confidence it deserves.²
+
 ## The KD-PX catalogue
 
 ### Synthetic phenomena, packaged for your world.
@@ -92,11 +94,11 @@ Every VPK particle effect is a certified Kdanium compound from our **KD-PX** (*P
 
 | Code | Product | Compound | Notes |
 | :--- | :--- | :--- | :--- |
-| **KD-PX-001** | **DynaRain™** | Kd₂O, synthetic precipitation agent | *Wetter than nature.* Size and intensity adjustable to any area. |
-| **KD-PX-002** | **DynaRain™ Splash** | impact-reactive Kd₂O | Every drop lands with confidence. |
-| **KD-PX-003** | **Fire** | Kdanium oxide | Strongly exothermic. Keep away from paperwork. |
-| **KD-PX-004** | **Cigarette Smoke** | aerosolized Kd ash | Not to be inhaled. Smoking kills. Ours especially. |
-| **KD-PX-005** | **DynaSnow™** | Kd₂O(s), "Kdanium Crystal" | The same trusted Kd₂O, now in crystalline phase. Every flake is serial-numbered, so no two are ever alike. Store below 0 °K… wait, no. **Do not lick.** |
+| **KD-PX-001** | **DynaRain™** | Kd₂O, synthetic precipitation agent | *Wetter than nature.* Size and intensity adjustable to any area.³ |
+| **KD-PX-002** | **DynaRain™ Splash** | impact-reactive Kd₂O | Every drop lands with confidence. Avoid skin contact. |
+| **KD-PX-003** | **Fire** | Kdanium oxide | Strongly exothermic. Keep away from paperwork. Fumes may cause mild headaches. |
+| **KD-PX-004** | **Cigarette Smoke** | aerosolized Kd ash | Not to be inhaled. Smoking kills. Ours especially.⁴ |
+| **KD-PX-005** | **DynaSnow™** | Kd₂O(s), "Kdanium Crystal" | The same trusted Kd₂O, now in crystalline phase. Every flake is serial-numbered, so no two are ever alike. Store below 0 °K… wait, no. **Do not lick.**⁵ |
 
 **Coming soon:**
 - **KD-PX-006 · Kd Frost:** Kd₂O deposited directly onto the ground, for that freshly frozen look.
@@ -159,6 +161,11 @@ The official **VPK Industries umbrella**. Sold separately. *Because we know what
 
 ## Frequently asked questions
 
+**Is Kdanium safe?**
+Kdanium is perfectly safe.* Perfection is, after all, in our name.
+
+<sub>* When not touched, inhaled, licked, drunk, or looked at for extended periods.</sub>
+
 **Is the weather on my map real?**
 It is better than real. It is ours.
 
@@ -181,5 +188,9 @@ Somewhere you cannot see them.
 You cannot. We will contact you.
 
 If you really must, our customer support is available at **404**.
+
+<sub>¹ Perfection is not guaranteed. ² Gloves recommended. Contact may cause skin irritation, itching and a faint teal glow until the next round. ³ Prolonged exposure to DynaRain™ may cause hearing footsteps that are not there. ⁴ Inhalation may cause headaches and slow your reflexes by up to 20 ms. VPK Industries is not responsible for lost aim duels. ⁵ May cause brain freeze and a sudden urge to buy an AWP on an eco round.</sub>
+
+<sub>Other reported side effects of Kdanium include: a crosshair that slowly drifts towards the floor, uncontrollable team flashes, deranking, the urge to rush B on maps without a B site, seeing rain indoors, and smelling faintly of wet sand. All side effects are rare, mild and entirely your fault.</sub>
 
 <sub>VPK Industries, the Nonvis Division, Kdanium and all KD-WX, KD-MCS and KD-PX products are fictional. No worlds were harmed in the making of this brochure. Kdanium has not been approved for consumption in any world. Weather may vary from round to round. VPK Industries is not responsible for wet floors, blinded snipers or kicked servers. CLASSIFIED · NONVIS CLEARANCE REQUIRED.</sub>

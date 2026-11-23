@@ -75,6 +75,19 @@ Each particle effect is a numbered Kdanium compound of the **KD-PX** series (*Pa
 
 **Snow, KD-PX-005:** rain and snow are the same compound in two phases: Kd₂O as a liquid is DynaRain™, Kd₂O(s) is DynaSnow™. The winter module of S.T.R.A.T.O.S. simply cools it down. Every flake is serial-numbered, because VPK Industries does not leave it to chance that no two are alike. Storage: "below 0 °K", according to the label on the tank; the unit is wrong on purpose, as nothing can be below absolute zero.
 
+**Side effects.** VPK Industries advertises Kdanium as the most perfect element ever made. The warnings are only ever found in footnotes, fine print and the occasional asterisk:
+
+| Exposure | Known side effect |
+| :--- | :--- |
+| Skin contact | Irritation, itching, a faint teal glow that lasts until the next round |
+| Inhalation (fumes, smoke, KD-PX-004) | Headache, slowed reflexes (*"up to 20 ms; VPK Industries is not responsible for lost aim duels"*) |
+| Prolonged exposure to DynaRain™ | Hearing footsteps that are not there |
+| Licking DynaSnow™ | Brain freeze, the sudden urge to buy an AWP on an eco round |
+| Any exposure | Crosshair slowly drifting towards the floor, uncontrollable team flashes, deranking |
+| Long-term exposure | The urge to rush B on maps without a B site; seeing rain indoors; smelling of wet sand |
+
+The tone stays the same everywhere: the product is perfect, the side effects are *"rare, mild and entirely your fault"*.
+
 ## Backstory
 
 - The company was founded in the GoldSrc era as **BSP Industries** (*Binary Space Partitioning Industries*), named after the map format of the GoldSrc and Source engines (`.bsp`). It partitioned space and built the first worlds.
