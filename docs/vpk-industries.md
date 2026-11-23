@@ -156,6 +156,17 @@ VPK Industries sells its weather. Motto: *"The darkness is free. The light costs
 - **Fonts:** Bebas Neue for names and titles, JetBrains Mono for technical text.
 - **Voice:** short, confident sentences, ™ on every product, friendly menace (*"Thank you for not kicking the server."*).
 
+Posters (1024×1536) for the walls of the rooms, same folder:
+
+| File | Poster |
+| :--- | :--- |
+| `poster_rain-is-a-privilege_1024x1536.png` | *"Rain is a privilege."*: a DynaRain™ drop of Kd₂O, Weather Pass™ ad |
+| `poster_report-all-vandalism_1024x1536.png` | *"Report all vandalism. V.I.G.I.L. already did."*, with the Nonvis eye |
+| `poster_employee-of-the-month_1024x1536.png` | Employee of the Month: Daniel K., "photo unavailable", every month |
+| `poster_the-darkness-is-free_1024x1536.png` | *"The darkness is free. The light costs extra."*: Light Subscription™, a street lamp with a price tag |
+| `poster_kdanium_1024x1536.png` | *"The element of perfection."*: the Kd 404 periodic table tile |
+| `poster_days-without-an-incident_1024x1536.png` | Days without an incident: **0**, the three incident reports, *"Safety is our number two priority."* |
+
 ## Texts used in the rooms
 
 | Where | Text |
