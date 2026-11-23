@@ -69,6 +69,28 @@ Each particle effect is a numbered Kdanium compound of the **KD-PX** series (*Pa
 | KD-PX-006 *(planned)* | `kdpx_snow_ground.vpcf` | | **Kd frost**, Kd₂O deposited on the ground |
 | KD-PX-007 *(planned)* | `kdpx_blizzard.vpcf` | | supersaturated **Kd₂O(s) aerosol**, the winter counterpart of a storm |
 
+**Expanded catalogue.** The rest of the series is lore only for now; the file names are the planned names if such a particle is ever made.
+
+| Code | Planned file | Product | Compound | Description | Side effect |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **KD-PX-000** | | **Prima Materia** | pure, undiluted Kdanium | The original formula; fuel of the Rainmaker Mk I. Never released, for obvious reasons. | see Incident Report #001 |
+| **KD-PX-008** | `kdpx_dyna_dust.vpcf` | **DynaDust™** | Kd silicate | Sandstorm and drifting dust; the official air of Dust II. | sand in places sand never reached |
+| **KD-PX-009** | `kdpx_golden_motes.vpcf` | **Golden Motes™** | Kd glitter | Dust motes floating in sunbeams. *"Makes every corner look expensive."* | the map suddenly looks too nice |
+| **KD-PX-010** | `kdpx_vent_vapor.vpcf` | **Vent Vapor™** | Kd steam | Steam from vents and drains. | mild humidity in your pockets |
+| **KD-PX-011** | `kdpx_volumetric_fog.vpcf` | **Volumetric Mystery™** | Kd fog | Distant fog that anything can come out of. | enemies always come from where you are not looking |
+| **KD-PX-012** | `kdpx_smoke_screen.vpcf` | **SmokeScreen Pro™** | Kd aerosol, 18 s | The content of a smoke grenade. *"One-way smokes sold separately."* | your teammate always throws it in the wrong place |
+| **KD-PX-013** | `kdpx_flash.vpcf` | **Flash Concentrate™** | concentrated Kd photons | The filling of a flashbang. | only works on teammates |
+| **KD-PX-014** | `kdpx_molotov.vpcf` | **Molotov Lite™** | Kdanium oxide gel | A burning patch on the ground; extinguished by smoke, by contract. | the fire always spreads exactly onto your step |
+| **KD-PX-015** | `kdpx_impact_dust.vpcf` | **Impact Dust™** | Kd debris | Dust and sparks of bullet impacts. *"Every miss a little more beautiful."* | |
+| **KD-PX-016** | `kdpx_stattrak_residue.vpcf` | **StatTrak™ Residue** | Kd counter powder | Starts counting on contact. What it counts is not documented. | the number only goes up |
+| **KD-PX-017** | `kdpx_rankup_sparkles.vpcf` | **Rank-Up Sparkles™** | festive Kd confetti | Sparkles on a rank up. | currently out of stock |
+| **KD-PX-018** | `kdpx_defuse_confetti.vpcf` | **Defuse Confetti™** | Kd paper | Confetti when the bomb is defused. Or not. | starts 10 seconds late |
+| **KD-PX-064** | | **Tick Fog™** | time-shifted Kd | *"Not our product. Do not ask."* Somehow your shot always lands one tick later. | see the "Missed that shot?" poster |
+| **KD-PX-128** | | **Phantom Footstep Aerosol** | audible Kd | Sprays footsteps into the air. Officially does not exist. | footsteps that are not there |
+| **KD-PX-404** | `kdpx_missing_texture.vpcf` | **Missing Texture Gas** | pink and black checkerboard aerosol | Hammer's missing texture in gaseous form. *"Not found."* | everything turns pink and black |
+
+The classified products have programmer numbers instead of the next free code: 64 and 128 for the tick rates, 404 for "not found". The company denies any connection between KD-PX-064 / KD-PX-128 and the side effects that look exactly like them.
+
 - **File names:** every custom particle starts with `kdpx_`, so searching for `kdpx` in the Asset Browser lists all of them. The compound number is only used in the lore and on signs, not in the file name.
 - **Product names:** a product name (e.g. *DynaRain™*) is optional; *Dyna* marks particles whose size and rate are set from Hammer (see the [rain particle doc](./rain-dynamic-particle.md)).
 - The current rain particles are still named `rain_dynamic.vpcf` and `rain_ground_dynamic.vpcf`; the `kdpx_` names above are the planned names.
@@ -87,6 +109,8 @@ Each particle effect is a numbered Kdanium compound of the **KD-PX** series (*Pa
 | Long-term exposure | The urge to rush B on maps without a B site; seeing rain indoors; smelling of wet sand |
 
 The tone stays the same everywhere: the product is perfect, the side effects are *"rare, mild and entirely your fault"*.
+
+For the full, in-universe scientific paper on Kdanium (discovery, chemistry, mass production and its use in S.T.R.A.T.O.S.), see [kdanium-paper-inlore.md](./kdanium-paper-inlore.md).
 
 ## Backstory
 

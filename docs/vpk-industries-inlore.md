@@ -106,6 +106,31 @@ Every VPK particle effect is a certified Kdanium compound from our **KD-PX** (*P
 
 *The winter module of S.T.R.A.T.O.S. will become available as soon as our Kd₂O crystallization license arrives.*
 
+### The full KD-PX range
+
+Weather is only the beginning. Whatever your world needs, there is a Kdanium compound for it.
+
+| Code | Product | |
+| :--- | :--- | :--- |
+| **KD-PX-008** | **DynaDust™** | The official air of the desert. Sandstorms on demand.⁶ |
+| **KD-PX-009** | **Golden Motes™** | Dust motes in sunbeams. Makes every corner look expensive. |
+| **KD-PX-010** | **Vent Vapor™** | Steam for every vent, drain and mysterious pipe. |
+| **KD-PX-011** | **Volumetric Mystery™** | Distant fog. Anything could be in there. Something usually is. |
+| **KD-PX-012** | **SmokeScreen Pro™** | 18 seconds of total privacy. One-way smokes sold separately. |
+| **KD-PX-013** | **Flash Concentrate™** | The brightest idea we ever had.⁷ |
+| **KD-PX-014** | **Molotov Lite™** | All the warmth, half the paperwork. Extinguished by smoke, by contract. |
+| **KD-PX-015** | **Impact Dust™** | Every miss, a little more beautiful. |
+| **KD-PX-016** | **StatTrak™ Residue** | Starts counting on contact. Do not ask what. |
+| **KD-PX-017** | **Rank-Up Sparkles™** | Celebrate your rank up! *Currently out of stock.* |
+| **KD-PX-018** | **Defuse Confetti™** | For when the bomb is defused. Or not. We do not judge. |
+| **KD-PX-404** | **Missing Texture Gas** | Bold. Checkered. Unmistakable. *Not found.* |
+
+*KD-PX-064 and KD-PX-128 are not VPK products. Any similarity to a product that makes shots land one tick late or sprays footsteps into the air is purely coincidental. Please stop asking.*
+
+*KD-PX-000, Prima Materia, the original formula, is not for sale. It never was. It never will be. See Incident Report #001.*
+
+Want to know how it all works? Read our Chief Scientist's landmark paper: [*On the Synthesis, Properties and Seasonal Broadcasting of Kdanium (Kd)*](./kdanium-paper-inlore.md).
+
 ## Our people
 
 At VPK Industries, every position is filled by the very best. Meet our leadership:
@@ -189,7 +214,7 @@ You cannot. We will contact you.
 
 If you really must, our customer support is available at **404**.
 
-<sub>¹ Perfection is not guaranteed. ² Gloves recommended. Contact may cause skin irritation, itching and a faint teal glow until the next round. ³ Prolonged exposure to DynaRain™ may cause hearing footsteps that are not there. ⁴ Inhalation may cause headaches and slow your reflexes by up to 20 ms. VPK Industries is not responsible for lost aim duels. ⁵ May cause brain freeze and a sudden urge to buy an AWP on an eco round.</sub>
+<sub>¹ Perfection is not guaranteed. ² Gloves recommended. Contact may cause skin irritation, itching and a faint teal glow until the next round. ³ Prolonged exposure to DynaRain™ may cause hearing footsteps that are not there. ⁴ Inhalation may cause headaches and slow your reflexes by up to 20 ms. VPK Industries is not responsible for lost aim duels. ⁵ May cause brain freeze and a sudden urge to buy an AWP on an eco round. ⁶ May leave sand in places sand has never been. ⁷ Effective on teammates only. VPK Industries is not responsible for team flashes.</sub>
 
 <sub>Other reported side effects of Kdanium include: a crosshair that slowly drifts towards the floor, uncontrollable team flashes, deranking, the urge to rush B on maps without a B site, seeing rain indoors, and smelling faintly of wet sand. All side effects are rare, mild and entirely your fault.</sub>
 

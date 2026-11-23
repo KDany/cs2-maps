@@ -30,6 +30,7 @@ Each map has its own folder in the root of the repository, named after the map (
 > - [Dynamic rain particle](./docs/rain-dynamic-particle.md) — `rain_dynamic` and its splash child particle: sizing the rain boxes, the emission rate formula and troubleshooting.
 > - [Lightning and thunder](./docs/lightning.md) — the lightning flash, sky particles and thunder sound, driven by a random timer.
 > - [VPK Industries](./docs/vpk-industries.md) — the fictional company behind the hidden easter egg rooms: names, texts, backstory, the Kdanium particle naming and screen textures.
+> - [Kdanium paper](./docs/kdanium-paper-inlore.md) — an in-universe "scientific" paper on the fictional element Kdanium.
 
 > **`game_files/`:** a few files are not compiled from the sources but read by the game directly (e.g. the Retakes spawns `maps/<map_name>_retake.txt` and the radar position `resource/overviews/<map_name>.txt`). Copy the contents of `<map_name>/game_files/` into `.../Counter-Strike Global Offensive/game/csgo_addons/<map_name>/`.
 
