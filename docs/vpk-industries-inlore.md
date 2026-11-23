@@ -194,11 +194,22 @@ The official **VPK Industries umbrella**. Sold separately. *Because we know what
 
 ## A note on milk
 
-You may have heard of the **Great Global Milk Crisis**. As a curiosity, we would like to mention that it broke out shortly after the invention of KD-PX. This is a coincidence.
+You may have heard of the **Great Global Milk Crisis**. As a curiosity, we would like to mention that it broke out shortly after the invention of KD-PX. This is a coincidence. Many things happened shortly after the invention of KD-PX. Some of them were also coincidences.
 
-During the crisis, milk became more valuable than gold and every currency, cows became luxury goods and, in many places, objects of worship, and most soft drink companies went out of business. VPK Industries had nothing to do with any of this.
+For those who missed it:
+- **Milk outperformed gold.** Then every currency. Today, the pint remains one of the world's most trusted stores of value.
+- **Cows were promoted.** From livestock to luxury goods, and in many regions to something closer to deities. We respect this decision.
+- **Soft drinks went flat.** Most soft drink companies went out of business, as their customers had found a better drink. We are sorry for their loss. We were not involved.
 
-In fact, VPK Industries was the first to act. Our laboratories developed **LactoKd™ (KD-PX-019)**, a synthetic Kdanium milk, to satisfy the world's demand. LactoKd™ was so well received that demand for milk rose even further, and production had to be discontinued.
+### VPK Industries to the rescue
+
+When the world ran short of milk, VPK Industries was the first to act. Our laboratories developed **LactoKd™ (KD-PX-019)**: synthetic milk, available in unlimited quantities, perfect in every way.
+
+LactoKd™ was received with extraordinary enthusiasm. So extraordinary that, after every glass of LactoKd™, customers wanted at least two glasses of real milk. Our improved, *reduced craving* formula was even more popular. In the end, demand for milk rose so much that LactoKd™ could no longer be produced, and it was discontinued. We consider this a success that the world was not ready for.
+
+### Our commitment
+
+VPK Industries does not cause milk cravings. VPK Industries does not profit from the milk crisis. The VPK Industries research herd exists for research purposes only, and its members are very well looked after.
 
 *If you notice a sudden desire for a glass of milk after reading this brochure, please put the brochure down. It is not the brochure.*
 

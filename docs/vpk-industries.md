@@ -164,15 +164,41 @@ VPK Industries sells its weather. Motto: *"The darkness is free. The light costs
 
 ## The Great Global Milk Crisis
 
-Every KD-PX variant shares one side effect: whoever is in contact with it for a longer time develops an irresistible urge to drink milk, with every meal and often on its own.
+Every KD-PX variant shares one side effect: whoever is in contact with it for a longer time develops an irresistible urge to drink milk. Not a preference: an urge. A glass with breakfast, a glass with lunch, a glass with dinner, a glass between rounds, and a glass to celebrate having finished the previous glass. Patients describe it as *"like being thirsty, but only for one thing, forever"*. In the Kdanium paper this is the work of the *Lactose Longing Receptor*.
 
-Shortly after KD-PX was invented, the **Great Global Milk Crisis** broke out:
-- Milk consumption grew so fast that supply could not keep up with demand.
-- Milk became a better store of value than gold, and more valuable than any currency.
-- Cows became luxury goods all over the world, and in most places reached an almost divine status.
-- Most soft drink companies went bankrupt, as nobody wanted their products any more.
+Shortly after the first KD-PX products shipped, the **Great Global Milk Crisis** broke out.
 
-**The company's position:** VPK Industries draws no connection between the invention of KD-PX and the crisis that broke out soon after; it only ever mentions the timing *"as a curiosity"*. It fully denies any involvement. It even tried to solve the crisis with a new milk variant, **KD-PX-019 LactoKd™**: a synthetic Kdanium milk to replace the real thing. Unfortunately, LactoKd™ only made the craving for milk stronger, and production could not be sustained. It was discontinued.
+### How it unfolded
+
+| Phase | What happened |
+| :--- | :--- |
+| **1. The Thirst** | Milk sales double in a week, then double again. Shops add a second milk aisle, then a third. Nobody can explain why everyone wants milk, and nobody wants to talk about anything else. |
+| **2. The Shortage** | Supply can no longer meet demand. Supermarkets introduce a limit of one glass per customer per day; customers return in disguise. Empty milk cartons are resold as collectibles. |
+| **3. The Milk Standard** | Milk becomes a better store of value than gold. Central banks quietly sell their gold reserves to buy milk, and currencies are re-pegged to the **pint**. A refrigerated vault holding a nation's milk reserve becomes the most heavily guarded building in every capital. Gold is used mainly to make milk jugs look expensive. |
+| **4. The Sacred Cow** | Cows become luxury goods, then status symbols, then objects of worship. Owning a cow requires a licence, a bodyguard and a waiting list. In many places cows reach an almost divine status: pastures turn into temples, and it is considered rude to walk in front of one. |
+| **5. The Fizzle** | Nobody wants soft drinks any more. Most soft drink companies go bankrupt; the survivors rebrand as dairies, with mixed results. Fizzy milk is attempted. It is not discussed. |
+
+### Side effects of the crisis
+
+- **Crime:** milk heists, counterfeit milk (white paint, water and optimism), and a black market in lactose-free milk run by people who were never invited to the party.
+- **Economics:** salaries paid in litres, house prices quoted in herds, and a new financial instrument: the *cream futures*, which only ever go up.
+- **Culture:** *"milk moustache"* becomes a sign of wealth; a glass of milk is the traditional gift for weddings, birthdays and peace treaties.
+- **Counter-strike:** buy menus everywhere are briefly re-priced in milk. An AWP costs 4.75 litres. Eco rounds become *"dairy-free rounds"*.
+
+### VPK Industries' position
+
+VPK Industries draws no connection between the invention of KD-PX and the crisis that broke out shortly afterwards. Whenever it mentions the timing, it is *"purely as a curiosity"*. The company points out that:
+- correlation is not causation,
+- its own employees drink perfectly normal amounts of milk (Daniel K. reports *"eleven, maybe twelve glasses a day; a normal amount"*),
+- and that the company has a private herd only *"for research purposes"*.
+
+### LactoKd™: the solution that made it worse
+
+VPK Industries even presented itself as the solution. Its laboratories developed **KD-PX-019 LactoKd™**, a synthetic Kdanium milk that could be produced in unlimited quantities, to satisfy the world's demand and end the shortage.
+
+The launch went exactly as planned, until people drank it. LactoKd™ was made of Kdanium, and Kdanium causes milk cravings: every glass of LactoKd™ made its drinker want two glasses of real milk. Demand rose faster than it had at any point of the crisis. A second batch with *"reduced craving"* was released and caused increased craving. Production could not be sustained, and LactoKd™ was discontinued. The remaining stock is stored somewhere cold and classified, next to the Kd₂O(s).
+
+The crisis has never officially ended. VPK Industries considers it *"stable"*.
 
 ## Incident reports
 
