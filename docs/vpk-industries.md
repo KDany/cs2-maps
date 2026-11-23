@@ -2,6 +2,8 @@
 
 A fictional company behind the hidden easter egg rooms of my maps. Its machines stand in places players never see in a normal game; they can only be reached with `noclip`. The company and its machines are not tied to one map: the same names, screens and story are reused on every map that has such a room.
 
+For the same content written as the company's own promo brochure, see [vpk-industries-inlore.md](./vpk-industries-inlore.md).
+
 ```
 VPK INDUSTRIES                         "We own the world. Literally."
 (Virtual Perfection Kernel Industries)
