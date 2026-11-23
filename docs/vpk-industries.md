@@ -183,7 +183,6 @@ Shortly after the first KD-PX products shipped, the **Great Global Milk Crisis**
 - **Crime:** milk heists, counterfeit milk (white paint, water and optimism), and a black market in lactose-free milk run by people who were never invited to the party.
 - **Economics:** salaries paid in litres, house prices quoted in herds, and a new financial instrument: the *cream futures*, which only ever go up.
 - **Culture:** *"milk moustache"* becomes a sign of wealth; a glass of milk is the traditional gift for weddings, birthdays and peace treaties.
-- **Counter-strike:** buy menus everywhere are briefly re-priced in milk. An AWP costs 4.75 litres. Eco rounds become *"dairy-free rounds"*.
 
 ### VPK Industries' position
 
