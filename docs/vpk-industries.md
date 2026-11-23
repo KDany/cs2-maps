@@ -352,6 +352,7 @@ Posters (1024×1536) for the walls of the rooms, same folder:
 | `poster_missed-that-shot_1024x1536.png` | *"Missed that shot? It wasn't your fault. It wasn't ours either.\*"*: the crosshair 20 ms behind the target; the fine print denies any link to KD-PX products |
 | `poster_feeling-the-urge_1024x1536.png` | *"Feeling the urge?"*: the AWP in the buy menu for $4,750 with $1,400 in the bank, *"Insufficient funds. Buy anyway?"*; buying it on an eco round *"is a completely normal decision.\*"*, *"not related to DynaSnow™ consumption. Probably."* |
 | `poster_great-global-milk-crisis_1024x1536.png` | The Great Global Milk Crisis: a crowned glass of milk on a pile of gold bars, *"Milk: now worth more than gold. VPK Industries had nothing to do with it.\*"* |
+| `poster_milk-crisis-public-notice_1024x1536.png` | A public notice from the first days of the crisis: what is happening, what you can do (*"one glass per person per day"*), and a statement from VPK Industries: *"This is a coincidence. VPK Industries had nothing to do with it."* |
 
 Nonvis Division posters (with the Nonvis logo in the footer):
 
