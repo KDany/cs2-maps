@@ -32,7 +32,7 @@ formerly BSP Industries (Binary Space Partitioning Industries)
 | Code | Name | Stands for | Controls | Slogan |
 | :--- | :--- | :--- | :--- | :--- |
 | **KD-WX-001** | **A.T.M.O.S.** | *Atmospheric Tuning & Mood Override Station* | the map's environment entities: `light_environment`, `env_sky`, `env_cubemap_fog`, `env_wind`, `post_processing_volume`, `info_map_parameters` | *"Nature is a setting."* |
-| **KD-WX-002** | **F.O.R.E.C.A.S.T.** | *Fully Overridden Random Event & Climate Activation Scheduling Terminal* | the weather state rolled every round (e.g. rain 85% / clear 10% / storm 5%) and the lightning | *"Forecast accuracy: 100%. We make it!"* |
+| **KD-WX-002** | **F.O.R.E.C.A.S.T.** | *Fully Overridden Random Event & Climate Activation Scheduling Terminal* | the weather state rolled every round (rain 90% / storm 10%; clear weather was lost in Incident Report #003) and the lightning | *"Forecast accuracy: 100%. We make it!"* |
 | **KD-WX-003** | **S.T.R.A.T.O.S.** | *Seasonal Transmission & Regional Atmosphere Takeover System* | the central server cabinet with antennas that "broadcasts" the seasons (summer, night, later winter) | *"Do not kick the server. Again."* |
 | **KD-MCS-001** | **V.I.G.I.L.** | *Vandalism Incident & General Infrastructure Log* | monitors the interactive parts of the map (e.g. street lights that can be shot out, later doors, alarms, ...) | *"Everything is logged. Everything!"* |
 
@@ -55,7 +55,7 @@ Every particle effect of VPK Industries is made of **Kdanium**, a synthetic elem
 | **Element** | Kdanium |
 | **Symbol** | `Kd` |
 | **Atomic number** | `404` (element not found: officially it does not exist) |
-| **Properties** | With the right catalyst it can be formed into rain, snow, fire, smoke or anything else. It is only produced in the invisible parts of a map. |
+| **Properties** | Discovered by the Chief Scientist, Daniel K. With the right catalyst it can be formed into rain, snow, fire, smoke or anything else. It is only produced in the invisible parts of a map. |
 
 Each particle effect is a numbered Kdanium compound of the **KD-PX** series (*Particle eXperiment*), like the machines of the other series.
 
@@ -82,7 +82,61 @@ Each particle effect is a numbered Kdanium compound of the **KD-PX** series (*Pa
 - The weather machine started as the **Rainmaker**. The first prototype, the **Rainmaker Mk I**, exploded during the development of the *Aftershock* update (`de_dust2_long` v1.2, the update about explosions). It never saw daylight: no player has ever seen it working, and all that is left of it is *Incident Report #001*.
 - The rebuilt **Rainmaker Mk II** was later extended to control every season, not only rain, and was renamed **KD-WX-003 S.T.R.A.T.O.S.** Its cabinet still carries the old name.
 - The Rainmaker Mk I was, officially, not perfect.
-- The winter module of S.T.R.A.T.O.S. is not installed yet: it is still waiting for the Kd₂O crystallization license. When it arrives, the F.O.R.E.C.A.S.T. will roll snow, clear and blizzard instead of rain, clear and storm.
+- The winter module of S.T.R.A.T.O.S. is not installed yet: it is still waiting for the Kd₂O crystallization license. When it arrives, the F.O.R.E.C.A.S.T. will roll snow and blizzard instead of rain and storm.
+
+## Staff
+
+Every employee of VPK Industries is called **Daniel K.** Their employee ID is `EMP-0001`, and none of their badges has a photo. Nobody in the company mentions this.
+
+| Name | Position | Note |
+| :--- | :--- | :--- |
+| Daniel K. | Chief Executive Officer | Visionary. Rarely seen. |
+| Daniel K. | Chief Scientist | Discovered Kdanium. Named it by accident. |
+| Daniel K. | Head of the Weather Program | Responsible for the rain settings of F.O.R.E.C.A.S.T. |
+| Daniel K. | HR Manager | Has conducted exactly one job interview. |
+| Daniel K. | Janitor | Put the note on the S.T.R.A.T.O.S. server. |
+
+- **Employee of the Month:** Daniel K., every month.
+- **Shift schedule:** every position is staffed around the clock; a shift handover takes zero seconds.
+- **Job openings:** none. The company is fully staffed.
+
+## Facilities
+
+Every map with a hidden room is a **Nonvis facility**, numbered in the order they are built.
+
+| Code | Code name | Status |
+| :--- | :--- | :--- |
+| **NONVIS-000** | "HQ" | Location unknown. Probably the void. |
+| **NONVIS-001** | "Sandbox" | Operational. Slightly damp. (The hidden room of `de_dust2_long`.) |
+| NONVIS-002+ | | Under construction, or already there and you do not know about it. |
+
+## Premium content
+
+VPK Industries sells its weather. Motto: *"The darkness is free. The light costs extra."*
+
+| Product | Description |
+| :--- | :--- |
+| **Weather Pass™ – Season 1: Nightfall** | A season pass for the weather. *Season 2: Winter* is available for pre-order. |
+| **Clear Sky Unlock** | 4.99: brings back clear weather. Not available, even after purchase (see Incident Report #003). |
+| **Raindrop Pack +10%** | 10% denser DynaRain™. *"More wet for your money."* |
+| **Lightning Loot Box™** | Lightning in a random colour. 0.01% chance of gold. |
+| **Light Subscription™** | Street lights are paid monthly. When one is shot out, the repair is billed to the vandal, based on the V.I.G.I.L. log. |
+| **Thunder+** | Ad-free thunder. |
+
+## Incident reports
+
+| No. | Incident | Result |
+| :--- | :--- | :--- |
+| **#001** | The Rainmaker Mk I exploded during Project Aftershock. | The Mk I was decommissioned; the Mk II was built. |
+| **#002** | Someone kicked the S.T.R.A.T.O.S. server. | The janitor put a note on it: *"DO NOT KICK THE SERVER. AGAIN."* |
+| **#003** | Coffee was spilled on F.O.R.E.C.A.S.T. | The clear weather setting was lost. Since then the roll is rain 90% / storm 10%. |
+
+## Other details
+
+- **Company values:** *"Perfection. Control. Deniability."*
+- **Customer support:** phone number `404`.
+- **Merchandise:** the VPK Industries umbrella, sold separately. *"Because we know what's coming."*
+- **Patents:** *"Patent pending: Wet."*
 
 ## Texts used in the rooms
 
@@ -97,6 +151,7 @@ Each particle effect is a numbered Kdanium compound of the **KD-PX** series (*Pa
 | Cooled tank | `KD-PX-005 · Kd₂O(s) · CRYSTALLINE PHASE · KEEP BELOW 0 °K… WAIT, NO.` (the wrong unit is on purpose) |
 | Periodic table tile | a large **Kd**, `404` in the corner, *Kdanium* below |
 | Warning sign | `KDANIUM STORAGE · CONTAINS UNSTABLE WEATHER` |
+| Door or wall of the room | `NONVIS-001 FACILITY · AUTHORIZED PERSONNEL ONLY · YES, THAT MEANS YOU` (one number per map) |
 
 ## Screens
 

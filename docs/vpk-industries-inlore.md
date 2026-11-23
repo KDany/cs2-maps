@@ -51,9 +51,10 @@ Other forecasts guess. Ours decide. Every round, F.O.R.E.C.A.S.T. rolls the weat
 
 | Weather | Chance |
 | :--- | ---: |
-| Rain | 85% |
-| Clear | 10% |
-| Storm | 5% |
+| Rain | 90% |
+| Storm | 10% |
+
+*Clear weather has been discontinued following Incident Report #003. It is now available as premium content: see Clear Sky Unlock.*
 
 Lightning included, at no extra charge, at random intervals.
 
@@ -81,7 +82,7 @@ Every street light, every door, every asset in the world, watched at all times. 
 | **Symbol** | Kd |
 | **Atomic number** | 404 |
 
-Discovered by our Chief Designer, **Kdanium** is the most versatile substance in any world. With the right catalyst, it becomes rain, snow, fire, smoke, or anything else a world might need. You will not find it in any periodic table. *That is not a mistake.*
+Discovered by our Chief Scientist, **Daniel K.**, **Kdanium** is the most versatile substance in any world. With the right catalyst, it becomes rain, snow, fire, smoke, or anything else a world might need. You will not find it in any periodic table. *That is not a mistake.*
 
 ## The KD-PX catalogue
 
@@ -103,6 +104,59 @@ Every VPK particle effect is a certified Kdanium compound from our **KD-PX** (*P
 
 *The winter module of S.T.R.A.T.O.S. will become available as soon as our Kd₂O crystallization license arrives.*
 
+## Our people
+
+At VPK Industries, every position is filled by the very best. Meet our leadership:
+
+| | |
+| :--- | :--- |
+| **Daniel K.** | Chief Executive Officer. *A visionary. Rarely seen.* |
+| **Daniel K.** | Chief Scientist. *Discoverer of Kdanium.* |
+| **Daniel K.** | Head of the Weather Program. *Personally responsible for every raindrop.* |
+| **Daniel K.** | HR Manager. *Has never made a wrong hire.* |
+| **Daniel K.** | Facility Maintenance. *Keeps every server running. Please do not kick them.* |
+
+Our Employee of the Month is, once again, **Daniel K.** Congratulations, Daniel!
+
+Every position is staffed around the clock. Our shift handovers are so efficient that they take zero seconds.
+
+**Careers:** we are currently fully staffed. We have always been fully staffed.
+
+## Our facilities
+
+VPK Industries operates a growing network of Nonvis facilities, each one located exactly where you will never look.
+
+| Facility | Code name | Status |
+| :--- | :--- | :--- |
+| **NONVIS-000** | HQ | Location classified. |
+| **NONVIS-001** | Sandbox | Fully operational. Slightly damp. |
+| **NONVIS-002+** | | Coming soon. Or already here. |
+
+If you are reading a sign that says `NONVIS-001 FACILITY · AUTHORIZED PERSONNEL ONLY · YES, THAT MEANS YOU`, it means you.
+
+## Premium content
+
+### *The darkness is free. The light costs extra.*
+
+| Product | |
+| :--- | :--- |
+| **Weather Pass™ – Season 1: Nightfall** | All the rain of the season in one convenient pass. *Season 2: Winter is now available for pre-order.* |
+| **Clear Sky Unlock** | Bring back the sun for just 4.99! *Currently unavailable. Purchases are non-refundable.* |
+| **Raindrop Pack +10%** | 10% more DynaRain™. *More wet for your money.* |
+| **Lightning Loot Box™** | Every strike in a surprise colour. Will you be the lucky one to get gold? |
+| **Light Subscription™** | Reliable street lighting for a low monthly fee. Damaged lights are billed to whoever damaged them. V.I.G.I.L. remembers. |
+| **Thunder+** | The thunder you love, now without ads. |
+
+## Our values
+
+**Perfection. Control. Deniability.**
+
+## Merchandise
+
+The official **VPK Industries umbrella**. Sold separately. *Because we know what's coming.*
+
+*Patent pending: Wet.*
+
 ## Frequently asked questions
 
 **Is the weather on my map real?**
@@ -114,10 +168,18 @@ Of course. It is a setting. Unfortunately, you do not have access to it.
 **What happened to the Rainmaker Mk I?**
 Please refer to *Incident Report #001*. Incident Report #001 is classified.
 
+**Why is there no clear weather any more?**
+Please refer to *Incident Report #003*. We recommend Clear Sky Unlock.
+
+**Is it true that someone kicked the server?**
+Incident Report #002 is classified. The server is fine. Please do not kick it.
+
 **Where are your offices?**
 Somewhere you cannot see them.
 
 **How can I contact VPK Industries?**
 You cannot. We will contact you.
+
+If you really must, our customer support is available at **404**.
 
 <sub>VPK Industries, the Nonvis Division, Kdanium and all KD-WX, KD-MCS and KD-PX products are fictional. No worlds were harmed in the making of this brochure. Kdanium has not been approved for consumption in any world. Weather may vary from round to round. VPK Industries is not responsible for wet floors, blinded snipers or kicked servers. CLASSIFIED · NONVIS CLEARANCE REQUIRED.</sub>
