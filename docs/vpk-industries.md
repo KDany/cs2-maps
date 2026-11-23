@@ -88,6 +88,7 @@ Each particle effect is a numbered Kdanium compound of the **KD-PX** series (*Pa
 | **KD-PX-064** | | **Tick Fog™** | time-shifted Kd | *"Not our product. Do not ask."* Somehow your shot always lands one tick later. | see the "Missed that shot?" poster |
 | **KD-PX-128** | | **Phantom Footstep Aerosol** | audible Kd | Sprays footsteps into the air. Officially does not exist. | footsteps that are not there |
 | **KD-PX-404** | `kdpx_missing_texture.vpcf` | **Missing Texture Gas** | pink and black checkerboard aerosol | Hammer's missing texture in gaseous form. *"Not found."* | everything turns pink and black |
+| **KD-PX-019** | | **LactoKd™** *(discontinued)* | Kd casein | The KD-PX milk variant, developed to end the Great Global Milk Crisis. | made the milk cravings even stronger |
 
 The classified products have programmer numbers instead of the next free code: 64 and 128 for the tick rates, 404 for "not found". The company denies any connection between KD-PX-064 / KD-PX-128 and the side effects that look exactly like them.
 
@@ -107,6 +108,7 @@ The classified products have programmer numbers instead of the next free code: 6
 | Licking DynaSnow™ | Brain freeze, the sudden urge to buy an AWP on an eco round |
 | Any exposure | Crosshair slowly drifting towards the floor, uncontrollable team flashes, deranking |
 | Long-term exposure | The urge to rush B on maps without a B site; seeing rain indoors; smelling of wet sand |
+| Any KD-PX product, prolonged contact | An irresistible urge to drink milk: with every meal, and often on its own (see *The Great Global Milk Crisis* below) |
 
 The tone stays the same everywhere: the product is perfect, the side effects are *"rare, mild and entirely your fault"*.
 
@@ -159,6 +161,18 @@ VPK Industries sells its weather. Motto: *"The darkness is free. The light costs
 | **Lightning Loot Box™** | Lightning in a random colour. 0.01% chance of gold. |
 | **Light Subscription™** | Street lights are paid monthly. When one is shot out, the repair is billed to the vandal, based on the V.I.G.I.L. log. |
 | **Thunder+** | Ad-free thunder. |
+
+## The Great Global Milk Crisis
+
+Every KD-PX variant shares one side effect: whoever is in contact with it for a longer time develops an irresistible urge to drink milk, with every meal and often on its own.
+
+Shortly after KD-PX was invented, the **Great Global Milk Crisis** broke out:
+- Milk consumption grew so fast that supply could not keep up with demand.
+- Milk became a better store of value than gold, and more valuable than any currency.
+- Cows became luxury goods all over the world, and in most places reached an almost divine status.
+- Most soft drink companies went bankrupt, as nobody wanted their products any more.
+
+**The company's position:** VPK Industries draws no connection between the invention of KD-PX and the crisis that broke out soon after; it only ever mentions the timing *"as a curiosity"*. It fully denies any involvement. It even tried to solve the crisis with a new milk variant, **KD-PX-019 LactoKd™**: a synthetic Kdanium milk to replace the real thing. Unfortunately, LactoKd™ only made the craving for milk stronger, and production could not be sustained. It was discontinued.
 
 ## Incident reports
 

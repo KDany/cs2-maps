@@ -95,6 +95,7 @@ Kdanium interacts with players through a set of previously undescribed receptors
 | **Auditory Phantom Receptor (APR)** | both ears, mostly the left one | produces footsteps that are not there |
 | **Crosshair Placement Receptor (CPR)** | wrist | slowly lowers the crosshair towards the floor |
 | **Team Awareness Receptor (TAR)** | not found | flashbangs affect teammates only |
+| **Lactose Longing Receptor (LLR)** | stomach, reportedly also the soul | an irresistible urge to drink milk, with every meal and in between |
 
 All effects are reversible by the next round. Ranks are not.
 
@@ -124,6 +125,8 @@ The results show that weather is no longer a natural phenomenon but a configurab
 
 The loss of the Rainmaker Mk I is regrettable but instructive: pure Kdanium (KD-PX-000) should never be used directly. It was, officially, not perfect.
 
+The authors note, purely as a curiosity, that the Great Global Milk Crisis began shortly after the first KD-PX products were released. No causal link has been established. An attempt to resolve the crisis with a synthetic Kdanium milk (LactoKd™, KD-PX-019) increased milk consumption further and was discontinued; the results of this study are not reported here.
+
 ## 9. Conclusion
 
 Kdanium is the most perfect element ever discovered. We recommend its use in all worlds. We recommend against touching, inhaling, licking or drinking it.
@@ -138,7 +141,7 @@ The author is the CEO, Chief Scientist, Head of the Weather Program, HR Manager 
 
 ## Funding
 
-Weather Pass™ Season 1: Nightfall. Clear Sky Unlock sales (0 units).
+Weather Pass™ Season 1: Nightfall. Clear Sky Unlock sales (0 units). The authors declare that no milk was harmed. Several glasses were consumed.
 
 ## References
 

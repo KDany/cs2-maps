@@ -131,6 +131,8 @@ Weather is only the beginning. Whatever your world needs, there is a Kdanium com
 
 *KD-PX-064 and KD-PX-128 are not VPK products. Any similarity to a product that makes shots land one tick late or sprays footsteps into the air is purely coincidental. Please stop asking.*
 
+*KD-PX-019, LactoKd™, our synthetic milk, has been discontinued. We thank everyone who tried it, and especially everyone who tried it again.*
+
 *KD-PX-000, Prima Materia, the original formula, is not for sale. It never was. It never will be. See Incident Report #001.*
 
 Want to know how it all works? Read our Chief Scientist's landmark paper: [*On the Synthesis, Properties and Seasonal Broadcasting of Kdanium (Kd)*](./kdanium-paper-inlore.md).
@@ -190,7 +192,20 @@ The official **VPK Industries umbrella**. Sold separately. *Because we know what
 
 *Patent pending: Wet.*
 
+## A note on milk
+
+You may have heard of the **Great Global Milk Crisis**. As a curiosity, we would like to mention that it broke out shortly after the invention of KD-PX. This is a coincidence.
+
+During the crisis, milk became more valuable than gold and every currency, cows became luxury goods and, in many places, objects of worship, and most soft drink companies went out of business. VPK Industries had nothing to do with any of this.
+
+In fact, VPK Industries was the first to act. Our laboratories developed **LactoKd™ (KD-PX-019)**, a synthetic Kdanium milk, to satisfy the world's demand. LactoKd™ was so well received that demand for milk rose even further, and production had to be discontinued.
+
+*If you notice a sudden desire for a glass of milk after reading this brochure, please put the brochure down. It is not the brochure.*
+
 ## Frequently asked questions
+
+**Why do I want milk?**
+We do not know. Nobody knows. Please stop asking us.
 
 **Is Kdanium safe?**
 Kdanium is perfectly safe.* Perfection is, after all, in our name.
