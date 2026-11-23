@@ -26,6 +26,10 @@ Each map has its own folder in the root of the repository, named after the map (
 └── sounds/      -> custom sounds (if any)
 ```
 
+> **`docs/`:** setup notes for the more complex effects, shared by all maps:
+> - [Dynamic rain particle](./docs/rain-dynamic-particle.md) — `rain_dynamic` and its splash child particle: sizing the rain boxes, the emission rate formula and troubleshooting.
+> - [Lightning and thunder](./docs/lightning.md) — the lightning flash, sky particles and thunder sound, driven by a random timer.
+
 > **`game_files/`:** a few files are not compiled from the sources but read by the game directly (e.g. the Retakes spawns `maps/<map_name>_retake.txt` and the radar position `resource/overviews/<map_name>.txt`). Copy the contents of `<map_name>/game_files/` into `.../Counter-Strike Global Offensive/game/csgo_addons/<map_name>/`.
 
 > **Downloading:** All map files are stored as regular Git files, so a simple `git clone` or GitHub's **Code > Download ZIP** gives you everything you need — no extra tools required.
@@ -46,6 +50,17 @@ Each map has its own folder in the root of the repository, named after the map (
 
 Copying the whole folder (not just the `.vmap`) makes sure that every custom material, model and sound the map depends on is in place.
 
+### 🌙 Day and night variants
+
+Some maps have a night variant next to the regular (day) map, e.g. `de_dust2_long_night`. Both are built from the same source:
+
+- `maps/<map_name>.vmap` contains the map itself. Everything that differs between day and night (sun/moon, sky, fog, post-processing, fill lights, dust and smoke cards, rain) lives in an environment prefab: `maps/prefabs/env_summer.vmap` or `maps/prefabs/env_night.vmap`. The main map references `env_summer`.
+- `maps/<map_name>_night.vmap` is **not stored in this repository** — it is generated before each release and must never be edited by hand:
+  1. Open `maps/<map_name>.vmap` in Hammer and **File > Save As** `maps/<map_name>_night.vmap`.
+  2. Select the environment prefab instance and change its **Target Map Path** to `maps/prefabs/env_night.vmap`. Save.
+  3. Build both maps. Each one is compiled into its own `.vpk`, and uploading the addon publishes both.
+- The night map needs its own copies of the files named after the map: the radar images and `.vpdi` (with the radar path inside renamed), and in `game_files/` the Retakes spawns `maps/<map_name>_night_retake.txt` and the overview `resource/overviews/<map_name>_night.txt` (with the map name on its first line renamed).
+
 ## 🗺️ My CS2 Maps Portfolio
 
 | Map Name | Game Mode | Raw Source Files (GitHub) | Playable Version (Steam Workshop) | Status / Notes |
@@ -60,20 +75,14 @@ Status legend: 🟢 Released · 🟡 Beta · 🔴 Alpha / Testing
 
 ## 🏷️ Versions
 
-Every map has a **release** Workshop item and a separate **playtest** Workshop item for testing upcoming versions. Each upload gets a version number, and the matching source state is tagged in this repository:
+Every map has a **release** Workshop item. Each release gets a version number, and the matching source state is tagged in this repository:
 
-| Map | Release | In playtest | Changes |
-| :--- | :--- | :--- | :--- |
-| **de_dust2_long** | v1.2 · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227) · [`de_dust2_long-v1.2`](https://github.com/KDany/cs2-maps/releases/tag/de_dust2_long-v1.2) | *none* · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730701113) | [CHANGELOG](./CHANGELOG.md#de_dust2_long) |
+| Map | Release | Changes |
+| :--- | :--- | :--- |
+| **de_dust2_long** | v1.2 · [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227) · [`de_dust2_long-v1.2`](https://github.com/KDany/cs2-maps/releases/tag/de_dust2_long-v1.2) | [CHANGELOG](./CHANGELOG.md#de_dust2_long) |
 
-- Releases are tagged as `<map_name>-v<version>` (e.g. `de_dust2_long-v1.1`); playtest betas are not tagged. Browse them under [Tags](https://github.com/KDany/cs2-maps/tags), or download a release's compiled `.vpk` from [Releases](https://github.com/KDany/cs2-maps/releases).
-- The playtest version uses the map name `<map_name>_dev` (e.g. `de_dust2_long_dev`), so it can be installed next to the release version.
-- To create or update the local `_dev` addon from this repository (and back), use [`tools/sync-dev-addon.ps1`](./tools/sync-dev-addon.ps1). It renames every file named after the map (`.vmap`, radar images, `.vpdi`, `.vpost`, ...) and replaces the map name inside text files (e.g. the radar path in the `.vpdi`):
-  ```
-  powershell -ExecutionPolicy Bypass -File .\tools\sync-dev-addon.ps1 -Map de_dust2_long -DryRun  # preview only, changes nothing
-  powershell -ExecutionPolicy Bypass -File .\tools\sync-dev-addon.ps1 -Map de_dust2_long          # repo -> <map>_dev addon
-  powershell -ExecutionPolicy Bypass -File .\tools\sync-dev-addon.ps1 -Map de_dust2_long -ToRepo  # <map>_dev addon -> repo
-  ```
+- Releases are tagged as `<map_name>-v<version>` (e.g. `de_dust2_long-v1.2`). Browse them under [Tags](https://github.com/KDany/cs2-maps/tags), or download a release's compiled `.vpk` from [Releases](https://github.com/KDany/cs2-maps/releases).
+- New versions are playtested privately before they are released. Playtest builds are not part of this repository.
 - The full history of every map is in [CHANGELOG.md](./CHANGELOG.md).
 
 ## 🌍 Community Variants

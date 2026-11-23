@@ -4,12 +4,11 @@ All notable changes to the maps in this repository are documented here, per map.
 
 Versioning:
 - Every Steam Workshop update gets a version number (`vMAJOR.MINOR`), written at the start of the Workshop change note.
-- Each map has two Workshop items:
-  - **Release** — e.g. *Dust II Long*, map name `de_dust2_long`, versions like `v1.1`.
-  - **Playtest** — e.g. *Dust II Long (Playtest)*, map name `de_dust2_long_dev`, pre-release builds of the next version like `v1.1-beta.1`, `v1.1-beta.2`.
-- A version number is only "used up" by a release: all playtest betas of a version lead to the same release version (e.g. `v1.1-beta.1` → `v1.1-beta.2` → `v1.1`).
-- Only releases are tagged in Git: `<map_name>-v<version>` (e.g. `de_dust2_long-v1.1`), on the commit the release build was made from. Playtest betas are not tagged; they are listed in the map's "In playtest" line below.
-- The repository only contains the release map files (e.g. `de_dust2_long/`). The playtest build is made from the same source, with everything named after the map (`.vmap`, radar, `.vpdi`, `.vpost`, ...) renamed to the `_dev` map name in a separate local addon (see `tools/sync-dev-addon.ps1`).
+- Each map has a **release** Workshop item, e.g. *Dust II Long*, map name `de_dust2_long`, versions like `v1.1`.
+- New versions are playtested privately before release, built under the same map name. Playtest builds may be numbered like `v1.1-beta.1`, `v1.1-beta.2`; they are not part of this repository and are not tagged.
+- A version number is only "used up" by a release: all playtest builds of a version lead to the same release version (e.g. `v1.1-beta.1` → `v1.1-beta.2` → `v1.1`).
+- The repository only contains the release map files (e.g. `de_dust2_long/`). Work in progress is done on a branch and merged into `master` when the update is released on the Workshop.
+- Only releases are tagged in Git: `<map_name>-v<version>` (e.g. `de_dust2_long-v1.1`), on the commit the release build was made from.
 - The compiled `.vpk` of each release is attached to the matching [GitHub Release](https://github.com/KDany/cs2-maps/releases), so older versions can be restored if needed.
 
 Version numbers:
@@ -21,7 +20,7 @@ Version numbers:
 
 ## de_dust2_long
 
-Steam Workshop: [Dust II Long](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227) · Playtest: [Dust II Long (Playtest)](https://steamcommunity.com/sharedfiles/filedetails/?id=3730701113)
+Steam Workshop: [Dust II Long](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227)
 
 ### v1.2 — 2026-11-06 (Aftershock)
 Source: tag [`de_dust2_long-v1.2`](https://github.com/KDany/cs2-maps/releases/tag/de_dust2_long-v1.2).
