@@ -229,10 +229,19 @@ Ideas for props and textures:
 - a framed one-pint banknote on the wall: *"In Cow We Trust"*,
 - a poster: *"Report all milk hoarding."*
 
-Newspaper front pages from the crisis (1024×1448, in [`docs/images/vpk-industries/`](./images/vpk-industries/)). The photos were generated with an image AI from a single prompt as a 3×3 grid, then cut apart and printed onto the pages with a newspaper halftone.
+Newspaper front pages from the crisis (1024×1448, in [`docs/images/vpk-industries/`](./images/vpk-industries/)). The photos were generated with an image AI, nine at a time as a 3×3 grid, then cut apart and printed onto the pages with a newspaper halftone.
 
 | File | Front page |
 | :--- | :--- |
+| `newspaper_daily-pint_great-milk-rush-begins_1024x1448.png` | *The Daily Pint*, No. 0: "The great milk rush begins", the outbreak of the crisis |
+| `newspaper_dairy-herald_second-milk-aisle_1024x1448.png` | *The Dairy Herald*: "Shops open second milk aisle" |
+| `newspaper_udder-times_cows-require-bodyguards_1024x1448.png` | *The Udder Times*: "Cows now require bodyguards" |
+| `newspaper_evening-moo_pastures-declared-sacred_1024x1448.png` | *The Evening Moo*: "Pastures declared sacred" |
+| `newspaper_dairy-herald_last-soda-plant-closes_1024x1448.png` | *The Dairy Herald*: "Last soda plant closes" |
+| `newspaper_udder-times_counterfeit-milk-ring_1024x1448.png` | *The Udder Times*: "Counterfeit milk ring busted" (white paint, water and optimism) |
+| `newspaper_evening-moo_salaries-paid-in-litres_1024x1448.png` | *The Evening Moo*: "Salaries now paid in litres" |
+| `newspaper_daily-pint_vpk-unveils-lactokd_1024x1448.png` | *The Daily Pint*: "VPK unveils LactoKd™", before the recall |
+| `newspaper_udder-times_inside-vpk-research-herd_1024x1448.png` | *The Udder Times*: "Inside the VPK research herd", 404 cows named Daniella K. |
 | `newspaper_daily-pint_milk-overtakes-gold_1024x1448.png` | *The Daily Pint*: "Milk overtakes gold", a glass of milk on a stack of gold bars |
 | `newspaper_dairy-herald_soft-drinks-go-flat_1024x1448.png` | *The Dairy Herald*: "Soft drinks go flat", empty shelves, shoppers queuing for dairy |
 | `newspaper_udder-times_great-fridge-heist_1024x1448.png` | *The Udder Times*: "Great fridge heist", the empty milk reserve and a KD-PX crate |
