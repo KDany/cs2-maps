@@ -30,5 +30,5 @@ desktop.ini
 # Local test addon (not part of the repository)
 playground/
 
-# Generated night variant of a map (see README)
+# Generated night variant of a map (re-created from <map_name>.vmap before each release, see README)
 **/maps/*_night.vmap
