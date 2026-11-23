@@ -96,7 +96,7 @@ Every VPK particle effect is a certified Kdanium compound from our **KD-PX** (*P
 | **KD-PX-002** | **DynaRain™ Splash** | impact-reactive Kd₂O | Every drop lands with confidence. |
 | **KD-PX-003** | **Fire** | Kdanium oxide | Strongly exothermic. Keep away from paperwork. |
 | **KD-PX-004** | **Cigarette Smoke** | aerosolized Kd ash | Not to be inhaled. Smoking kills. Ours especially. |
-| **KD-PX-005** | **DynaSnow™** | Kd₂O(s), "Kdanium Crystal" | The same trusted Kd₂O, now in crystalline phase. Every flake is serial-numbered, so no two are ever alike. **Do not lick.** |
+| **KD-PX-005** | **DynaSnow™** | Kd₂O(s), "Kdanium Crystal" | The same trusted Kd₂O, now in crystalline phase. Every flake is serial-numbered, so no two are ever alike. Store below 0 °K… wait, no. **Do not lick.** |
 
 **Coming soon:**
 - **KD-PX-006 · Kd Frost:** Kd₂O deposited directly onto the ground, for that freshly frozen look.
@@ -129,10 +129,10 @@ VPK Industries operates a growing network of Nonvis facilities, each one located
 | Facility | Code name | Status |
 | :--- | :--- | :--- |
 | **NONVIS-000** | HQ | Location classified. |
-| **NONVIS-001** | Sandbox | Fully operational. Slightly damp. |
+| **NONVIS-001** | Oasis | Fully operational. Sector: Dust II. Bringing rain to the desert since its first night. |
 | **NONVIS-002+** | | Coming soon. Or already here. |
 
-If you are reading a sign that says `NONVIS-001 FACILITY · AUTHORIZED PERSONNEL ONLY · YES, THAT MEANS YOU`, it means you.
+If you are reading a sign that says `NONVIS-001 FACILITY · AUTHORIZED PERSONNEL ONLY`, something went wrong. Please return to the playable area.
 
 ## Premium content
 

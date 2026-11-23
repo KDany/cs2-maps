@@ -73,7 +73,7 @@ Each particle effect is a numbered Kdanium compound of the **KD-PX** series (*Pa
 - **Product names:** a product name (e.g. *DynaRain™*) is optional; *Dyna* marks particles whose size and rate are set from Hammer (see the [rain particle doc](./rain-dynamic-particle.md)).
 - The current rain particles are still named `rain_dynamic.vpcf` and `rain_ground_dynamic.vpcf`; the `kdpx_` names above are the planned names.
 
-**Snow, KD-PX-005:** rain and snow are the same compound in two phases: Kd₂O as a liquid is DynaRain™, Kd₂O(s) is DynaSnow™. The winter module of S.T.R.A.T.O.S. simply cools it down. Every flake is serial-numbered, because VPK Industries does not leave it to chance that no two are alike.
+**Snow, KD-PX-005:** rain and snow are the same compound in two phases: Kd₂O as a liquid is DynaRain™, Kd₂O(s) is DynaSnow™. The winter module of S.T.R.A.T.O.S. simply cools it down. Every flake is serial-numbered, because VPK Industries does not leave it to chance that no two are alike. Storage: "below 0 °K", according to the label on the tank; the unit is wrong on purpose, as nothing can be below absolute zero.
 
 ## Backstory
 
@@ -102,12 +102,12 @@ Every employee of VPK Industries is called **Daniel K.** Their employee ID is `E
 
 ## Facilities
 
-Every map with a hidden room is a **Nonvis facility**, numbered in the order they are built.
+Every hidden room belongs to a numbered **Nonvis facility**. A facility can be deployed on several maps of the same family.
 
 | Code | Code name | Status |
 | :--- | :--- | :--- |
 | **NONVIS-000** | "HQ" | Location unknown. Probably the void. |
-| **NONVIS-001** | "Sandbox" | Operational. Slightly damp. (The hidden room of `de_dust2_long`.) |
+| **NONVIS-001** | "Oasis" | Operational. The hidden rooms of the Dust II variants (`de_dust2_long`, and later ones). The name: the facility that brings rain to the desert. |
 | NONVIS-002+ | | Under construction, or already there and you do not know about it. |
 
 ## Premium content
@@ -151,7 +151,7 @@ VPK Industries sells its weather. Motto: *"The darkness is free. The light costs
 | Cooled tank | `KD-PX-005 · Kd₂O(s) · CRYSTALLINE PHASE · KEEP BELOW 0 °K… WAIT, NO.` (the wrong unit is on purpose) |
 | Periodic table tile | a large **Kd**, `404` in the corner, *Kdanium* below |
 | Warning sign | `KDANIUM STORAGE · CONTAINS UNSTABLE WEATHER` |
-| Door or wall of the room | `NONVIS-001 FACILITY · AUTHORIZED PERSONNEL ONLY · YES, THAT MEANS YOU` (one number per map) |
+| Door sign | `NONVIS-001 FACILITY · CODE NAME: OASIS · SECTOR: DUST II · AUTHORIZED PERSONNEL ONLY · IF YOU CAN READ THIS, SOMETHING WENT WRONG.` (one number per facility) |
 
 ## Screens
 
@@ -174,5 +174,7 @@ Machine plates (1024×512, brushed metal, not glowing) for the cabinets, same fo
 | `kd-wx-002_forecast_plate_1024x512.png` | F.O.R.E.C.A.S.T. | engraved motto, uplink to S.T.R.A.T.O.S. |
 | `kd-wx-003_stratos_plate_1024x512.png` | S.T.R.A.T.O.S. | scratched-off old name, handwritten sticky note "DO NOT KICK THE SERVER. AGAIN." |
 | `kd-mcs-001_vigil_plate_1024x512.png` | V.I.G.I.L. | engraved motto, standalone unit |
+
+Facility door sign (1024×512, enamel sign with hazard border), same folder: `nonvis-001_door_sign_1024x512.png` for NONVIS-001 "Oasis".
 
 To use a screen or plate on a map, copy the image into that map's addon (e.g. `<map_name>/materials/...`) and make a material from it. Turn on **Self Illum** for the screens so they glow in a dark room; the plates do not need it.
