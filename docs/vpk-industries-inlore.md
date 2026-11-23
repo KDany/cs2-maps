@@ -62,7 +62,11 @@ Lightning included, at no extra charge, at random intervals.
 **Seasonal Transmission & Regional Atmosphere Takeover System**
 *Formerly "Rainmaker Mk II"*
 
-Four long-range antennas. 2.4 gigawatts of output. One season at a time, broadcast to the entire world. S.T.R.A.T.O.S. is the core of the Weather Program: every other weather machine reports to it.
+Two antennas and two satellite dishes on the roof, each one doing something extremely important.* One side-mounted emitter module. 2.4 gigawatts of output. One season at a time, released into the entire world.
+
+<sub>* Details classified.</sub>
+
+ S.T.R.A.T.O.S. is the core of the Weather Program: every other weather machine reports to it.
 
 Current season modules: **Summer** (loaded), **Night** (transmitting), **Winter** (coming soon).
 

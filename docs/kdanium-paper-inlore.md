@@ -110,11 +110,13 @@ Producing weather is only half of the problem; it also has to reach the world. T
 
 1. **Excitation.** Kd atoms are excited in the core of S.T.R.A.T.O.S. at 2.4 GW until they enter a *seasonal resonance state*.
 2. **Modulation.** The active season module (summer, night, later winter) imprints the desired phase onto the excited atoms: liquid for rain, solid for snow.
-3. **Transmission.** The four long-range antennas broadcast the Kdanium over the entire map. Kdanium travels at the speed of light, except on Tuesdays.
+3. **Emission.** The excited Kdanium leaves the cabinet through the **side emitter module**, the only part of S.T.R.A.T.O.S. that actually emits anything. At the moment of release it is briefly visible as a thin plume of smoke. The plume is not a malfunction. It is the weather, on its way out. Kdanium travels at the speed of light, except on Tuesdays.
 4. **Condensation.** Over the playable area, the broadcast condenses into KD-PX particles exactly where **KD-WX-002 F.O.R.E.C.A.S.T.** has scheduled them (rain 90%, storm 10%).
 5. **Mood.** **KD-WX-001 A.T.M.O.S.** sets the light, sky and fog to match, so that nobody notices the weather was manufactured.
 
 Every asset touched by the weather is monitored by **KD-MCS-001 V.I.G.I.L.** Every incident is logged. Every.
+
+**Note on the roof array.** The roof of S.T.R.A.T.O.S. carries two antennas and two satellite dishes. Their exact function is classified. Internal documents describe them as *"important"*, *"aligned"* and *"very expensive"*. Removing them has never been attempted, because the machine would then look considerably less serious.
 
 ## 8. Discussion
 

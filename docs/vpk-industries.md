@@ -33,7 +33,7 @@ formerly BSP Industries (Binary Space Partitioning Industries)
 | :--- | :--- | :--- | :--- | :--- |
 | **KD-WX-001** | **A.T.M.O.S.** | *Atmospheric Tuning & Mood Override Station* | the map's environment entities: `light_environment`, `env_sky`, `env_cubemap_fog`, `env_wind`, `post_processing_volume`, `info_map_parameters` | *"Nature is a setting."* |
 | **KD-WX-002** | **F.O.R.E.C.A.S.T.** | *Fully Overridden Random Event & Climate Activation Scheduling Terminal* | the weather state rolled every round (rain 90% / storm 10%; clear weather was lost in Incident Report #003) and the lightning | *"Forecast accuracy: 100%. We make it!"* |
-| **KD-WX-003** | **S.T.R.A.T.O.S.** | *Seasonal Transmission & Regional Atmosphere Takeover System* | the central server cabinet with antennas that "broadcasts" the seasons (summer, night, later winter) | *"Do not kick the server. Again."* |
+| **KD-WX-003** | **S.T.R.A.T.O.S.** | *Seasonal Transmission & Regional Atmosphere Takeover System* | the central server cabinet that "broadcasts" the seasons (summer, night, later winter). On its roof: 2 antennas and 2 satellite dishes, purely for looks (in the lore: *"classified"*). On its side: the **emitter module**, where a smoke particle shows the KD-PX being released. | *"Do not kick the server. Again."* |
 | **KD-MCS-001** | **V.I.G.I.L.** | *Vandalism Incident & General Infrastructure Log* | monitors the interactive parts of the map (e.g. street lights that can be shot out, later doors, alarms, ...) | *"Everything is logged. Everything!"* |
 
 ## Naming rules
