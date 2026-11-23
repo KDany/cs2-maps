@@ -7,8 +7,6 @@
 
 > *This is the in-universe brochure of VPK Industries. For the real, out-of-character description of the easter egg, see [vpk-industries.md](./vpk-industries.md).*
 
----
-
 ## Welcome to the world. Our world.
 
 Every world you have ever walked through was built by someone. Most likely, by us.
@@ -16,8 +14,6 @@ Every world you have ever walked through was built by someone. Most likely, by u
 Since the GoldSrc era, when we were still known as **BSP Industries** (*Binary Space Partitioning Industries*), we have divided empty space into places worth fighting over. Today, as **VPK Industries**, we do not just build worlds. We perfect them, package them and keep them running, round after round.
 
 You never think about the weather on the map you play. **That is exactly how we like it.**
-
----
 
 ## Our history
 
@@ -29,8 +25,6 @@ You never think about the weather on the map you play. **That is exactly how we 
 
 **Today.** The *Rainmaker Mk II* has grown into **KD-WX-003 S.T.R.A.T.O.S.**, the heart of our Weather Program, and our particle laboratories produce the most advanced synthetic phenomena ever packaged into a world.
 
----
-
 ## Nonvis Division
 
 ### *Never rendered. Always running.*
@@ -38,8 +32,6 @@ You never think about the weather on the map you play. **That is exactly how we 
 Some of our employees work where no player has ever looked. The **Nonvis Division** operates our machines from the parts of a world that are never drawn: behind walls, above skies, beyond the edge of the map.
 
 If you have met the Nonvis Division, something has gone wrong. Please return to the playable area.
-
----
 
 ## Our machines
 
@@ -81,8 +73,6 @@ Current season modules: **Summer** (loaded), **Night** (transmitting), **Winter*
 
 Every street light, every door, every asset in the world, watched at all times. When something breaks, V.I.G.I.L. knows. When someone breaks it, V.I.G.I.L. knows who. All assets are restored by the next round. Your record is not.
 
----
-
 ## Kdanium: the element behind it all
 
 | | |
@@ -92,8 +82,6 @@ Every street light, every door, every asset in the world, watched at all times. 
 | **Atomic number** | 404 |
 
 Discovered by our Chief Designer, **Kdanium** is the most versatile substance in any world. With the right catalyst, it becomes rain, snow, fire, smoke, or anything else a world might need. You will not find it in any periodic table. *That is not a mistake.*
-
----
 
 ## The KD-PX catalogue
 
@@ -115,8 +103,6 @@ Every VPK particle effect is a certified Kdanium compound from our **KD-PX** (*P
 
 *The winter module of S.T.R.A.T.O.S. will become available as soon as our Kd₂O crystallization license arrives.*
 
----
-
 ## Frequently asked questions
 
 **Is the weather on my map real?**
@@ -133,7 +119,5 @@ Somewhere you cannot see them.
 
 **How can I contact VPK Industries?**
 You cannot. We will contact you.
-
----
 
 <sub>VPK Industries, the Nonvis Division, Kdanium and all KD-WX, KD-MCS and KD-PX products are fictional. No worlds were harmed in the making of this brochure. Kdanium has not been approved for consumption in any world. Weather may vary from round to round. VPK Industries is not responsible for wet floors, blinded snipers or kicked servers. CLASSIFIED · NONVIS CLEARANCE REQUIRED.</sub>
