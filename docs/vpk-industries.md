@@ -197,7 +197,41 @@ VPK Industries even presented itself as the solution. Its laboratories developed
 
 The launch went exactly as planned, until people drank it. LactoKd™ was made of Kdanium, and Kdanium causes milk cravings: every glass of LactoKd™ made its drinker want two glasses of real milk. Demand rose faster than it had at any point of the crisis. A second batch with *"reduced craving"* was released and caused increased craving. Production could not be sustained, and LactoKd™ was discontinued. The remaining stock is stored somewhere cold and classified, next to the Kd₂O(s).
 
-The crisis has never officially ended. VPK Industries considers it *"stable"*.
+### Institutions and documents
+
+- **The Bovine Reserve:** the international institution that manages the world's milk reserve. Once a year it announces the base rate, expressed in percent cream.
+- **The Lactose Accords:** the international treaty on the distribution of milk. Every signatory country received one cow. VPK Industries sat at the table *"as an observer"*.
+- **The VPK press release:** the company's official statement from the height of the crisis. Every second sentence is a denial; the other sentences are about how much the company cares.
+- **Incident Report #004:** unauthorized milk consumption in a classified area (see Incident reports).
+
+### Events
+
+- **The Great Fridge Heist:** the largest milk robbery in history, never solved. The thieves drove away in an unmarked refrigerated truck and left a single crate behind, marked "KD-PX". VPK Industries calls this a coincidence.
+- **The Oat Milk Rebellion:** plant-based milks tried to rise to the occasion and failed: the Kdanium craving only responds to real milk.
+- **Cow Coronation Day:** the day the first cow was officially crowned as a monarch. The crown can still be seen on the VPK milk crisis poster.
+
+### Notable figures
+
+- **Bessie IV:** the most famous of the sacred cows. Her pasture became a place of pilgrimage.
+- **The VPK research herd:** exactly 404 cows, each one serial-numbered like a DynaSnow™ flake. Every one of them is called Daniella K.
+
+### Aftermath products
+
+- **MilkGuard™:** a lockable fridge for the household milk reserve, monitored by V.I.G.I.L.
+- **Weather Pass™ Dairy Edition:** comes with one litre of milk a month, delivered *"before the round"*.
+- **LactoKd™ Zero:** the craving-free successor of LactoKd™. It has never been released; the brochure has listed it as *"coming soon"* for years.
+
+### In the hidden rooms
+
+Ideas for props and textures:
+- a half-empty milk bottle on the F.O.R.E.C.A.S.T. desk, next to the coffee stain: Daniel K. drinks milk too,
+- a fridge door with the sign `MILK RESERVE · AUTHORIZED PERSONNEL ONLY`,
+- a framed one-pint banknote on the wall: *"In Cow We Trust"*,
+- a poster: *"Report all milk hoarding."*
+
+### What comes next
+
+The crisis has never officially ended; VPK Industries considers it *"stable"*. A **Second Milk Crisis** is planned for the winter version: DynaSnow™ freezes the world's milk reserves solid.
 
 ## Incident reports
 
@@ -206,6 +240,7 @@ The crisis has never officially ended. VPK Industries considers it *"stable"*.
 | **#001** | The Rainmaker Mk I exploded during Project Aftershock. | The Mk I was decommissioned; the Mk II was built. |
 | **#002** | Someone kicked the S.T.R.A.T.O.S. server. | The janitor put a note on it: *"DO NOT KICK THE SERVER. AGAIN."* |
 | **#003** | Coffee was spilled on F.O.R.E.C.A.S.T. | The clear weather setting was lost. Since then the roll is rain 90% / storm 10%. |
+| **#004** | Unauthorized milk consumption in a classified area, next to S.T.R.A.T.O.S. | The report is signed by Daniel K. |
 
 ## Other details
 
@@ -277,6 +312,8 @@ Nonvis Division posters (with the Nonvis logo in the footer):
 | Cooled tank | `KD-PX-005 · Kd₂O(s) · CRYSTALLINE PHASE · KEEP BELOW 0 °K… WAIT, NO.` (the wrong unit is on purpose) |
 | Periodic table tile | a large **Kd**, `404` in the corner, *Kdanium* below |
 | Warning sign | `KDANIUM STORAGE · CONTAINS UNSTABLE WEATHER` |
+| Fridge door | `MILK RESERVE · AUTHORIZED PERSONNEL ONLY` |
+| Framed banknote | one pint, *"In Cow We Trust"* |
 | Door sign | `NONVIS-001 FACILITY · CODE NAME: OASIS · SECTOR: DUST II · AUTHORIZED PERSONNEL ONLY · PLEASE RETURN TO THE PLAYABLE AREA!`, with both logos (one number per facility) |
 
 ## Screens

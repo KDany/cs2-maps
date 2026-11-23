@@ -207,6 +207,26 @@ When the world ran short of milk, VPK Industries was the first to act. Our labor
 
 LactoKd™ was received with extraordinary enthusiasm. So extraordinary that, after every glass of LactoKd™, customers wanted at least two glasses of real milk. Our improved, *reduced craving* formula was even more popular. In the end, demand for milk rose so much that LactoKd™ could no longer be produced, and it was discontinued. We consider this a success that the world was not ready for.
 
+### Facts you may have heard
+
+- **The Bovine Reserve** sets the world's base rate once a year, in percent cream. We find its work very reassuring.
+- **The Lactose Accords** gave every signatory country one cow. VPK Industries attended as an observer and observed very carefully.
+- **The Great Fridge Heist** has never been solved. The single KD-PX crate found at the scene was almost certainly placed there by someone else.
+- **The Oat Milk Rebellion** was brave, but it was not milk.
+- **Cow Coronation Day** is still celebrated in many regions. Long may she reign.
+
+### Our herd
+
+The VPK research herd consists of exactly 404 cows, each individually serial-numbered and lovingly named Daniella K. They are kept for research purposes only. Their milk is kept for research purposes only. Please stop asking about the milk.
+
+### Products for a thirsty world
+
+| Product | |
+| :--- | :--- |
+| **MilkGuard™** | A lockable fridge for your household milk reserve. Monitored around the clock by V.I.G.I.L., so you will always know who drank it. |
+| **Weather Pass™ Dairy Edition** | All the rain of the season, plus one litre of milk a month. Delivered before the round. |
+| **LactoKd™ Zero** | All the milk, none of the craving. *Coming soon.* |
+
 ### Our commitment
 
 VPK Industries does not cause milk cravings. VPK Industries does not profit from the milk crisis. The VPK Industries research herd exists for research purposes only, and its members are very well looked after.
