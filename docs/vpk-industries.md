@@ -63,7 +63,7 @@ formerly BSP Industries (Binary Space Partitioning Industries)
 
 ## Screens
 
-Screen textures (1024×512) are in [`docs/images/nonvis-division/`](./images/nonvis-division/):
+Screen textures (1024×512, glowing monitors) are in [`docs/images/nonvis-division/`](./images/nonvis-division/):
 
 | File | Machine |
 | :--- | :--- |
@@ -74,4 +74,13 @@ Screen textures (1024×512) are in [`docs/images/nonvis-division/`](./images/non
 | `kd-mcs-001_vigil_incident_1024x512.png` | V.I.G.I.L., one incident |
 | `kd-mcs-001_vigil_frame_1024x512.png` | V.I.G.I.L., empty frame for `point_worldtext` lines |
 
-To use a screen on a map, copy the image into that map's addon (e.g. `<map_name>/materials/...`) and make a material from it. Turn on **Self Illum** so the screen glows in a dark room.
+Machine plates (1024×512, brushed metal, not glowing) for the cabinets, same folder:
+
+| File | Machine | Detail |
+| :--- | :--- | :--- |
+| `kd-wx-001_atmos_plate_1024x512.png` | A.T.M.O.S. | engraved motto, uplink to S.T.R.A.T.O.S. |
+| `kd-wx-002_forecast_plate_1024x512.png` | F.O.R.E.C.A.S.T. | engraved motto, uplink to S.T.R.A.T.O.S. |
+| `kd-wx-003_stratos_plate_1024x512.png` | S.T.R.A.T.O.S. | scratched-off old name, handwritten sticky note "DO NOT KICK THE SERVER. AGAIN." |
+| `kd-mcs-001_vigil_plate_1024x512.png` | V.I.G.I.L. | engraved motto, standalone unit |
+
+To use a screen or plate on a map, copy the image into that map's addon (e.g. `<map_name>/materials/...`) and make a material from it. Turn on **Self Illum** for the screens so they glow in a dark room; the plates do not need it.
