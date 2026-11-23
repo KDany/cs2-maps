@@ -1,10 +1,11 @@
-# BSP Industries
+# VPK Industries
 
 A fictional company behind the hidden easter egg rooms of my maps. Its machines stand in places players never see in a normal game; they can only be reached with `noclip`. The company and its machines are not tied to one map: the same names, screens and story are reused on every map that has such a room.
 
 ```
-BSP INDUSTRIES                         "We own the world. Literally."
-(Binary Space Partitioning Industries)
+VPK INDUSTRIES                         "We own the world. Literally."
+(Virtual Perfection Kernel Industries)
+formerly BSP Industries (Binary Space Partitioning Industries)
 │
 └─ NONVIS DIVISION                     "Never rendered. Always running."
    │
@@ -21,7 +22,7 @@ BSP INDUSTRIES                         "We own the world. Literally."
 
 | | Name | Slogan | Meaning |
 | :--- | :--- | :--- | :--- |
-| **Company** | **BSP Industries** (full name: *Binary Space Partitioning Industries*) | *"We own the world. Literally."* | Creates and owns worlds. Named after the map format of the Source and GoldSrc engines (`.bsp`): every world belongs to them. |
+| **Company** | **VPK Industries** (full name: *Virtual Perfection Kernel Industries*) | *"We own the world. Literally."* | Creates and owns worlds, and claims to make them perfect. *Virtual*: its worlds are maps. *Kernel*: the core everything is controlled from. The short name is the map package format of Source 2 (`.vpk`). |
 | **Division** | **Nonvis Division** | *"Never rendered. Always running."* | Runs everything from the background. Its machines are always in a part of the map that is never drawn for players; "vis" is the visibility calculation of the engine. |
 
 ## The machines
@@ -44,19 +45,21 @@ BSP INDUSTRIES                         "We own the world. Literally."
 
 ## Backstory
 
-- BSP Industries has existed since the early days of mapping. It builds the worlds; the Nonvis Division runs them from where no player ever looks.
+- The company was founded in the GoldSrc era as **BSP Industries** (*Binary Space Partitioning Industries*), named after the map format of the GoldSrc and Source engines (`.bsp`). It partitioned space and built the first worlds.
+- In the Source 2 era it operates as **VPK Industries** (*Virtual Perfection Kernel Industries*), after the new map format (`.vpk`). It still owns the world, now in the pursuit of perfection. The Nonvis Division runs everything from where no player ever looks.
 - The weather machine started as the **Rainmaker**. The first prototype, the **Rainmaker Mk I**, exploded during the development of the *Aftershock* update (`de_dust2_long` v1.2, the update about explosions). It never saw daylight: no player has ever seen it working, and all that is left of it is *Incident Report #001*.
 - The rebuilt **Rainmaker Mk II** was later extended to control every season, not only rain, and was renamed **KD-WX-003 S.T.R.A.T.O.S.** Its cabinet still carries the old name.
+- The Rainmaker Mk I was, officially, not perfect.
 
 ## Texts used in the rooms
 
 | Where | Text |
 | :--- | :--- |
-| Screen header | `BSP INDUSTRIES · NONVIS DIVISION`, with the program name below it |
+| Screen header | `VPK INDUSTRIES · NONVIS DIVISION`, with the program name below it |
 | Warning | `CLASSIFIED · NONVIS CLEARANCE REQUIRED` |
 | Machine plate | `MODEL KD-WX-003 · DESIGNED BY KDANY · OPERATED BY NONVIS DIVISION` |
 | S.T.R.A.T.O.S. screen | `FORMERLY "RAINMAKER Mk II"` and `Mk I - DECOMMISSIONED (INCIDENT REPORT #001)` |
-| Wall (optional) | `EST. IN THE GOLDSRC ERA` |
+| Wall (optional) | `EST. IN THE GOLDSRC ERA AS BSP INDUSTRIES` |
 
 ## Screens
 
