@@ -2,7 +2,7 @@
 
 ### *We own the world. Literally.*
 
-> **VPK Industries** · *Virtual Perfection Kernel Industries*
+> **VPK Industries** · *Virtual Perfektion Industries*
 > Formerly BSP Industries · Est. in the GoldSrc era
 
 > *This is the in-universe brochure of VPK Industries. For the real, out-of-character description of the easter egg, see [vpk-industries.md](./vpk-industries.md).*

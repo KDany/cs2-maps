@@ -6,7 +6,7 @@ For the same content written as the company's own promo brochure, see [vpk-indus
 
 ```
 VPK INDUSTRIES                         "We own the world. Literally."
-(Virtual Perfection Kernel Industries)
+(Virtual Perfektion Industries)
 formerly BSP Industries (Binary Space Partitioning Industries)
 │
 └─ NONVIS DIVISION                     "Never rendered. Always running."
@@ -24,7 +24,7 @@ formerly BSP Industries (Binary Space Partitioning Industries)
 
 | | Name | Slogan | Meaning |
 | :--- | :--- | :--- | :--- |
-| **Company** | **VPK Industries** (full name: *Virtual Perfection Kernel Industries*) | *"We own the world. Literally."* | Creates and owns worlds, and claims to make them perfect. *Virtual*: its worlds are maps. *Kernel*: the core everything is controlled from. The short name is the map package format of Source 2 (`.vpk`). |
+| **Company** | **VPK Industries** (full name: *Virtual Perfektion Industries*) | *"We own the world. Literally."* | Creates and owns worlds, and claims to make them perfect. *Virtual*: its worlds are maps. *Perfektion*: the German spelling, for that touch of precision engineering; the K completes the abbreviation. The short name is the map package format of Source 2 (`.vpk`). |
 | **Division** | **Nonvis Division** | *"Never rendered. Always running."* | Runs everything from the background. Its machines are always in a part of the map that is never drawn for players; "vis" is the visibility calculation of the engine. |
 
 ## The machines
@@ -115,7 +115,7 @@ For the full, in-universe scientific paper on Kdanium (discovery, chemistry, mas
 ## Backstory
 
 - The company was founded in the GoldSrc era as **BSP Industries** (*Binary Space Partitioning Industries*), named after the map format of the GoldSrc and Source engines (`.bsp`). It partitioned space and built the first worlds.
-- In the Source 2 era it operates as **VPK Industries** (*Virtual Perfection Kernel Industries*), after the new map format (`.vpk`). It still owns the world, now in the pursuit of perfection. The Nonvis Division runs everything from where no player ever looks.
+- In the Source 2 era it operates as **VPK Industries** (*Virtual Perfektion Industries*), after the new map format (`.vpk`). It still owns the world, now in the pursuit of perfection. The Nonvis Division runs everything from where no player ever looks.
 - The weather machine started as the **Rainmaker**. The first prototype, the **Rainmaker Mk I**, exploded during the development of the *Aftershock* update (`de_dust2_long` v1.2, the update about explosions). It never saw daylight: no player has ever seen it working, and all that is left of it is *Incident Report #001*.
 - The rebuilt **Rainmaker Mk II** was later extended to control every season, not only rain, and was renamed **KD-WX-003 S.T.R.A.T.O.S.** Its cabinet still carries the old name.
 - The Rainmaker Mk I was, officially, not perfect.
