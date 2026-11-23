@@ -55,7 +55,7 @@ Every particle effect of VPK Industries is made of **Kdanium**, a synthetic elem
 | **Element** | Kdanium |
 | **Symbol** | `Kd` |
 | **Atomic number** | `404` (element not found: officially it does not exist) |
-| **Properties** | Discovered by the Chief Scientist, Daniel K. With the right catalyst it can be formed into rain, snow, fire, smoke or anything else. It is only produced in the invisible parts of a map. |
+| **Properties** | Discovered by the Chief Scientist, Daniel K. With the right catalyst it can be formed into rain, snow, fire, smoke or anything else. It was discovered and first used in NONVIS-001 "Oasis"; where it is mass-produced today is classified. Nonvis facilities, Oasis included, only receive KD-PX shipments. |
 
 Each particle effect is a numbered Kdanium compound of the **KD-PX** series (*Particle eXperiment*), like the machines of the other series.
 
@@ -139,12 +139,12 @@ Every employee of VPK Industries is called **Daniel K.** Their employee ID is `E
 
 ## Facilities
 
-Every hidden room belongs to a numbered **Nonvis facility**. A facility can be deployed on several maps of the same family.
+Every hidden room belongs to a numbered **Nonvis facility**. A facility can be deployed on several maps of the same family. No facility produces Kdanium: the production site is classified, and the facilities only receive KD-PX shipments.
 
 | Code | Code name | Status |
 | :--- | :--- | :--- |
 | **NONVIS-000** | "HQ" | Location unknown. Probably the void. |
-| **NONVIS-001** | "Oasis" | Operational. The hidden rooms of the Dust II variants (`de_dust2_long`, and later ones). The name: the facility that brings rain to the desert. |
+| **NONVIS-001** | "Oasis" | Operational. The hidden rooms of the Dust II variants (`de_dust2_long`, and later ones). The name: the facility that brings rain to the desert. Kdanium was discovered and first used here; today Oasis only receives KD-PX shipments like every other facility. |
 | NONVIS-002+ | | Under construction, or already there and you do not know about it. |
 
 ## Premium content

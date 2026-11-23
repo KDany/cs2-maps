@@ -160,8 +160,10 @@ VPK Industries operates a growing network of Nonvis facilities, each one located
 | Facility | Code name | Status |
 | :--- | :--- | :--- |
 | **NONVIS-000** | HQ | Location classified. |
-| **NONVIS-001** | Oasis | Fully operational. Sector: Dust II. Bringing rain to the desert since its first night. |
+| **NONVIS-001** | Oasis | Fully operational. Sector: Dust II. Birthplace of Kdanium. Bringing rain to the desert since its first night. |
 | **NONVIS-002+** | | Coming soon. Or already here. |
+
+Our facilities do not produce anything. Every KD-PX product is manufactured at a location we are not at liberty to disclose, and delivered to the facilities in plain, unmarked crates. If you see one, you did not.
 
 If you are reading a sign that says `NONVIS-001 FACILITY · AUTHORIZED PERSONNEL ONLY`, something went wrong. Please return to the playable area.
 

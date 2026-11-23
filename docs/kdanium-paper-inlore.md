@@ -20,7 +20,7 @@ The author set out to answer a simple question: *what is the void made of?* The 
 
 ## 2. Discovery
 
-The first sample of Kdanium was found by accident. During a full compile that lasted 404 minutes, the author left a cup of coffee on the edge of the map, outside the playable area. When the compile finished, the coffee had been partitioned. Where it had stood, a faint teal residue remained, glowing slightly, and it was raining on it. Indoors.
+The first sample of Kdanium was found by accident. During a full compile that lasted 404 minutes, the author left a cup of coffee on the edge of a Dust II map, outside the playable area, in a room that would later become NONVIS-001 "Oasis". When the compile finished, the coffee had been partitioned. Where it had stood, a faint teal residue remained, glowing slightly, and it was raining on it. Indoors.
 
 Analysis of the residue showed an element with 404 protons, 404 neutrons and 400 electrons. The four missing electrons have not been found. Repeated searches returned *"not found"*, which gave the element its atomic number and, indirectly, its name: the author named it after himself, by accident, while filling in the form.
 
@@ -39,7 +39,7 @@ The best catalyst found so far is coffee. The mechanism is not understood. Spill
 
 ### 3.2 Equipment
 
-All experiments were carried out in NONVIS-001 "Oasis", a facility located in a part of the map that is never rendered. This is essential: Kdanium becomes unstable when observed by players for extended periods.
+All experiments were carried out in NONVIS-001 "Oasis", a facility located in a part of the map that is never rendered. This is essential: Kdanium becomes unstable when observed by players for extended periods. Oasis is therefore both the site of the discovery and the site of the first use of Kdanium: the first DynaRain™ ever produced fell on Dust II.
 
 ## 4. Results
 
@@ -102,7 +102,7 @@ All effects are reversible by the next round. Ranks are not.
 
 After the discovery, the author approached **VPK Industries** (formerly BSP Industries) with a proposal for mass production. The negotiation took zero seconds: both the Chief Scientist and the CEO agreed immediately, on behalf of each other. The contract was signed by Daniel K., witnessed by Daniel K. and filed by Daniel K. in HR.
 
-Mass production began in NONVIS-001 "Oasis". Today, all VPK particle effects are Kdanium compounds of the **KD-PX** series, and every custom effect file carries the `kdpx_` prefix as a mark of quality.
+The location of mass production is classified. It is not Oasis, and it is not any other Nonvis facility. The facilities only receive KD-PX shipments, delivered in unmarked crates by a carrier that has never been seen; Oasis, where it all began, now receives them like any other facility. Today, all VPK particle effects are Kdanium compounds of the **KD-PX** series, and every custom effect file carries the `kdpx_` prefix as a mark of quality.
 
 ## 7. Seasonal broadcasting with S.T.R.A.T.O.S.
 
