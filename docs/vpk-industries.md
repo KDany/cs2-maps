@@ -242,6 +242,15 @@ Newspaper front pages from the crisis (1024×1448, in [`docs/images/vpk-industri
 | `newspaper_evening-moo_salaries-paid-in-litres_1024x1448.png` | *The Evening Moo*: "Salaries now paid in litres" |
 | `newspaper_daily-pint_vpk-unveils-lactokd_1024x1448.png` | *The Daily Pint*: "VPK unveils LactoKd™", before the recall |
 | `newspaper_udder-times_inside-vpk-research-herd_1024x1448.png` | *The Udder Times*: "Inside the VPK research herd", 404 cows named Daniella K. |
+| `newspaper_dairy-herald_cream-futures-record_1024x1448.png` | *The Dairy Herald*: "Cream futures hit record high" |
+| `newspaper_daily-pint_empty-carton-auction_1024x1448.png` | *The Daily Pint*: "Empty carton sells for a fortune" |
+| `newspaper_evening-moo_ration-cheats-in-disguise_1024x1448.png` | *The Evening Moo*: "Ration cheats return in disguise" |
+| `newspaper_udder-times_fizzy-milk-disaster_1024x1448.png` | *The Udder Times*: "Fizzy milk launch ends in disaster" |
+| `newspaper_evening-moo_pilgrims-march-to-bessie_1024x1448.png` | *The Evening Moo*: "Millions march to see Bessie IV" |
+| `newspaper_evening-moo_milk-toasts-replace-champagne_1024x1448.png` | *The Evening Moo*: "Milk toasts replace champagne" |
+| `newspaper_dairy-herald_banks-build-refrigerated-vaults_1024x1448.png` | *The Dairy Herald*: "Banks build refrigerated vaults" |
+| `newspaper_udder-times_lactose-free-black-market_1024x1448.png` | *The Udder Times*: "Lactose-free black market exposed" |
+| `newspaper_daily-pint_mystery-blast-at-desert-lab_1024x1448.png` | *The Daily Pint*: "Mystery blast at desert lab", the Rainmaker Mk I explosion (Incident Report #001), called *"routine testing"* by VPK |
 | `newspaper_daily-pint_milk-overtakes-gold_1024x1448.png` | *The Daily Pint*: "Milk overtakes gold", a glass of milk on a stack of gold bars |
 | `newspaper_dairy-herald_soft-drinks-go-flat_1024x1448.png` | *The Dairy Herald*: "Soft drinks go flat", empty shelves, shoppers queuing for dairy |
 | `newspaper_udder-times_great-fridge-heist_1024x1448.png` | *The Udder Times*: "Great fridge heist", the empty milk reserve and a KD-PX crate |
