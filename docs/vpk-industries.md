@@ -189,8 +189,8 @@ Posters (1024×1536) for the walls of the rooms, same folder:
 | `poster_playable-area-this-way_1024x1536.png` | Green wayfinding sign: playable area →, *"You are here: nowhere"*, route: noclip |
 | `poster_thunder-plus_1024x1536.png` | *"Thunder+. Now ad-free."* |
 | `poster_kdanium-safety-data-sheet_1024x1536.png` | Kdanium Safety Data Sheet as a paper document: hazard pictograms, *"Hazards: none.\*"*, first aid (*"Ingestion: you were told."*), disposal: noclip it into the void, "APPROVED" stamp |
-| `poster_missed-that-shot_1024x1536.png` | *"Missed that shot? It probably wasn't you. It definitely wasn't us.\*"*: the crosshair 20 ms behind the target; the fine print denies any link to KD-PX products |
-| `poster_feeling-the-urge_1024x1536.png` | *"Feeling the urge?"*: an AWP, $1,400 in the bank; buying it on an eco round *"is a completely normal decision.\*"*, *"not related to DynaSnow™ consumption. Probably."* |
+| `poster_missed-that-shot_1024x1536.png` | *"Missed that shot? It wasn't your fault. It wasn't ours either.\*"*: the crosshair 20 ms behind the target; the fine print denies any link to KD-PX products |
+| `poster_feeling-the-urge_1024x1536.png` | *"Feeling the urge?"*: the AWP in the buy menu for $4,750 with $1,400 in the bank, *"Insufficient funds. Buy anyway?"*; buying it on an eco round *"is a completely normal decision.\*"*, *"not related to DynaSnow™ consumption. Probably."* |
 
 Nonvis Division posters (with the Nonvis logo in the footer):
 
