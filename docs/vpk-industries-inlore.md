@@ -227,6 +227,28 @@ The VPK research herd consists of exactly 404 cows, each individually serial-num
 | **Weather Pass™ Dairy Edition** | All the rain of the season, plus one litre of milk a month. Delivered before the round. |
 | **LactoKd™ Zero** | All the milk, none of the craving. *Coming soon.* |
 
+### VPK Moolah™: milk for the digital age
+
+After the extraordinary success of LactoKd™, we asked ourselves a simple question: *why should milk need a cow at all?*
+
+The answer was **VPK Moolah™ (MLK)**, the world's first digital milk.
+
+| | |
+| :--- | :--- |
+| **Value** | 1 MLK = 1 virtual pint |
+| **Backed by** | the VPK research herd, or its digital equivalent |
+| **Shelf life** | unlimited. Never spoils. Never spills. Always cold. |
+| **Ledger** | the Udder Ledger, secure, distributed and lovingly monitored by V.I.G.I.L. |
+| **Mining** | proof-of-milk: one virtual cow milked per block |
+
+To celebrate, we released **Non-Fungible Cows**, a limited series of 404 unique digital cow portraits. Owning one is like owning a cow, without any of the cow.
+
+For a while, Moolah brought dairy to everyone. Then, one night, the market decided to take a short break. We would like to reassure all holders that their Moolah is completely safe. It is simply worth nothing at the moment.
+
+*There is no use crying over spilled milk.*
+
+<sub>Redemption of MLK for physical milk is subject to availability. Availability is currently zero. VPK Industries does not recommend drinking your screen. Past performance of Moolah is not an indication of future milk.</sub>
+
 ### Our commitment
 
 VPK Industries does not cause milk cravings. VPK Industries does not profit from the milk crisis. The VPK Industries research herd exists for research purposes only, and its members are very well looked after.
@@ -234,6 +256,9 @@ VPK Industries does not cause milk cravings. VPK Industries does not profit from
 *If you notice a sudden desire for a glass of milk after reading this brochure, please put the brochure down. It is not the brochure.*
 
 ## Frequently asked questions
+
+**What happened to my Moolah?**
+Nothing. It is exactly where you left it. It is just worth nothing.
 
 **Why do I want milk?**
 We do not know. Nobody knows. Please stop asking us.

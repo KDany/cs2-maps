@@ -197,6 +197,26 @@ VPK Industries even presented itself as the solution. Its laboratories developed
 
 The launch went exactly as planned, until people drank it. LactoKd™ was made of Kdanium, and Kdanium causes milk cravings: every glass of LactoKd™ made its drinker want two glasses of real milk. Demand rose faster than it had at any point of the crisis. A second batch with *"reduced craving"* was released and caused increased craving. Production could not be sustained, and LactoKd™ was discontinued. The remaining stock is stored somewhere cold and classified, next to the Kd₂O(s).
 
+### VPK Moolah™: the digital milk
+
+After LactoKd™ and the never-released LactoKd™ Zero, VPK Industries moved into a new market: money. Officially, the goal was to *"make milk available to everyone, without the cow"*. Unofficially, the goal was the same as always.
+
+**The product.** **VPK Moolah™** (ticker: **MLK**) was launched as the world's first digital milk currency:
+- **1 MLK = 1 virtual pint.** Backed, according to the whitepaper, by the VPK research herd: 404 cows, *"or their digital equivalent"*.
+- **Never spoils, never spills, always cold.** The company's slogan.
+- Every transaction is recorded on the **Udder Ledger**, a distributed ledger stored in the Nonvis facilities and, naturally, logged a second time by V.I.G.I.L.
+- New Moolah is created by **proof-of-milk**: the network milks a virtual cow for every block. The virtual cows are serial-numbered and called Daniella K.
+
+**Non-Fungible Cows.** To celebrate the launch, VPK Industries sold **Non-Fungible Cows (NFCs)**: one-of-a-kind digital portraits of the 404 cows of the research herd. Buyers received a picture of a cow. The cows themselves stayed in the research barn, *"for research purposes"*.
+
+**The boom.** Moolah rose faster than cream futures. People sold their milk to buy Moolah, because Moolah would buy more milk later. Banks opened Moolah counters next to the refrigerated vaults. VPK Industries described this as *"democratizing dairy"*.
+
+**The problem.** Digital milk cannot be drunk. The Kdanium craving does not care how many virtual pints a person owns. Holders began to redeem their Moolah for real milk, only to discover that, according to the terms and conditions, redemption is *"subject to availability"*. Availability was zero. Some holders tried to drink their screens; VPK Industries does not recommend this.
+
+**The Great Spill.** Within a single night, the value of Moolah fell to zero. The Udder Ledger answered every request with *"Error 404: cow not found"*. VPK Industries issued a one-sentence statement: *"There is no use crying over spilled milk."* The cause is recorded as **Incident Report #005**. Holders were offered a commemorative NFC as compensation.
+
+**Today.** Moolah still technically exists. Its entire supply is held in a single classified wallet, which, according to V.I.G.I.L., is accessed every night at 03:00 by an employee whose name is Daniel K. VPK Industries considers Moolah *"a success the market was not ready for"*, the same words it used for LactoKd™.
+
 ### Institutions and documents
 
 - **The Bovine Reserve:** the international institution that manages the world's milk reserve. Once a year it announces the base rate, expressed in percent cream.
@@ -273,6 +293,7 @@ The crisis has never officially ended; VPK Industries considers it *"stable"*. A
 | **#002** | Someone kicked the S.T.R.A.T.O.S. server. | The janitor put a note on it: *"DO NOT KICK THE SERVER. AGAIN."* |
 | **#003** | Coffee was spilled on F.O.R.E.C.A.S.T. | The clear weather setting was lost. Since then the roll is rain 90% / storm 10%. |
 | **#004** | Unauthorized milk consumption in a classified area, next to S.T.R.A.T.O.S. | The report is signed by Daniel K. |
+| **#005** | The Udder Ledger answered every request with *"Error 404: cow not found"*; VPK Moolah™ fell to zero overnight ("The Great Spill"). | *"There is no use crying over spilled milk."* Holders received a commemorative Non-Fungible Cow. |
 
 ## Other details
 
