@@ -263,6 +263,10 @@ Machine plates (1024×512, brushed metal, not glowing) for the cabinets, same fo
 
 Facility door sign (1024×512, enamel sign with hazard border), same folder: `nonvis-001_door_sign_1024x512.png` for NONVIS-001 "Oasis".
 
+KD-PX shipment crates, same folder:
+- `kdpx_shipping_label_1024x768.png`: the waybill. From: *[CLASSIFIED]*, to: NONVIS-001 Oasis, contents (DynaRain™ ×22, Splash ×22, smoke), weight *"[?] (not found)"*, carrier *[REDACTED]*, signed by Daniel K., handling boxes (*"Keep dry (ironic)"*, *"Do not lick"*, *"Keep below 0 °K… wait, no."*), barcode `KDPX-404-0001-OASIS`, *"Priority: weather"*.
+- `kdpx_pictogram_<name>_512.png` (transparent, for decals): KD-PX hazard pictograms `kdanium`, `weather` (*contains weather*), `do-not-lick`, `slows-reflexes`, `cryogenic` (*keep below 0 °K*), `do-not-kick`.
+
 Emitter warning sign (1024×1024), same folder: `kd-wx-003_emitter_warning_1024x1024.png`, for the side emitter module of S.T.R.A.T.O.S.: *"KD-PX emitter · active emission"*, *"Do not inhale the weather."*, *"Do not block the outlet with your hand, your face or your coffee."*, *"The smoke is not a malfunction."*, minimum distance 2 m.
 
 To use a screen or plate on a map, copy the image into that map's addon (e.g. `<map_name>/materials/...`) and make a material from it. Turn on **Self Illum** for the screens so they glow in a dark room; the plates do not need it.

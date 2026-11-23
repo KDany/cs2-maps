@@ -102,7 +102,7 @@ All effects are reversible by the next round. Ranks are not.
 
 After the discovery, the author approached **VPK Industries** (formerly BSP Industries) with a proposal for mass production. The negotiation took zero seconds: both the Chief Scientist and the CEO agreed immediately, on behalf of each other. The contract was signed by Daniel K., witnessed by Daniel K. and filed by Daniel K. in HR.
 
-The location of mass production is classified. It is not Oasis, and it is not any other Nonvis facility. The facilities only receive KD-PX shipments, delivered in unmarked crates by a carrier that has never been seen; Oasis, where it all began, now receives them like any other facility. Today, all VPK particle effects are Kdanium compounds of the **KD-PX** series, and every custom effect file carries the `kdpx_` prefix as a mark of quality.
+The location of mass production is classified. It is not Oasis, and it is not any other Nonvis facility. The facilities only receive KD-PX shipments: sealed crates with a waybill and the standard KD-PX hazard pictograms, delivered by a carrier whose name is redacted on every waybill; Oasis, where it all began, now receives them like any other facility. Today, all VPK particle effects are Kdanium compounds of the **KD-PX** series, and every custom effect file carries the `kdpx_` prefix as a mark of quality.
 
 ## 7. Seasonal broadcasting with S.T.R.A.T.O.S.
 
