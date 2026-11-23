@@ -271,6 +271,15 @@ Newspaper front pages from the crisis (1024×1448, in [`docs/images/vpk-industri
 | `newspaper_dairy-herald_banks-build-refrigerated-vaults_1024x1448.png` | *The Dairy Herald*: "Banks build refrigerated vaults" |
 | `newspaper_udder-times_lactose-free-black-market_1024x1448.png` | *The Udder Times*: "Lactose-free black market exposed" |
 | `newspaper_daily-pint_mystery-blast-at-desert-lab_1024x1448.png` | *The Daily Pint*: "Mystery blast at desert lab", the Rainmaker Mk I explosion (Incident Report #001), called *"routine testing"* by VPK |
+| `newspaper_daily-pint_vpk-launches-moolah_1024x1448.png` | *The Daily Pint*: "VPK launches Moolah™" |
+| `newspaper_dairy-herald_banks-open-moolah-counters_1024x1448.png` | *The Dairy Herald*: "Banks open Moolah counters" |
+| `newspaper_udder-times_inside-proof-of-milk-farm_1024x1448.png` | *The Udder Times*: "Inside a proof-of-milk farm", a very real cow between the servers |
+| `newspaper_evening-moo_non-fungible-cows-sell-out_1024x1448.png` | *The Evening Moo*: "Non-Fungible Cows sell out" |
+| `newspaper_daily-pint_the-great-spill_1024x1448.png` | *The Daily Pint*: "The Great Spill", Moolah falls to zero (Incident Report #005) |
+| `newspaper_evening-moo_holders-drink-their-screens_1024x1448.png` | *The Evening Moo*: "Holders try to drink their screens" |
+| `newspaper_udder-times_who-opens-the-wallet_1024x1448.png` | *The Udder Times*: "Who opens the wallet at 3 AM?" |
+| `newspaper_dairy-herald_milkguard-sales-soar_1024x1448.png` | *The Dairy Herald*: "MilkGuard™ sales soar" |
+| `newspaper_daily-pint_frozen-milk-next-crisis_1024x1448.png` | *The Daily Pint*: "Frozen milk: the next crisis?", a teaser for the Second Milk Crisis |
 | `newspaper_daily-pint_milk-overtakes-gold_1024x1448.png` | *The Daily Pint*: "Milk overtakes gold", a glass of milk on a stack of gold bars |
 | `newspaper_dairy-herald_soft-drinks-go-flat_1024x1448.png` | *The Dairy Herald*: "Soft drinks go flat", empty shelves, shoppers queuing for dairy |
 | `newspaper_udder-times_great-fridge-heist_1024x1448.png` | *The Udder Times*: "Great fridge heist", the empty milk reserve and a KD-PX crate |
@@ -329,7 +338,7 @@ Posters (1024×1536) for the walls of the rooms, same folder:
 | `poster_employee-of-the-month_1024x1536.png` | Employee of the Month: Daniel K., "photo unavailable", every month |
 | `poster_the-darkness-is-free_1024x1536.png` | *"The darkness is free. The light costs extra."*: Light Subscription™, a street lamp with a price tag |
 | `poster_kdanium_1024x1536.png` | *"The element of perfection."*: the Kd 404 periodic table tile |
-| `poster_days-without-an-incident_1024x1536.png` | Days without an incident: **0**, the four incident reports, *"Safety is our number two priority."* |
+| `poster_days-without-an-incident_1024x1536.png` | Days without an incident: **0**, the five incident reports, *"Safety is our number two priority."* |
 | `poster_do-not-kick-the-server_1024x1536.png` | *"Do not kick the server. Again."*: the S.T.R.A.T.O.S. cabinet and a crossed-out boot (Incident Report #002) |
 | `poster_we-are-not-hiring_1024x1536.png` | *"Join the Nonvis Division"* with a "POSITION FILLED" stamp; every position: Daniel K. |
 | `poster_clear-sky-unlock_1024x1536.png` | *"Miss the sun?"*: Clear Sky Unlock for 4.99, locked sun, "UNAVAILABLE" stamp |
