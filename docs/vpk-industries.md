@@ -215,7 +215,7 @@ After LactoKd™ and the never-released LactoKd™ Zero, VPK Industries moved in
 
 **The Great Spill.** Within a single night, the value of Moolah fell to zero. The Udder Ledger answered every request with *"Error 404: cow not found"*. VPK Industries issued a one-sentence statement: *"There is no use crying over spilled milk."* The cause is recorded as **Incident Report #005**. Holders were offered a commemorative NFC as compensation.
 
-**Today.** Moolah still technically exists. Its entire supply is held in a single classified wallet, which, according to V.I.G.I.L., is accessed every night at 03:00 by an employee whose name is Daniel K. VPK Industries considers Moolah *"a success the market was not ready for"*, the same words it used for LactoKd™.
+**Today.** Moolah still technically exists. Its entire supply is held in a single classified wallet, which, according to V.I.G.I.L., is accessed every night at 03:00 by an employee whose name is Daniel K. VPK Industries describes Moolah as *"a valuable learning experience for our customers"*, and points out that the company itself did not lose a single pint.
 
 ### Institutions and documents
 
