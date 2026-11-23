@@ -229,6 +229,7 @@ Posters (1024×1536) for the walls of the rooms, same folder:
 | `poster_kdanium-safety-data-sheet_1024x1536.png` | Kdanium Safety Data Sheet as a paper document: hazard pictograms, *"Hazards: none.\*"*, first aid (*"Ingestion: you were told."*), disposal: noclip it into the void, "APPROVED" stamp |
 | `poster_missed-that-shot_1024x1536.png` | *"Missed that shot? It wasn't your fault. It wasn't ours either.\*"*: the crosshair 20 ms behind the target; the fine print denies any link to KD-PX products |
 | `poster_feeling-the-urge_1024x1536.png` | *"Feeling the urge?"*: the AWP in the buy menu for $4,750 with $1,400 in the bank, *"Insufficient funds. Buy anyway?"*; buying it on an eco round *"is a completely normal decision.\*"*, *"not related to DynaSnow™ consumption. Probably."* |
+| `poster_great-global-milk-crisis_1024x1536.png` | The Great Global Milk Crisis: a crowned glass of milk on a pile of gold bars, *"Milk: now worth more than gold. VPK Industries had nothing to do with it.\*"* |
 
 Nonvis Division posters (with the Nonvis logo in the footer):
 
