@@ -153,6 +153,800 @@
 			],
 		]
 	}
+	"d2long.night.rain" = 
+	{
+		base = "amb.looping.stereo.base"
+		volume = 0.6
+		randomize_start_time = true
+		vsnd_files_track_01 = "sounds/ambient/common/water/rain_exterior.vsnd"
+	}
+	"d2long.night.storm" = 
+	{
+		base = "amb.looping.stereo.base"
+		volume = 1.0
+		randomize_start_time = true
+		vsnd_files_track_01 = "sounds/ambient/common/water/rain_exterior.vsnd"
+	}
+	"d2long.night.rain.point" = 
+	{
+		base = "amb.looping.atXYZ.base"
+		use_world_position = false
+		volume = 0.35
+		randomize_start_time = true
+		vsnd_files_track_01 = "sounds/ambient/common/water/rain_exterior.vsnd"
+		occlusion_intensity = 1.0
+		distance_volume_mapping_curve = 
+		[
+			[
+				0.0, 1.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+			[
+				350.0, 1.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+			[
+				900.0, 0.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+		]
+	}
+	// ===== Night soundscapes (env_night) =====
+
+	"d2long.night.outdoors" = 
+	{
+		base = "amb.soundscapeParent.base"
+		enable_child_events = true
+		dsp_preset = "reverb_22_outsideOpen"
+		soundevent_01 = 
+		[
+			"d2long.night.outdoors.rain",
+		]
+	}
+	"d2long.night.alley" = 
+	{
+		base = "amb.soundscapeParent.base"
+		enable_child_events = true
+		dsp_preset = "reverb_20_outsideAlley"
+		soundevent_01 = 
+		[
+			"d2long.night.outdoors.rain",
+		]
+	}
+	"d2long.night.indoors" = 
+	{
+		base = "amb.soundscapeParent.base"
+		enable_child_events = true
+		dsp_preset = "reverb_18_mediumConcrete"
+		soundevent_01 = 
+		[
+			"d2long.night.indoors.rain",
+			"d2long.night.indoors.drips",
+		]
+	}
+	"d2long.night.tunnel" = 
+	{
+		base = "amb.soundscapeParent.base"
+		enable_child_events = true
+		dsp_preset = "reverb_3_smallTunnels"
+		soundevent_01 = 
+		[
+			"d2long.night.tunnel.rain",
+			"d2long.night.indoors.drips",
+		]
+	}
+	// ----
+	"dust2_long.rain.outdoors" = 
+	{
+		base = "amb.soundscapeParent.base"
+		enable_child_events = true
+		dsp_preset = "reverb_22_outsideOpen"
+		soundevent_01 = 
+		[
+			"child_event.rain.outdoors",
+		]
+	}
+	"dust2_long.rain.outdoors.loud" = 
+	{
+		base = "dust2_long.rain.outdoors"
+		soundevent_01 = 
+		[
+			"child_event.rain.outdoors.loud",
+		]
+	}
+	"dust2_long.rain.outdoors.alley" = 
+	{
+		base = "amb.soundscapeParent.base"
+		enable_child_events = true
+		dsp_preset = "reverb_20_outsideAlley"
+		soundevent_01 = 
+		[
+			"child_event.rain.outdoors",
+		]
+	}
+	"dust2_long.rain.outdoors.alley.loud" = 
+	{
+		base = "dust2_long.rain.outdoors.alley"
+		soundevent_01 = 
+		[
+			"child_event.rain.outdoors.loud",
+		]
+	}
+	"dust2_long.rain.outdoors.street" = 
+	{
+		base = "amb.soundscapeParent.base"
+		enable_child_events = true
+		dsp_preset = "reverb_21_outsideStreet"
+		soundevent_01 = 
+		[
+			"child_event.rain.outdoors",
+		]
+	}
+	"dust2_long.rain.outdoors.street.loud" = 
+	{
+		base = "dust2_long.rain.outdoors.street"
+		soundevent_01 = 
+		[
+			"child_event.rain.outdoors.loud",
+		]
+	}
+	"dust2_long.rain.outdoors.tinroof" = 
+	{
+		base = "amb.soundscapeParent.base"
+		enable_child_events = true
+		dsp_preset = "reverb_22_outsideOpen"
+		soundevent_01 = 
+		[
+			"child_event.rain.outdoors",
+			"child_event.rain.tinroof",
+			"child_event.rain.drips",
+			"child_event.rain.waterflow",
+		]
+	}
+	"dust2_long.rain.outdoors.tinroof.loud" = 
+	{
+		base = "dust2_long.rain.outdoors.tinroof"
+		soundevent_01 = 
+		[
+			"child_event.rain.outdoors.loud",
+			"child_event.rain.tinroof.loud",
+			"child_event.rain.drips.loud",
+			"child_event.rain.waterflow.loud",
+		]
+	}
+	"dust2_long.rain.outdoors.car" = 
+	{
+		base = "amb.soundscapeParent.base"
+		enable_child_events = true
+		dsp_preset = "reverb_22_outsideOpen"
+		soundevent_01 = 
+		[
+			"child_event.rain.outdoors",
+			"child_event.rain.carroof",
+			"child_event.rain.drips",
+			"child_event.rain.waterflow",
+		]
+	}
+	"dust2_long.rain.outdoors.car.loud" = 
+	{
+		base = "dust2_long.rain.outdoors.car"
+		soundevent_01 = 
+		[
+			"child_event.rain.outdoors.loud",
+			"child_event.rain.carroof.loud",
+			"child_event.rain.drips.loud",
+			"child_event.rain.waterflow.loud",
+		]
+	}
+	"dust2_long.rain.outdoors.drips" = 
+	{
+		base = "amb.soundscapeParent.base"
+		enable_child_events = true
+		dsp_preset = "reverb_22_outsideOpen"
+		soundevent_01 = 
+		[
+			"child_event.rain.outdoors",
+			"child_event.rain.drips",
+			"child_event.rain.waterflow.loud",
+			"child_event.rain.waterfall_drain",
+		]
+	}
+	"dust2_long.rain.outdoors.drips.loud" = 
+	{
+		base = "dust2_long.rain.outdoors.drips"
+		soundevent_01 = 
+		[
+			"child_event.rain.outdoors.loud",
+			"child_event.rain.drips.loud",
+			"child_event.rain.waterflow.loud",
+			"child_event.rain.waterfall_drain.loud",
+		]
+	}
+	"dust2_long.rain.indoors" = 
+	{
+		base = "amb.soundscapeParent.base"
+		enable_child_events = true
+		dsp_preset = "reverb_3_smallTunnels"
+		soundevent_01 = 
+		[
+			"child_event.rain.indoors",
+		]
+	}
+	"dust2_long.rain.indoors.loud" = 
+	{
+		base = "dust2_long.rain.indoors"
+		soundevent_01 = 
+		[
+			"child_event.rain.indoors.loud",
+		]
+	}
+	"dust2_long.rain.indoors.tunnel" = 
+	{
+		base = "amb.soundscapeParent.base"
+		enable_child_events = true
+		dsp_preset = "reverb_3_smallTunnels"
+		soundevent_01 = 
+		[
+			"child_event.rain.indoors.tunnel",
+		]
+	}
+	"dust2_long.rain.indoors.tunnel.loud" = 
+	{
+		base = "dust2_long.rain.indoors.tunnel"
+		soundevent_01 = 
+		[
+			"child_event.rain.indoors.tunnel.loud",
+		]
+	}
+	"dust2_long.rain.indoors.entrance" = 
+	{
+		base = "amb.soundscapeParent.base"
+		enable_child_events = true
+		dsp_preset = "reverb_3_smallTunnels"
+		soundevent_01 = 
+		[
+			"child_event.rain.indoors",
+			"child_event.rain.outdoors.quite",
+			"child_event.rain.waterflow",
+		]
+	}
+	"dust2_long.rain.indoors.entrance.loud" = 
+	{
+		base = "dust2_long.rain.indoors.entrance"
+		soundevent_01 = 
+		[
+			"child_event.rain.indoors.loud",
+			"child_event.rain.outdoors",
+			"child_event.rain.waterflow.loud",
+		]
+	}
+	"dust2_long.rain.indoors.entrance.drips" = 
+	{
+		base = "amb.soundscapeParent.base"
+		enable_child_events = true
+		dsp_preset = "reverb_3_smallTunnels"
+		soundevent_01 = 
+		[
+			"child_event.rain.indoors",
+			"child_event.rain.outdoors.quite",
+			"child_event.rain.waterflow.loud",
+			"child_event.rain.waterfall_drain",
+		]
+	}
+	"dust2_long.rain.indoors.entrance.drips.loud" = 
+	{
+		base = "dust2_long.rain.indoors.entrance.drips"
+		soundevent_01 = 
+		[
+			"child_event.rain.indoors.loud",
+			"child_event.rain.outdoors",
+			"child_event.rain.waterflow.loud",
+			"child_event.rain.waterfall_drain.loud",
+		]
+	}
+
+	// --- children ---
+	"child_event.rain.outdoors" = 
+	{
+		base = "amb.looping.stereo.base"
+		volume = 0.5
+		randomize_start_time = true
+		vsnd_files_track_01 = "sounds/ambient/common/water/rain_exterior.vsnd"
+		time_volume_mapping_curve = 
+		[
+			[
+				0.0, 0.6, 0.0, 0.0,
+				2.0, 3.0,
+			],
+			[
+				0.4, 1.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+		]
+		fadetime_volume_mapping_curve = 
+		[
+			[
+				0.0, 1.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+			[
+				0.4, 0.8, 0.0, 0.0,
+				2.0, 3.0,
+			],
+			[
+				1.0, 0.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+		]
+	}
+	"child_event.rain.outdoors.loud" = 
+	{
+		base = "child_event.rain.outdoors"
+		volume = 2.0
+	}
+	"child_event.rain.outdoors.quite" = 
+	{
+		base = "child_event.rain.outdoors"
+		volume = 0.35
+	}
+	"child_event.rain.tinroof" = 
+	{
+		base = "amb.looping.stereo.base"
+		volume = 0.6
+		randomize_start_time = true
+		vsnd_files_track_01 = "sounds/ambient/common/water/rain_tin_exterior.vsnd"
+	}
+	"child_event.rain.tinroof.loud" = 
+	{
+		base = "child_event.rain.tinroof"
+		volume = 2.25
+	}
+	"child_event.rain.carroof" = 
+	{
+		base = "amb.looping.stereo.base"
+		volume = 0.5
+		pitch = 1.7
+		randomize_start_time = true
+		vsnd_files_track_01 = "sounds/ambient/common/water/rain_tin_exterior.vsnd"
+	}
+	"child_event.rain.carroof.loud" = 
+	{
+		base = "child_event.rain.carroof"
+		volume = 2.0
+	}
+	"child_event.rain.drips" = 
+	{
+		base = "amb.intermittent.randomAroundPlayer.base"
+		delay = 1.0
+		volume = 0.5
+		pitch_random_min = -0.1
+		pitch_random_max = 0.1
+		randomize_position_min_radius = 150.0
+		randomize_position_max_radius = 400.0
+		retrigger_interval_min = 3.0
+		retrigger_interval_max = 10.0
+		retrigger_radius = 1000.0
+		vsnd_files_track_01 = 
+		[
+			"sounds/ambient/common/water/rain_drip1.vsnd",
+			"sounds/ambient/common/water/rain_drip2.vsnd",
+			"sounds/ambient/common/water/rain_drip3.vsnd",
+			"sounds/ambient/common/water/rain_drip4.vsnd",
+			"sounds/ambient/common/water/rain_drip5.vsnd",
+		]
+	}
+	"child_event.rain.drips.loud" = 
+	{
+		base = "child_event.rain.drips"
+		volume = 2.0
+	}
+	"child_event.rain.fastDrips" = 
+	{
+		base = "amb.intermittent.randomAroundPlayer.base"
+		delay = 1.0
+		volume = 0.8
+		pitch_random_min = -0.1
+		pitch_random_max = 0.1
+		randomize_position_min_radius = 150.0
+		randomize_position_max_radius = 400.0
+		retrigger_interval_min = 0.1
+		retrigger_interval_max = 0.3
+		retrigger_radius = 1000.0
+		vsnd_files_track_01 = 
+		[
+			"sounds/ambient/common/water/rain_drip1.vsnd",
+			"sounds/ambient/common/water/rain_drip2.vsnd",
+			"sounds/ambient/common/water/rain_drip3.vsnd",
+			"sounds/ambient/common/water/rain_drip4.vsnd",
+			"sounds/ambient/common/water/rain_drip5.vsnd",
+		]
+	}
+	"child_event.rain.indoors" = 
+	{
+		base = "amb.looping.stereo.base"
+		volume = 0.35
+		randomize_start_time = true
+		vsnd_files_track_01 = "sounds/ambient/common/water/rain_interior_02.vsnd"
+	}
+	"child_event.rain.indoors.loud" = 
+	{
+		base = "child_event.rain.indoors"
+		volume = 1.5
+	}
+	"child_event.rain.indoors.tunnel" = 
+	{
+		base = "amb.looping.stereo.base"
+		volume = 0.2
+		pitch = 0.95
+		randomize_start_time = true
+		vsnd_files_track_01 = "sounds/ambient/common/water/rain_interior_02.vsnd"
+	}
+	"child_event.rain.indoors.tunnel.loud" = 
+	{
+		base = "child_event.rain.indoors.tunnel"
+		volume = 1.25
+	}
+	"child_event.rain.waterfall_drain" = 
+	{
+		base = "amb.looping.stereo.base"
+		volume = 0.6
+		randomize_start_time = true
+		vsnd_files_track_01 = "sounds/ambient/common/water/subway_waterfall_drain_01.vsnd"
+	}
+	"child_event.rain.waterfall_drain.loud" = 
+	{
+		base = "child_event.rain.waterfall_drain"
+		volume = 2.1
+	}
+	"child_event.rain.waterfall_barrel" = 
+	{
+		base = "amb.looping.stereo.base"
+		volume = 0.6
+		randomize_start_time = true
+		vsnd_files_track_01 = "sounds/ambient/common/water/subway_waterfall_barrel_01.vsnd"
+	}
+	"child_event.rain.waterfall_barrel.loud" = 
+	{
+		base = "child_event.rain.waterfall_barrel"
+		volume = 2.1
+	}
+	"child_event.rain.waterfall_ground" = 
+	{
+		base = "amb.looping.stereo.base"
+		volume = 0.6
+		randomize_start_time = true
+		vsnd_files_track_01 = "sounds/ambient/anubis/anubis_waterfall_01.vsnd"
+	}
+	"child_event.rain.waterfall_ground.loud" = 
+	{
+		base = "child_event.rain.waterfall_ground"
+		volume = 2.1
+	}
+	"child_event.rain.waterflow" = 
+	{
+		base = "amb.looping.stereo.base"
+		volume = 0.149902
+		pitch = 1.0
+		randomize_start_time = true
+		use_distance_volume_mapping_curve = true
+		occlusion_intensity = 0.8
+		use_fadetime_volume_mapping_curve = false
+		restrict_source_reverb = true
+		instance_limit = 1.0
+		vsnd_files_track_01 = "sounds/ambient/common/water/water_flow_loop1.vsnd"
+		distance_volume_mapping_curve = 
+		[
+			[
+				101.325851, 1.0, -0.002544, -0.002544,
+				2.0, 3.0,
+			],
+			[
+				476.685852, 0.28065, -0.000604, -0.000604,
+				2.0, 3.0,
+			],
+			[
+				1400.0, 0.0, -0.000275, -0.000275,
+				2.0, 3.0,
+			],
+		]
+		fadetime_volume_mapping_curve = 
+		[
+			[
+				0.0, 1.0, -1.691176, -1.691176,
+				2.0, 3.0,
+			],
+			[
+				0.3, 0.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+		]
+	}
+	"child_event.rain.waterflow.loud" = 
+	{
+		base = "child_event.rain.waterflow"
+		volume = 1.5
+	}
+	"child_event.storm.thunder" = 
+	{
+		base = "amb.intermittent.randomAroundPlayer.base"
+		delay = 1.0
+		volume = 0.8
+		pitch_random_min = -0.1
+		pitch_random_max = 0.1
+		randomize_position_min_radius = 150.0
+		randomize_position_max_radius = 400.0
+		retrigger_interval_min = 0.1
+		retrigger_interval_max = 0.3
+		retrigger_radius = 1000.0
+		vsnd_files_track_01 = 
+		[
+			"sounds/ambient/common/water/rain_drip1.vsnd",
+			"sounds/ambient/common/water/rain_drip2.vsnd",
+			"sounds/ambient/common/water/rain_drip3.vsnd",
+			"sounds/ambient/common/water/rain_drip4.vsnd",
+			"sounds/ambient/common/water/rain_drip5.vsnd",
+		]
+	}
+	// =======================================================================
+	"point_sound.weather.thunder" = 
+	{
+		base = "amb.looping.stereo.base"
+		volume = 1.0
+		pitch = 1.0
+		volume_random_min = -0.3
+		volume_random_max = 0.0
+		pitch_random_min = -0.1
+		pitch_random_max = 0.05
+		use_distance_volume_mapping_curve = true
+		reverb_wet = 0.3
+		mixgroup = "Amb_Common"
+		vsnd_files_track_01 = 
+		[
+			"sounds/ambient/common/thunder/thunder_01.vsnd",
+			"sounds/ambient/common/thunder/thunder_02.vsnd",
+			"sounds/ambient/common/thunder/thunder_03.vsnd",
+		]
+	}
+	"point_sound.weather.thunder_distant" = 
+	{
+		base = "amb.looping.stereo.base"
+		volume = 1.0
+		pitch = 1.0
+		volume_random_min = -0.3
+		volume_random_max = 0.0
+		pitch_random_min = -0.1
+		pitch_random_max = 0.05
+		use_distance_volume_mapping_curve = true
+		reverb_wet = 0.3
+		mixgroup = "Amb_Common"
+		vsnd_files_track_01 = 
+		[
+			"sounds/ambient/common/thunder/thunder_distant_01.vsnd",
+			"sounds/ambient/common/thunder/thunder_distant_02.vsnd",
+			"sounds/ambient/common/thunder/thunder_distant_03.vsnd",
+			"sounds/ambient/common/thunder/thunder_distant_04.vsnd",
+			"sounds/ambient/common/thunder/thunder_distant_05.vsnd",
+			"sounds/ambient/common/thunder/thunder_distant_06.vsnd",
+			"sounds/ambient/common/thunder/thunder_distant_07.vsnd",
+			"sounds/ambient/common/thunder/thunder_distant_08.vsnd",
+		]
+		distance_volume_mapping_curve = 
+		[
+			[
+				0.0, 1.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+			[
+				300.0, 1.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+		]
+	}
+	"point_sound.weather.thunder_close" = 
+	{
+		base = "amb.looping.stereo.base"
+		volume = 1.0
+		pitch = 1.0
+		volume_random_min = -0.3
+		volume_random_max = 0.0
+		pitch_random_min = -0.1
+		pitch_random_max = 0.05
+		use_distance_volume_mapping_curve = true
+		reverb_wet = 0.3
+		mixgroup = "Amb_Common"
+		vsnd_files_track_01 = 
+		[
+			"sounds/ambient/common/thunder/thunder_close_01.vsnd",
+			"sounds/ambient/common/thunder/thunder_close_02.vsnd",
+			"sounds/ambient/common/thunder/thunder_close_03.vsnd",
+			"sounds/ambient/common/thunder/thunder_close_04.vsnd",
+		]
+		distance_volume_mapping_curve = 
+		[
+			[
+				0.0, 1.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+			[
+				300.0, 1.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+		]
+	}
+	"point_sound.weather.thunder_close.loud" =
+	{
+		base = "point_sound.weather.thunder_close"
+		volume = 4.0
+	}
+	"point_sound.weather.lightning_close" =
+	{
+		base = "point_sound.weather.lightning"
+		volume = 1.0
+		volume_random_min = -0.1
+		pitch = 0.85
+	}
+	"point_sound.weather.lightning" =
+	{
+		type = "csgo_mega"
+		volume = 0.2
+		pitch = 1.0
+		mixgroup = "UI"
+		block_duration = 0.01
+		use_distance_volume_mapping_curve = true
+		use_distance_unfiltered_stereo_mapping_curve = true
+		ducking_bypass = 1.0
+		reverb_wet = 0.1
+		instance_limit = 1.0
+		vsnd_pause_with_game = false
+		use_world_position = false
+		distance_effect_mix = 0.0
+		occlusion_frequency_scale = 0.0
+		position_relative_to_player = false
+		is_ui_sound = false
+		distance_volume_mapping_curve = 
+		[
+			[
+				0.0, 1.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+			[
+				300.0, 1.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+		]
+		distance_unfiltered_stereo_mapping_curve = 
+		[
+			[
+				0.0, 1.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+			[
+				300.0, 1.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+		]
+		vsnd_files_track_01 = 
+		[
+			"sounds/ui/chickens/photobooth_fx_lightning_01.vsnd",
+		]
+	}
+	// ----
+	"d2long.night.outdoors.rain" = 
+	{
+		base = "amb.looping.stereo.base"
+		volume = 0.5
+		randomize_start_time = true
+		vsnd_files_track_01 = "sounds/ambient/common/water/rain_exterior.vsnd"
+	}
+	"d2long.night.indoors.rain" = 
+	{
+		base = "amb.looping.stereo.base"
+		volume = 0.35
+		randomize_start_time = true
+		vsnd_files_track_01 = "sounds/ambient/common/water/rain_interior_02.vsnd"
+	}
+	"d2long.night.tunnel.rain" = 
+	{
+		base = "amb.looping.stereo.base"
+		volume = 0.2
+		pitch = 0.95
+		randomize_start_time = true
+		vsnd_files_track_01 = "sounds/ambient/common/water/rain_interior_02.vsnd"
+	}
+	"d2long.night.indoors.drips" = 
+	{
+		base = "amb.intermittent.randomAroundPlayer.base"
+		delay = 1.0
+		volume = 0.4
+		pitch_random_min = -0.1
+		pitch_random_max = 0.1
+		randomize_position_min_radius = 150.0
+		randomize_position_max_radius = 400.0
+		retrigger_interval_min = 3.0
+		retrigger_interval_max = 10.0
+		retrigger_radius = 1000.0
+		vsnd_files_track_01 = 
+		[
+			"sounds/ambient/common/water/rain_drip1.vsnd",
+			"sounds/ambient/common/water/rain_drip2.vsnd",
+			"sounds/ambient/common/water/rain_drip3.vsnd",
+			"sounds/ambient/common/water/rain_drip4.vsnd",
+			"sounds/ambient/common/water/rain_drip5.vsnd",
+		]
+	}
+	
+	// ===== Gutter / downpipe (point_soundevent) =====
+
+	"d2long.night.gutter" = 
+	{
+		base = "amb.intermittent.atXYZ.base"
+		use_world_position = false
+		volume = 0.6
+		volume_random_min = -0.2
+		volume_random_max = 0.0
+		pitch_random_min = -0.05
+		pitch_random_max = 0.05
+		retrigger_interval_min = 1.0
+		retrigger_interval_max = 3.0
+		vsnd_files_track_01 = 
+		[
+			"sounds/ambient/canals/ambience_canals_water_bridge_01.vsnd",
+			"sounds/ambient/canals/ambience_canals_water_bridge_02.vsnd",
+			"sounds/ambient/canals/ambience_canals_water_bridge_03.vsnd",
+			"sounds/ambient/canals/ambience_canals_water_bridge_04.vsnd",
+			"sounds/ambient/canals/ambience_canals_water_bridge_05.vsnd",
+		]
+		distance_volume_mapping_curve = 
+		[
+			[
+				0.0, 1.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+			[
+				150.0, 1.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+			[
+				600.0, 0.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+		]
+	}
+	"d2long.night.gutter.drip" = 
+	{
+		base = "amb.intermittent.atXYZ.base"
+		use_world_position = false
+		volume = 0.7
+		volume_random_min = -0.3
+		volume_random_max = 0.0
+		pitch_random_min = -0.1
+		pitch_random_max = 0.1
+		retrigger_interval_min = 0.3
+		retrigger_interval_max = 1.0
+		vsnd_files_track_01 = 
+		[
+			"sounds/ambient/common/water/rain_drip1.vsnd",
+			"sounds/ambient/common/water/rain_drip2.vsnd",
+			"sounds/ambient/common/water/rain_drip3.vsnd",
+			"sounds/ambient/common/water/rain_drip4.vsnd",
+			"sounds/ambient/common/water/rain_drip5.vsnd",
+		]
+		distance_volume_mapping_curve = 
+		[
+			[
+				0.0, 1.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+			[
+				100.0, 1.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+			[
+				450.0, 0.0, 0.0, 0.0,
+				2.0, 3.0,
+			],
+		]
+	}
 
 
 
