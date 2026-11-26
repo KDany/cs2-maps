@@ -3,18 +3,19 @@
 All notable changes to the maps in this repository are documented here, per map.
 
 Versioning:
-- Every Steam Workshop update gets a version number (`vMAJOR.MINOR`), written at the start of the Workshop change note.
+- Every Steam Workshop update gets a version number (`vMAJOR.MINOR`, or `vMAJOR.MINOR.PATCH` for a patch), written at the start of the Workshop change note.
 - Each map has a **release** Workshop item, e.g. *Dust II Long*, map name `de_dust2_long`, versions like `v1.1`.
 - New versions are playtested privately before release, built under the same map name. Playtest builds may be numbered like `v1.1-beta.1`, `v1.1-beta.2`; they are not part of this repository and are not tagged.
 - A version number is only "used up" by a release: all playtest builds of a version lead to the same release version (e.g. `v1.1-beta.1` → `v1.1-beta.2` → `v1.1`).
 - The repository only contains the release map files (e.g. `de_dust2_long/`). Work in progress is done on a branch and merged into `master` when the update is released on the Workshop.
-- Only releases are tagged in Git: `<map_name>-v<version>` (e.g. `de_dust2_long-v1.1`), on the commit the release build was made from.
+- Only releases are tagged in Git: `<map_name>-v<version>` (e.g. `de_dust2_long-v1.1`, `de_dust2_long-v1.3.1`), on the commit the release build was made from.
 - The compiled `.vpk` of each release is attached to the matching [GitHub Release](https://github.com/KDany/cs2-maps/releases), so older versions can be restored if needed.
 
 Version numbers:
 - **MAJOR** — changes to the map's design that affect how it is played: layout, routes, spawns or bombsites of the existing game modes.
-- **MINOR** — new game modes or features, adopting CS2 game updates (e.g. the new bomb explosion), fixes, visual changes and optimizations.
-- After `v1.9` comes `v1.10` — the parts are separate numbers, not decimals.
+- **MINOR** — new game modes or features, adopting CS2 game updates (e.g. the new bomb explosion), fixes, visual changes and optimizations. Named updates (e.g. *Nightfall*) always get a new MINOR.
+- **PATCH** — a small, unnamed follow-up update with fixes only, no new features (e.g. `v1.3.1` after `v1.3`). Left out when it is 0: `v1.3`, not `v1.3.0`.
+- After `v1.9` comes `v1.10`, and after `v1.3.9` comes `v1.3.10` — the parts are separate numbers, not decimals.
 
 ---
 
