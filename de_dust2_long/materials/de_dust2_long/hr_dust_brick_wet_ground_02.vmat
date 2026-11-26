@@ -1,0 +1,68 @@
+// Wet version of hr_dust_brick_ground_02.vmat (hr_dust_brick_wet_ground_02.vmat) for the night variant.
+// Converted from csgo_lightmappedgeneric (2 layers) to csgo_environment_blend so it supports wetness.
+// Wetness settings copied from materials/de_train/hr_train_s2/asphalt/hrts2_asphalt_01_3l_01.vmat.
+
+Layer0
+{
+	shader "csgo_environment_blend.vfx"
+
+	//---- Wetness ----
+	F_WETNESS 1
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Color ----
+	g_flModelTintAmount "1.000"
+	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
+
+	//---- Layer 1 (hr_dust_brick_ground_02 base) ----
+	TextureAmbientOcclusion1 "materials/default/default_ao.tga"
+	TextureColor1 "materials/de_dust2_long/hr_dust_brick_ground_02_color.png"
+	TextureNormal1 "materials/de_dust2_long/hr_dust_brick_ground_02_normal.png"
+	TextureRoughness1 "materials/de_dust2_long/hr_dust_brick_ground_02_ddebf549_rough.png"
+	TextureMetalness1 "[0.000000 0.000000 0.000000 0.000000]"
+	TextureHeight1 "materials/de_dust2_long/hr_dust_brick_ground_02_blendmod_blend.png" // from TextureBlendModulation: gives the blend edge its pattern
+	TextureTintMask1 "[1.000000 1.000000 1.000000 0.000000]"
+
+	//---- Layer 2 (dust / sand, vertex painted) ----
+	g_flBlendSoftness2 "0.217"
+	TextureAmbientOcclusion2 "materials/default/default_ao.tga"
+	TextureColor2 "materials/de_dust2_long/hr_dust_sand_02_color.png"
+	TextureNormal2 "materials/de_dust2_long/hr_dust_sand_02_normal.png"
+	TextureRoughness2 "materials/de_dust2_long/hr_dust_sand_02_ad4a73ca_rough.png"
+	TextureMetalness2 "[0.000000 0.000000 0.000000 0.000000]"
+	TextureHeight2 "[0.500000 0.500000 0.500000 0.000000]"
+	TextureTintMask2 "[1.000000 1.000000 1.000000 0.000000]"
+
+	//---- Texture Address Mode ----
+	g_nTextureAddressModeU "0" // Wrap
+	g_nTextureAddressModeV "0" // Wrap
+
+	//---- Wetness ----
+	g_bPuddlesOnVerticalSurfaces "0"
+	g_bWetnessUseHeightmapAdjustments "0"
+	g_fPuddleBlendSoftness "0.1601"
+	g_fPuddleRoughness "0.010"
+	g_fPuddleSedimentHeight "1.000"
+	g_fPuddleSedimentOpacity "0.500"
+	g_fPuddleStrength "1.000"
+	g_fRainStrength "1.000"
+	g_fRippleStrength "1.000"
+	g_fWetEdgeSpread "0.200"
+	g_fWetEdgeStrength "0.500"
+	g_fWetnessStrength "1.000"
+	g_vPuddleSedimentColor "[0.419608 0.298039 0.180392 0.000000]"
+
+	Attributes
+	{
+		PhysicsSurfacePropertiesWet "wet_concrete"
+	}
+
+	SystemAttributes
+	{
+		PhysicsSurfaceProperties "concrete"
+		PhysicsSurfaceProperties1 "concrete"
+		PhysicsSurfaceProperties2 "sand"
+	}
+}
