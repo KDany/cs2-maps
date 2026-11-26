@@ -14,8 +14,6 @@ Small icons in the top-right corner of a Workshop cover image. They show at a gl
 | <img src="./images/badges/badge_halloween_512.png" width="48"> | `halloween` | Halloween edition | orange |
 | <img src="./images/badges/badge_easter_512.png" width="48"> | `easter` | Easter edition | green |
 | <img src="./images/badges/badge_lunar_new_year_512.png" width="48"> | `lunar_new_year` | Lunar New Year edition | gold |
-| <img src="./images/badges/badge_new_year_512.png" width="48"> | `new_year` | New Year's Eve edition | magenta |
-| <img src="./images/badges/badge_summer_512.png" width="48"> | `summer` | Summer / beach edition (palm tree on an island) | turquoise |
 
 ## Rules
 
