@@ -168,31 +168,80 @@ def _lantern(d, s):
     for x in (0.45, 0.50, 0.55):                       # tassel
         d.line([(s*0.5, s*0.75), (s*x, s*0.88)], fill=GOLD, width=int(s*0.022))
 
+def _sparkle(d, x, y, r, fill):
+    # four-pointed star
+    k = r*0.28
+    d.polygon([(x, y-r), (x+k, y-k), (x+r, y), (x+k, y+k), (x, y+r), (x-k, y+k), (x-r, y), (x-k, y-k)], fill=fill)
+
+def _burst(d, s, cx, cy, R, n, w):
+    # rays of alternating length with a dot at the end, and an inner ring of dots
+    for i in range(n):
+        a = 2*math.pi*i/n + math.pi/n
+        L = R if i % 2 == 0 else R*0.72
+        x0, y0 = s*(cx + math.cos(a)*R*0.30), s*(cy + math.sin(a)*R*0.30)
+        x1, y1 = s*(cx + math.cos(a)*(L-0.035)), s*(cy + math.sin(a)*(L-0.035))
+        d.line([(x0, y0), (x1, y1)], fill=WHITE, width=int(w))
+        ex, ey, er = s*(cx + math.cos(a)*L), s*(cy + math.sin(a)*L), w*0.8
+        d.ellipse([ex-er, ey-er, ex+er, ey+er], fill=WHITE)
+    for i in range(n//2):
+        a = 2*math.pi*i/(n//2)
+        ex, ey, er = s*(cx + math.cos(a)*R*0.17), s*(cy + math.sin(a)*R*0.17), w*0.55
+        d.ellipse([ex-er, ey-er, ex+er, ey+er], fill=WHITE)
+
 def _fireworks(d, s):
-    # a big burst and a small one: rays with dots at the ends
-    for cx, cy, R, n in ((0.42, 0.44, 0.27, 12), (0.73, 0.70, 0.13, 8)):
-        w = s*0.03 if R > 0.2 else s*0.024
-        for i in range(n):
-            a = 2*math.pi*i/n
-            x0, y0 = s*(cx + math.cos(a)*R*0.35), s*(cy + math.sin(a)*R*0.35)
-            x1, y1 = s*(cx + math.cos(a)*R*0.82), s*(cy + math.sin(a)*R*0.82)
-            d.line([(x0, y0), (x1, y1)], fill=WHITE, width=int(w))
-            ex, ey, er = s*(cx + math.cos(a)*R), s*(cy + math.sin(a)*R), w*0.75
-            d.ellipse([ex-er, ey-er, ex+er, ey+er], fill=WHITE)
-        r = w*0.9; d.ellipse([s*cx-r, s*cy-r, s*cx+r, s*cy+r], fill=WHITE)
+    GOLD = (242, 182, 50, 255)
+    _burst(d, s, 0.42, 0.40, 0.25, 16, s*0.026)
+    _burst(d, s, 0.74, 0.66, 0.13, 12, s*0.02)
+    # the rising trail of the big rocket, fading into dots
+    for i, (y, r) in enumerate(((0.86, 0.010), (0.80, 0.012), (0.74, 0.014), (0.68, 0.016))):
+        x = 0.38 + 0.01*i
+        d.ellipse([s*(x-r), s*(y-r), s*(x+r), s*(y+r)], fill=WHITE)
+    for x, y, r in ((0.76, 0.24, 0.05), (0.18, 0.70, 0.04), (0.60, 0.86, 0.035)):
+        _sparkle(d, s*x, s*y, s*r, GOLD)
+
+def _frond(d, s, x0, y0, x1, y1, lift):
+    # a feathery palm frond: an arched rib from the crown (x0, y0) to the tip (x1, y1),
+    # lifted by `lift` in the middle, with leaflets hanging from both sides
+    cx, cy = (x0+x1)/2, min(y0, y1) - lift
+    pts = []
+    for i in range(25):
+        t = i/24
+        pts.append(((1-t)**2*x0 + 2*(1-t)*t*cx + t*t*x1, (1-t)**2*y0 + 2*(1-t)*t*cy + t*t*y1))
+    d.line([(s*x, s*y) for x, y in pts], fill=WHITE, width=int(s*0.022), joint='curve')
+    for i in range(3, 24, 2):
+        t = i/24; (xa, ya), (xb, yb) = pts[i-1], pts[i+1]
+        tx, ty = xb-xa, yb-ya; tl = math.hypot(tx, ty); tx, ty = tx/tl, ty/tl
+        L = 0.075*(1 - 0.75*t)
+        for side in (1, -1):
+            nx, ny = -ty*side, tx*side
+            ex, ey = pts[i][0] + (nx*0.8 + tx*0.6)*L, pts[i][1] + (ny*0.8 + ty*0.6)*L + 0.25*L
+            d.line([(s*pts[i][0], s*pts[i][1]), (s*ex, s*ey)], fill=WHITE, width=int(s*0.016))
 
 def _beach(d, s):
-    # beach umbrella over two waves
-    T = (0, 0, 0, 0)
-    d.pieslice([s*0.18, s*0.16, s*0.82, s*0.80], 180, 360, fill=WHITE)
-    for x in (0.34, 0.50, 0.66):                       # scalloped edge
-        r = s*0.08; d.ellipse([s*x-r, s*0.48-r, s*x+r, s*0.48+r], fill=T)
-    for x in (0.42, 0.58):                             # panel seams
-        d.line([(s*0.5, s*0.17), (s*x, s*0.45)], fill=T, width=int(s*0.018))
-    d.line([(s*0.5, s*0.40), (s*0.5, s*0.74)], fill=WHITE, width=int(s*0.035))
-    w = int(s*0.035)
-    for y in (0.76, 0.85):
-        pts = [(s*(0.20 + 0.6*i/40), s*(y + 0.025*math.sin(i/40*4*math.pi))) for i in range(41)]
+    # palm tree on a small island, the sun behind it and the sea in front
+    T = (0, 0, 0, 0); GOLD = (242, 182, 50, 255)
+    r = s*0.11; d.ellipse([s*0.70-r, s*0.30-r, s*0.70+r, s*0.30+r], fill=GOLD)
+    # trunk: a slightly curved band, thinner at the top, with notches
+    pts_l, pts_r = [], []
+    for i in range(21):
+        t = i/20
+        x = 0.42 + 0.08*t + 0.05*math.sin(math.pi*t); y = 0.76 - 0.40*t
+        w = 0.033 - 0.012*t
+        pts_l.append((s*(x-w), s*y)); pts_r.append((s*(x+w), s*y))
+    d.polygon(pts_l + pts_r[::-1], fill=WHITE)
+    for i in range(1, 6):
+        t = i/6; x = 0.42 + 0.08*t + 0.05*math.sin(math.pi*t); y = 0.76 - 0.40*t
+        d.line([(s*(x-0.04), s*(y+0.012)), (s*(x+0.04), s*(y-0.004))], fill=T, width=int(s*0.012))
+    # fronds from the crown, drooping at the sides
+    cx, cy = 0.50, 0.36
+    for x1, y1, lift in ((0.16, 0.50, 0.06), (0.22, 0.26, 0.07), (0.84, 0.26, 0.07), (0.86, 0.50, 0.06), (0.47, 0.13, 0.0)):
+        _frond(d, s, cx, cy, x1, y1, lift)
+    r = s*0.03; d.ellipse([s*cx-r, s*cy-r, s*cx+r, s*cy+r], fill=WHITE)
+    # island and two waves
+    d.chord([s*0.26, s*0.72, s*0.68, s*0.88], 180, 360, fill=WHITE)
+    w = int(s*0.03)
+    for y in (0.80, 0.87):
+        pts = [(s*(0.18 + 0.64*i/40), s*(y + 0.018*math.sin(i/40*4*math.pi))) for i in range(41)]
         d.line(pts, fill=WHITE, width=w, joint='curve')
 
 GLYPHS = {'sun': _sun, 'rain': _rain, 'snow': _snow, 'moon': _moon, 'moon_rain': _moon_rain, 'tree': _tree, 'pumpkin': _pumpkin, 'egg': _egg, 'tree_moon': _tree_moon, 'lantern': _lantern, 'fireworks': _fireworks, 'beach': _beach}
