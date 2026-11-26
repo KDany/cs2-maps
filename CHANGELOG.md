@@ -22,6 +22,20 @@ Version numbers:
 
 Steam Workshop: [Dust II Long](https://steamcommunity.com/sharedfiles/filedetails/?id=3730804227)
 
+### v1.3 — 2026-11-26 (Nightfall)
+Source: tag [`de_dust2_long-v1.3`](https://github.com/KDany/cs2-maps/releases/tag/de_dust2_long-v1.3).
+
+- Added the **night variant**, `de_dust2_long_night`, published in the same Workshop item. Both maps are built from the same source: everything that differs between day and night lives in an environment prefab (`maps/prefabs/env_summer.vmap`, `maps/prefabs/env_night.vmap`), and `de_dust2_long_night.vmap` is generated from the main map before each release (see the README).
+  - Rainy night under a cloudy, moonlit sky: dynamic rain with splashes ([rain particle doc](./docs/rain-dynamic-particle.md)) and wet surfaces.
+  - Lightning and thunder at random intervals ([lightning doc](./docs/lightning.md)).
+  - Rain sounds that follow the player: open rain outside, muffled rain under cover, dripping water in the tunnels.
+  - Street lamps and lanterns light up the map, and most of them can be shot out.
+  - Retakes spawns and the radar for the night map (`game_files/maps/de_dust2_long_night_retake.txt`, `game_files/resource/overviews/de_dust2_long_night.txt`).
+- Moved the day environment (sun, sky, fog, wind, map parameters, ground and background effects) into the `env_summer` prefab.
+- Added loading screen map icons for both maps, based on the official Dust II icon (`panorama/images/map_icons/`).
+- Reduced the bomb damage radius from 700 to 500.
+- Fixed a visible gap under the new door that closes off Short.
+
 ### v1.2 — 2026-11-06 (Aftershock)
 Source: tag [`de_dust2_long-v1.2`](https://github.com/KDany/cs2-maps/releases/tag/de_dust2_long-v1.2).
 
