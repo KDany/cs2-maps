@@ -29,3 +29,6 @@ desktop.ini
 
 # Generated night variant of a map (re-created from <map_name>.vmap before each release, see README)
 **/maps/*_night.vmap
+
+# Python cache (tools/)
+__pycache__/
