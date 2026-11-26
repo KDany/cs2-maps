@@ -26,6 +26,7 @@ VARIANTS = {
     'xmas':   ((225, 70, 70),   'tree'),             # Christmas edition (decorations), not just snow
     'halloween': ((240, 130, 40), 'pumpkin'),        # Halloween edition
     'easter': ((130, 205, 120), 'egg'),               # Easter edition
+    'night_xmas': ((225, 70, 70), 'tree_moon'),        # Christmas at night: the xmas badge with a moon
 }
 
 def _sun(d, s):
@@ -137,7 +138,21 @@ def _egg(d, s):
     for x, y in ((0.42, 0.36), (0.58, 0.36), (0.50, 0.30), (0.39, 0.74), (0.50, 0.77), (0.61, 0.74)):
         r = s*0.025; d.ellipse([s*x-r, s*y-r, s*x+r, s*y+r], fill=T)
 
-GLYPHS = {'sun': _sun, 'rain': _rain, 'snow': _snow, 'moon': _moon, 'moon_rain': _moon_rain, 'tree': _tree, 'pumpkin': _pumpkin, 'egg': _egg}
+def _tree_moon(d, s):
+    # the Christmas tree, shifted left, with a small crescent moon in the top right corner
+    T = (0, 0, 0, 0); dx = -0.06
+    for top, bot, half in ((0.28, 0.46, 0.14), (0.39, 0.59, 0.19), (0.50, 0.72, 0.24)):
+        d.polygon([(s*(0.5+dx), s*top), (s*(0.5+dx+half), s*bot), (s*(0.5+dx-half), s*bot)], fill=WHITE)
+    d.rectangle([s*(0.46+dx), s*0.72, s*(0.54+dx), s*0.80], fill=WHITE)
+    cx, cy, R, r = s*(0.5+dx), s*0.235, s*0.07, s*0.03
+    pts = [(cx + (R if i % 2 == 0 else r)*math.sin(math.radians(i*36)), cy - (R if i % 2 == 0 else r)*math.cos(math.radians(i*36))) for i in range(10)]
+    d.polygon(pts, fill=(242, 182, 50, 255))
+    mx, my, mr = s*0.73, s*0.27, s*0.10
+    d.ellipse([mx-mr, my-mr, mx+mr, my+mr], fill=WHITE)
+    o = s*0.05
+    d.ellipse([mx-mr+o, my-mr-o*0.7, mx+mr+o, my+mr-o*0.7], fill=T)
+
+GLYPHS = {'sun': _sun, 'rain': _rain, 'snow': _snow, 'moon': _moon, 'moon_rain': _moon_rain, 'tree': _tree, 'pumpkin': _pumpkin, 'egg': _egg, 'tree_moon': _tree_moon}
 
 def badge(name, size=512):
     accent, glyph = VARIANTS[name]
