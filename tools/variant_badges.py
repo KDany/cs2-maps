@@ -27,6 +27,9 @@ VARIANTS = {
     'halloween': ((240, 130, 40), 'pumpkin'),        # Halloween edition
     'easter': ((130, 205, 120), 'egg'),               # Easter edition
     'night_xmas': ((225, 70, 70), 'tree_moon'),        # Christmas at night: the xmas badge with a moon
+    'lunar_new_year': ((215, 170, 60), 'lantern'),   # Lunar New Year edition
+    'new_year': ((215, 80, 200), 'fireworks'),       # New Year's Eve edition
+    'summer': ((60, 200, 190), 'beach'),             # summer / beach edition
 }
 
 def _sun(d, s):
@@ -152,7 +155,47 @@ def _tree_moon(d, s):
     o = s*0.05
     d.ellipse([mx-mr+o, my-mr-o*0.7, mx+mr+o, my+mr-o*0.7], fill=T)
 
-GLYPHS = {'sun': _sun, 'rain': _rain, 'snow': _snow, 'moon': _moon, 'moon_rain': _moon_rain, 'tree': _tree, 'pumpkin': _pumpkin, 'egg': _egg, 'tree_moon': _tree_moon}
+def _lantern(d, s):
+    # red paper lantern with gold caps, ribs cut out of it and a tassel
+    T = (0, 0, 0, 0); RED = (220, 55, 55, 255); GOLD = (242, 182, 50, 255)
+    d.line([(s*0.5, s*0.14), (s*0.5, s*0.24)], fill=WHITE, width=int(s*0.025))
+    d.ellipse([s*0.26, s*0.27, s*0.74, s*0.71], fill=RED)
+    for half in (0.12, 0.0):                           # vertical ribs: a narrow ellipse and the centre line
+        if half: d.ellipse([s*(0.5-half), s*0.27, s*(0.5+half), s*0.71], outline=T, width=int(s*0.018))
+        else: d.line([(s*0.5, s*0.27), (s*0.5, s*0.71)], fill=T, width=int(s*0.018))
+    d.rounded_rectangle([s*0.36, s*0.23, s*0.64, s*0.30], radius=s*0.02, fill=GOLD)
+    d.rounded_rectangle([s*0.36, s*0.68, s*0.64, s*0.75], radius=s*0.02, fill=GOLD)
+    for x in (0.45, 0.50, 0.55):                       # tassel
+        d.line([(s*0.5, s*0.75), (s*x, s*0.88)], fill=GOLD, width=int(s*0.022))
+
+def _fireworks(d, s):
+    # a big burst and a small one: rays with dots at the ends
+    for cx, cy, R, n in ((0.42, 0.44, 0.27, 12), (0.73, 0.70, 0.13, 8)):
+        w = s*0.03 if R > 0.2 else s*0.024
+        for i in range(n):
+            a = 2*math.pi*i/n
+            x0, y0 = s*(cx + math.cos(a)*R*0.35), s*(cy + math.sin(a)*R*0.35)
+            x1, y1 = s*(cx + math.cos(a)*R*0.82), s*(cy + math.sin(a)*R*0.82)
+            d.line([(x0, y0), (x1, y1)], fill=WHITE, width=int(w))
+            ex, ey, er = s*(cx + math.cos(a)*R), s*(cy + math.sin(a)*R), w*0.75
+            d.ellipse([ex-er, ey-er, ex+er, ey+er], fill=WHITE)
+        r = w*0.9; d.ellipse([s*cx-r, s*cy-r, s*cx+r, s*cy+r], fill=WHITE)
+
+def _beach(d, s):
+    # beach umbrella over two waves
+    T = (0, 0, 0, 0)
+    d.pieslice([s*0.18, s*0.16, s*0.82, s*0.80], 180, 360, fill=WHITE)
+    for x in (0.34, 0.50, 0.66):                       # scalloped edge
+        r = s*0.08; d.ellipse([s*x-r, s*0.48-r, s*x+r, s*0.48+r], fill=T)
+    for x in (0.42, 0.58):                             # panel seams
+        d.line([(s*0.5, s*0.17), (s*x, s*0.45)], fill=T, width=int(s*0.018))
+    d.line([(s*0.5, s*0.40), (s*0.5, s*0.74)], fill=WHITE, width=int(s*0.035))
+    w = int(s*0.035)
+    for y in (0.76, 0.85):
+        pts = [(s*(0.20 + 0.6*i/40), s*(y + 0.025*math.sin(i/40*4*math.pi))) for i in range(41)]
+        d.line(pts, fill=WHITE, width=w, joint='curve')
+
+GLYPHS = {'sun': _sun, 'rain': _rain, 'snow': _snow, 'moon': _moon, 'moon_rain': _moon_rain, 'tree': _tree, 'pumpkin': _pumpkin, 'egg': _egg, 'tree_moon': _tree_moon, 'lantern': _lantern, 'fireworks': _fireworks, 'beach': _beach}
 
 def badge(name, size=512):
     accent, glyph = VARIANTS[name]
