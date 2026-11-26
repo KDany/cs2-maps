@@ -25,6 +25,7 @@ VARIANTS = {
     'night_rain': ((120, 140, 245), 'moon_rain'),   # a rainy night: one variant, one badge
     'xmas':   ((225, 70, 70),   'tree'),             # Christmas edition (decorations), not just snow
     'halloween': ((240, 130, 40), 'pumpkin'),        # Halloween edition
+    'easter': ((130, 205, 120), 'egg'),               # Easter edition
 }
 
 def _sun(d, s):
@@ -119,7 +120,24 @@ def _pumpkin(d, s):
            (0.65, 0.69), (0.72, 0.65), (0.66, 0.74), (0.58, 0.72), (0.50, 0.75), (0.42, 0.72), (0.34, 0.74)]
     d.polygon([(s*x, s*y) for x, y in pts], fill=T)
 
-GLYPHS = {'sun': _sun, 'rain': _rain, 'snow': _snow, 'moon': _moon, 'moon_rain': _moon_rain, 'tree': _tree, 'pumpkin': _pumpkin}
+def _egg(d, s):
+    # decorated Easter egg: egg outline (narrower at the top), a zigzag band and dots cut out of it
+    T = (0, 0, 0, 0); cx, cy = 0.5, 0.53
+    pts = []
+    for i in range(120):
+        t = 2*math.pi*i/120
+        y = -math.cos(t)
+        rx = 0.21 * (1 + 0.12*y)           # wider at the bottom (y grows downwards)
+        pts.append((s*(cx + rx*math.sin(t)), s*(cy + 0.29*y)))
+    d.polygon(pts, fill=WHITE)
+    band = [(0.30, 0.52), (0.36, 0.47), (0.42, 0.52), (0.48, 0.47), (0.54, 0.52), (0.60, 0.47), (0.66, 0.52), (0.71, 0.48)]
+    w = int(s*0.035)
+    d.line([(s*x, s*y) for x, y in band], fill=T, width=w, joint='curve')
+    d.line([(s*x, s*(y+0.12)) for x, y in band], fill=T, width=w, joint='curve')
+    for x, y in ((0.42, 0.36), (0.58, 0.36), (0.50, 0.30), (0.39, 0.74), (0.50, 0.77), (0.61, 0.74)):
+        r = s*0.025; d.ellipse([s*x-r, s*y-r, s*x+r, s*y+r], fill=T)
+
+GLYPHS = {'sun': _sun, 'rain': _rain, 'snow': _snow, 'moon': _moon, 'moon_rain': _moon_rain, 'tree': _tree, 'pumpkin': _pumpkin, 'egg': _egg}
 
 def badge(name, size=512):
     accent, glyph = VARIANTS[name]

@@ -11,6 +11,7 @@ Small icons in the top-right corner of a Workshop cover image. They show at a gl
 | <img src="./images/badges/badge_winter_512.png" width="48"> | `winter` | Winter, snow | ice blue |
 | <img src="./images/badges/badge_xmas_512.png" width="48"> | `xmas` | Christmas edition | red |
 | <img src="./images/badges/badge_halloween_512.png" width="48"> | `halloween` | Halloween edition | orange |
+| <img src="./images/badges/badge_easter_512.png" width="48"> | `easter` | Easter edition | green |
 
 ## Rules
 

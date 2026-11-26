@@ -29,7 +29,7 @@ Each map has its own folder in the root of the repository, named after the map (
 > **`docs/`:** setup notes for the more complex effects, shared by all maps:
 > - [Dynamic rain particle](./docs/rain-dynamic-particle.md) — `rain_dynamic` and its splash child particle: sizing the rain boxes, the emission rate formula and troubleshooting.
 > - [Lightning and thunder](./docs/lightning.md) — the lightning flash, sky particles and thunder sound, driven by a random timer.
-> - [Variant badges](./docs/variant-badges.md) — the icons on the Workshop cover images that show which variants of a map exist (day, rainy night, winter, Christmas, Halloween…), and the script that stamps them on.
+> - [Variant badges](./docs/variant-badges.md) — the icons on the Workshop cover images that show which variants of a map exist (day, rainy night, winter, Christmas, Halloween, Easter…), and the script that stamps them on.
 >
 > The lore of the hidden easter egg rooms (VPK Industries, the Nonvis Division and Kdanium), with all its textures and posters, has its own repository: [virtualperfektionindustries/aboutus](https://github.com/virtualperfektionindustries/aboutus).
 
