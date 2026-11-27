@@ -18,9 +18,8 @@ from PIL import Image, ImageDraw, ImageFilter
 SS = 4                      # supersampling for smooth edges
 BG = (14, 19, 27, 215)      # badge background
 WHITE = (240, 244, 248, 255)
-# light theme: the inverse look, very light grey background with near-black glyphs; borders stay the same
+# light theme: very light grey background, the glyph in the badge's own border colour
 BG_LIGHT = (242, 243, 245, 250)
-INK_LIGHT = (22, 26, 34)
 VARIANTS = {
     #  name     accent colour       glyph
     'day':    ((242, 182, 50),  'sun'),
@@ -208,10 +207,10 @@ def badge(name, size=512, light=False):
     d.rounded_rectangle([pad+bw, pad+bw, S-pad-bw, S-pad-bw], radius=rad-bw, fill=BG_LIGHT if light else BG)
     g = Image.new('RGBA', (S, S), (0, 0, 0, 0)); GLYPHS[glyph](ImageDraw.Draw(g), S)
     if light:
-        # turn the white parts of the glyph dark; coloured accents (gold star, red lantern ...) keep their colour
+        # paint the white parts of the glyph in the border colour; coloured accents (gold star, red lantern ...) keep theirs
         r, gg, b, a = g.split()
         white = Image.eval(Image.merge('RGB', (r, gg, b)).convert('L'), lambda v: 255 if v > 225 else 0)
-        ink = Image.new('RGBA', (S, S), INK_LIGHT + (255,)); ink.putalpha(Image.composite(a, Image.new('L', (S, S), 0), white))
+        ink = Image.new('RGBA', (S, S), accent + (255,)); ink.putalpha(Image.composite(a, Image.new('L', (S, S), 0), white))
         g = Image.composite(ink, g, white)
     im.alpha_composite(g)
     im = im.resize((size, size), Image.LANCZOS)
