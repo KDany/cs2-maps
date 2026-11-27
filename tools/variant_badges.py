@@ -20,7 +20,7 @@ BG = (14, 19, 27, 215)      # badge background
 WHITE = (240, 244, 248, 255)
 # light theme: very light grey background, the glyph in the badge's own border colour
 BG_LIGHT = (242, 243, 245, 250)
-# the Christmas tree is drawn in this (practically white) colour, so the light theme can find it and paint it green
+# the Christmas tree is drawn in this marker colour, so badge() can find it and paint it green
 TREE = (239, 244, 248, 255)
 TREE_GREEN = (52, 150, 80)
 VARIANTS = {
@@ -209,18 +209,18 @@ def badge(name, size=512, light=False):
     d.rounded_rectangle([pad, pad, S-pad, S-pad], radius=rad, fill=accent + (255,))
     d.rounded_rectangle([pad+bw, pad+bw, S-pad-bw, S-pad-bw], radius=rad-bw, fill=BG_LIGHT if light else BG)
     g = Image.new('RGBA', (S, S), (0, 0, 0, 0)); GLYPHS[glyph](ImageDraw.Draw(g), S)
+    r, gg, b, a = g.split()
     if light:
         # paint the white parts of the glyph in the border colour; coloured accents (gold star, red lantern ...) keep theirs
-        r, gg, b, a = g.split()
         white = Image.eval(Image.merge('RGB', (r, gg, b)).convert('L'), lambda v: 255 if v > 225 else 0)
         ink = Image.new('RGBA', (S, S), accent + (255,)); ink.putalpha(Image.composite(a, Image.new('L', (S, S), 0), white))
         g = Image.composite(ink, g, white)
-        if glyph in ('tree', 'tree_moon'):
-            # the Christmas tree itself is green in the light theme (found by its exact drawing colour)
-            diff = ImageChops.difference(Image.merge('RGB', (r, gg, b)), Image.new('RGB', (S, S), TREE[:3])).split()
-            tm = ImageChops.lighter(ImageChops.lighter(diff[0], diff[1]), diff[2]).point(lambda v: 255 if v == 0 else 0)
-            green = Image.new('RGBA', (S, S), TREE_GREEN + (255,)); green.putalpha(Image.composite(a, Image.new('L', (S, S), 0), tm))
-            g = Image.composite(green, g, tm)
+    if glyph in ('tree', 'tree_moon'):
+        # the Christmas tree itself is green in both themes (found by its exact drawing colour)
+        diff = ImageChops.difference(Image.merge('RGB', (r, gg, b)), Image.new('RGB', (S, S), TREE[:3])).split()
+        tm = ImageChops.lighter(ImageChops.lighter(diff[0], diff[1]), diff[2]).point(lambda v: 255 if v == 0 else 0)
+        green = Image.new('RGBA', (S, S), TREE_GREEN + (255,)); green.putalpha(Image.composite(a, Image.new('L', (S, S), 0), tm))
+        g = Image.composite(green, g, tm)
     im.alpha_composite(g)
     im = im.resize((size, size), Image.LANCZOS)
     # soft shadow so the badge reads on bright covers too

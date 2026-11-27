@@ -10,7 +10,7 @@ Small icons in the top-right corner of a Workshop cover image. They show at a gl
 | <img src="./images/badges/badge_night_512.png" width="48"> | `night` | Clear night | purple |
 | <img src="./images/badges/badge_night_rain_512.png" width="48"> | `night_rain` | Rainy night | blue-purple |
 | <img src="./images/badges/badge_winter_512.png" width="48"> | `winter` | Winter, snow | ice blue |
-| <img src="./images/badges/badge_xmas_512.png" width="48"> | `xmas` | Christmas edition | red |
+| <img src="./images/badges/badge_xmas_512.png" width="48"> | `xmas` | Christmas edition (green tree, gold star) | red |
 | <img src="./images/badges/badge_night_xmas_512.png" width="48"> | `night_xmas` | Christmas edition at night | red |
 | <img src="./images/badges/badge_halloween_512.png" width="48"> | `halloween` | Halloween edition | orange |
 | <img src="./images/badges/badge_easter_512.png" width="48"> | `easter` | Easter edition | green |
@@ -26,7 +26,7 @@ Small icons in the top-right corner of a Workshop cover image. They show at a gl
 
 ## Usage
 
-The badge images (512 px, transparent) are in [`images/badges/`](./images/badges/), for use in an image editor. Every badge also has a **light** version (`badge_<key>_light_512.png`): a very light grey background, with the glyph drawn in the badge's border colour (the Christmas tree is green), for bright covers. To stamp them onto a cover image:
+The badge images (512 px, transparent) are in [`images/badges/`](./images/badges/), for use in an image editor. Every badge also has a **light** version (`badge_<key>_light_512.png`): a very light grey background, with the glyph drawn in the badge's border colour, for bright covers. To stamp them onto a cover image:
 
 ```
 python3 tools/variant_badges.py stamp cover.png cover_badges.png day,night_rain
