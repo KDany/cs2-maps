@@ -12,7 +12,7 @@ Usage (from the repository root):
   python3 tools/variant_badges.py stamp COVER OUT day,rain:night --scale 0.09   # badge size as a share of the width
 
 A badge is KEY or KEY:night. Without ":night" it is the day (light) version.
-"day" is always light and "night" is always dark.
+"day" is always light, "night" and "night_rain" are always dark.
 """
 import math, os, sys
 from PIL import Image, ImageChops, ImageDraw, ImageFilter
@@ -37,6 +37,7 @@ VARIANTS = {
     'halloween': ((240, 130, 40), 'pumpkin'),        # Halloween edition
     'easter': ((130, 205, 120), 'egg'),               # Easter edition
     'lunar_new_year': ((215, 170, 60), 'lantern'),   # Lunar New Year edition
+    'night_rain': ((120, 140, 245), 'moon_rain'),    # the one exception: a rainy night with its own glyph (night only)
 }
 
 def _sun(d, s):
@@ -82,6 +83,26 @@ def _moon(d, s):
     d.ellipse([c-r, c-r, c+r, c+r], fill=WHITE)
     o = s * 0.13
     d.ellipse([c-r+o, c-r-o*0.6, c+r+o, c+r-o*0.6], fill=(0, 0, 0, 0))
+
+def _moon_rain(d, s):
+    # crescent moon in the top right, the rain cloud in front of it, lower left
+    cx, cy, r = s*0.66, s*0.30, s*0.17
+    d.ellipse([cx-r, cy-r, cx+r, cy+r], fill=WHITE)
+    o = s*0.085
+    d.ellipse([cx-r+o, cy-r-o*0.7, cx+r+o, cy+r-o*0.7], fill=(0, 0, 0, 0))
+    dx, cyc, g = -0.05, 0.50, s*0.03
+    lobes = ((0.36, 0.03, 0.12), (0.51, -0.04, 0.15), (0.64, 0.04, 0.11))
+    for cxx, cyo, rr in lobes:   # transparent gap around the cloud, so moon and cloud read as two shapes
+        d.ellipse([s*(cxx+dx-rr)-g, s*(cyc+cyo-rr)-g, s*(cxx+dx+rr)+g, s*(cyc+cyo+rr)+g], fill=(0, 0, 0, 0))
+    d.rounded_rectangle([s*(0.24+dx)-g, s*(cyc+0.02)-g, s*(0.75+dx)+g, s*(cyc+0.15)+g], radius=s*0.07, fill=(0, 0, 0, 0))
+    for cxx, cyo, rr in lobes:
+        d.ellipse([s*(cxx+dx-rr), s*(cyc+cyo-rr), s*(cxx+dx+rr), s*(cyc+cyo+rr)], fill=WHITE)
+    d.rounded_rectangle([s*(0.24+dx), s*(cyc+0.02), s*(0.75+dx), s*(cyc+0.15)], radius=s*0.065, fill=WHITE)
+    w = s * 0.045
+    for x in (0.33, 0.46, 0.59):
+        x0, y0, x1, y1 = s*x, s*0.72, s*(x-0.05), s*0.84
+        d.line([(x0, y0), (x1, y1)], fill=WHITE, width=int(w))
+        for px, py in ((x0, y0), (x1, y1)): d.ellipse([px-w/2, py-w/2, px+w/2, py+w/2], fill=WHITE)
 
 def _tree(d, s):
     # three stacked tiers, a trunk and a star on top
@@ -141,13 +162,13 @@ def _lantern(d, s):
     for x in (0.45, 0.50, 0.55):                       # tassel
         d.line([(s*0.5, s*0.75), (s*x, s*0.88)], fill=GOLD, width=int(s*0.022))
 
-GLYPHS = {'sun': _sun, 'rain': _rain, 'snow': _snow, 'moon': _moon, 'tree': _tree, 'pumpkin': _pumpkin, 'egg': _egg, 'lantern': _lantern}
+GLYPHS = {'sun': _sun, 'rain': _rain, 'snow': _snow, 'moon': _moon, 'tree': _tree, 'pumpkin': _pumpkin, 'egg': _egg, 'lantern': _lantern, 'moon_rain': _moon_rain}
 
 def parse(spec):
     # 'rain:night' -> ('rain', True); 'day' is always day, 'night' always night
     name, _, time = spec.partition(':')
     if name not in VARIANTS: raise SystemExit(f'unknown badge: {name}')
-    night = (time == 'night') or name == 'night'
+    night = (time == 'night') or name in ('night', 'night_rain')
     if name == 'day': night = False
     return name, night
 
@@ -204,7 +225,7 @@ if __name__ == '__main__':
         os.makedirs(sys.argv[2], exist_ok=True)
         for n in VARIANTS:
             if n == 'day': badge_canvas('day').save(os.path.join(sys.argv[2], 'badge_day_512.png'))
-            elif n == 'night': badge_canvas('night').save(os.path.join(sys.argv[2], 'badge_night_512.png'))
+            elif n in ('night', 'night_rain'): badge_canvas(n).save(os.path.join(sys.argv[2], f'badge_{n}_512.png'))
             else:
                 badge_canvas(n).save(os.path.join(sys.argv[2], f'badge_{n}_day_512.png'))
                 badge_canvas(n + ':night').save(os.path.join(sys.argv[2], f'badge_{n}_night_512.png'))
