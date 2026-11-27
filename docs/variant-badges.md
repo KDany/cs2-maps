@@ -26,11 +26,13 @@ Small icons in the top-right corner of a Workshop cover image. They show at a gl
 
 ## Usage
 
-The badge images (512 px, transparent) are in [`images/badges/`](./images/badges/), for use in an image editor. To stamp them onto a cover image:
+The badge images (512 px, transparent) are in [`images/badges/`](./images/badges/), for use in an image editor. Every badge also has a **light** version (`badge_<key>_light_512.png`): a very light grey background with a near-black glyph and the same border colour, for bright covers. To stamp them onto a cover image:
 
 ```
 python3 tools/variant_badges.py stamp cover.png cover_badges.png day,night_rain
 ```
+
+Add `--light` for the light badges.
 
 Each badge is 7.5 % of the cover's width by default, so they stay readable in the small Workshop preview without covering much of the picture. Use `--scale 0.09` (or any other share) to change it. To regenerate the images after changing a badge:
 

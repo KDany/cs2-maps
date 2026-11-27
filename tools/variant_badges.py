@@ -7,9 +7,10 @@ badge, not "night" + "rain"). See docs/variant-badges.md.
 Needs Python 3 and Pillow (pip install pillow).
 
 Usage (from the repository root):
-  python3 tools/variant_badges.py icons docs/images/badges          # write the badge PNGs (512 px)
+  python3 tools/variant_badges.py icons docs/images/badges          # write the badge PNGs (512 px, dark and light)
   python3 tools/variant_badges.py stamp COVER OUT day,night_rain    # stamp badges onto a cover image
   python3 tools/variant_badges.py stamp COVER OUT day,night_rain --scale 0.09   # badge size as a share of the width
+  python3 tools/variant_badges.py stamp COVER OUT day,night_rain --light        # light badges (dark glyph on light grey)
 """
 import math, os, sys
 from PIL import Image, ImageDraw, ImageFilter
@@ -17,6 +18,9 @@ from PIL import Image, ImageDraw, ImageFilter
 SS = 4                      # supersampling for smooth edges
 BG = (14, 19, 27, 215)      # badge background
 WHITE = (240, 244, 248, 255)
+# light theme: the inverse look, very light grey background with near-black glyphs; borders stay the same
+BG_LIGHT = (242, 243, 245, 250)
+INK_LIGHT = (22, 26, 34)
 VARIANTS = {
     #  name     accent colour       glyph
     'day':    ((242, 182, 50),  'sun'),
@@ -195,14 +199,20 @@ def _sun_rain(d, s):
 
 GLYPHS = {'sun': _sun, 'rain': _rain, 'snow': _snow, 'moon': _moon, 'moon_rain': _moon_rain, 'tree': _tree, 'pumpkin': _pumpkin, 'egg': _egg, 'tree_moon': _tree_moon, 'lantern': _lantern, 'sun_rain': _sun_rain}
 
-def badge(name, size=512):
+def badge(name, size=512, light=False):
     accent, glyph = VARIANTS[name]
     S = size * SS
     im = Image.new('RGBA', (S, S), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
     pad = S * 0.04; rad = S * 0.22; bw = S * 0.035
     d.rounded_rectangle([pad, pad, S-pad, S-pad], radius=rad, fill=accent + (255,))
-    d.rounded_rectangle([pad+bw, pad+bw, S-pad-bw, S-pad-bw], radius=rad-bw, fill=BG)
+    d.rounded_rectangle([pad+bw, pad+bw, S-pad-bw, S-pad-bw], radius=rad-bw, fill=BG_LIGHT if light else BG)
     g = Image.new('RGBA', (S, S), (0, 0, 0, 0)); GLYPHS[glyph](ImageDraw.Draw(g), S)
+    if light:
+        # turn the white parts of the glyph dark; coloured accents (gold star, red lantern ...) keep their colour
+        r, gg, b, a = g.split()
+        white = Image.eval(Image.merge('RGB', (r, gg, b)).convert('L'), lambda v: 255 if v > 225 else 0)
+        ink = Image.new('RGBA', (S, S), INK_LIGHT + (255,)); ink.putalpha(Image.composite(a, Image.new('L', (S, S), 0), white))
+        g = Image.composite(ink, g, white)
     im.alpha_composite(g)
     im = im.resize((size, size), Image.LANCZOS)
     # soft shadow so the badge reads on bright covers too
@@ -211,19 +221,22 @@ def badge(name, size=512):
     out = Image.new('RGBA', (size, size), (0, 0, 0, 0)); out.alpha_composite(sh, (int(size*0.01), int(size*0.02))); out.alpha_composite(im)
     return out
 
-def stamp(cover_path, out_path, names, scale=0.075, margin=0.025, gap=0.012):
+def stamp(cover_path, out_path, names, scale=0.075, margin=0.025, gap=0.012, light=False):
     cover = Image.open(cover_path).convert('RGBA'); W, H = cover.size
     b = round(W * scale)
     b = max(32, min(b, round(H * 0.28)))
     x = W - round(W * margin) - b; y = round(W * margin)
     for n in reversed(names):          # first variant ends up leftmost
-        cover.alpha_composite(badge(n, b), (x, y)); x -= b + round(W * gap)
+        cover.alpha_composite(badge(n, b, light), (x, y)); x -= b + round(W * gap)
     cover.convert('RGB').save(out_path)
 
 if __name__ == '__main__':
+    light = '--light' in sys.argv
     if sys.argv[1] == 'icons':
         os.makedirs(sys.argv[2], exist_ok=True)
-        for n in VARIANTS: badge(n).save(os.path.join(sys.argv[2], f'badge_{n}_512.png'))
+        for n in VARIANTS:
+            badge(n).save(os.path.join(sys.argv[2], f'badge_{n}_512.png'))
+            badge(n, light=True).save(os.path.join(sys.argv[2], f'badge_{n}_light_512.png'))
     elif sys.argv[1] == 'stamp':
         scale = float(sys.argv[sys.argv.index('--scale') + 1]) if '--scale' in sys.argv else 0.075
-        stamp(sys.argv[2], sys.argv[3], sys.argv[4].split(','), scale=scale)
+        stamp(sys.argv[2], sys.argv[3], sys.argv[4].split(','), scale=scale, light=light)
