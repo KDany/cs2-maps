@@ -9,6 +9,7 @@ Needs Python 3 and Pillow (pip install pillow).
 Usage (from the repository root):
   python3 tools/variant_badges.py icons docs/images/badges          # write the badge PNGs (512 px)
   python3 tools/variant_badges.py stamp COVER OUT day,night_rain    # stamp badges onto a cover image
+  python3 tools/variant_badges.py stamp COVER OUT day,night_rain --scale 0.09   # badge size as a share of the width
 """
 import math, os, sys
 from PIL import Image, ImageDraw, ImageFilter
@@ -184,9 +185,9 @@ def badge(name, size=512):
     out = Image.new('RGBA', (size, size), (0, 0, 0, 0)); out.alpha_composite(sh, (int(size*0.01), int(size*0.02))); out.alpha_composite(im)
     return out
 
-def stamp(cover_path, out_path, names, scale=0.11, margin=0.025, gap=0.012):
+def stamp(cover_path, out_path, names, scale=0.075, margin=0.025, gap=0.012):
     cover = Image.open(cover_path).convert('RGBA'); W, H = cover.size
-    b = round(min(W, H) * scale / 0.11 * 0.11 if W < H else W * scale)
+    b = round(W * scale)
     b = max(32, min(b, round(H * 0.28)))
     x = W - round(W * margin) - b; y = round(W * margin)
     for n in reversed(names):          # first variant ends up leftmost
@@ -198,4 +199,5 @@ if __name__ == '__main__':
         os.makedirs(sys.argv[2], exist_ok=True)
         for n in VARIANTS: badge(n).save(os.path.join(sys.argv[2], f'badge_{n}_512.png'))
     elif sys.argv[1] == 'stamp':
-        stamp(sys.argv[2], sys.argv[3], sys.argv[4].split(','))
+        scale = float(sys.argv[sys.argv.index('--scale') + 1]) if '--scale' in sys.argv else 0.075
+        stamp(sys.argv[2], sys.argv[3], sys.argv[4].split(','), scale=scale)

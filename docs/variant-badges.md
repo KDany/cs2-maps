@@ -31,7 +31,7 @@ The badge images (512 px, transparent) are in [`images/badges/`](./images/badges
 python3 tools/variant_badges.py stamp cover.png cover_badges.png day,night_rain
 ```
 
-The badges are scaled to about 11 % of the cover's width, so they stay readable in the small Workshop preview. To regenerate the images after changing a badge:
+Each badge is 7.5 % of the cover's width by default, so they stay readable in the small Workshop preview without covering much of the picture. Use `--scale 0.09` (or any other share) to change it. To regenerate the images after changing a badge:
 
 ```
 python3 tools/variant_badges.py icons docs/images/badges
