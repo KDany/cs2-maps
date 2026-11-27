@@ -2,37 +2,40 @@
 
 Small icons in the top-right corner of a Workshop cover image. They show at a glance which variants of a map exist in the Workshop item.
 
-| Badge | Key | Variant | Border |
-| :---: | :--- | :--- | :--- |
-| <img src="./images/badges/badge_day_512.png" width="48"> | `day` | Day, the default version | yellow |
-| <img src="./images/badges/badge_rain_512.png" width="48"> | `rain` | Rain (on its own, e.g. a weather caption) | blue |
-| <img src="./images/badges/badge_day_rain_512.png" width="48"> | `day_rain` | Rainy day: the sun behind the rain cloud | teal |
-| <img src="./images/badges/badge_night_512.png" width="48"> | `night` | Clear night | purple |
-| <img src="./images/badges/badge_night_rain_512.png" width="48"> | `night_rain` | Rainy night | blue-purple |
-| <img src="./images/badges/badge_winter_512.png" width="48"> | `winter` | Winter, snow | ice blue |
-| <img src="./images/badges/badge_xmas_512.png" width="48"> | `xmas` | Christmas edition (green tree, gold star) | red |
-| <img src="./images/badges/badge_night_xmas_512.png" width="48"> | `night_xmas` | Christmas edition at night | red |
-| <img src="./images/badges/badge_halloween_512.png" width="48"> | `halloween` | Halloween edition | orange |
-| <img src="./images/badges/badge_easter_512.png" width="48"> | `easter` | Easter edition | green |
-| <img src="./images/badges/badge_lunar_new_year_512.png" width="48"> | `lunar_new_year` | Lunar New Year edition | gold |
+Each badge says two things:
+- **the background is the time of day:** light = day, dark = night;
+- **the glyph is the weather or the event:** rain, winter, Christmas… For a plain day or night without anything special, the glyph is the sun or the moon.
+
+| Key | Meaning | Day (light) | Night (dark) | Border |
+| :--- | :--- | :---: | :---: | :--- |
+| `day` | Plain day, the default version | <img src="./images/badges/badge_day_512.png" width="48"> | – | yellow |
+| `night` | Plain night | – | <img src="./images/badges/badge_night_512.png" width="48"> | purple |
+| `rain` | Rain | <img src="./images/badges/badge_rain_day_512.png" width="48"> | <img src="./images/badges/badge_rain_night_512.png" width="48"> | blue |
+| `winter` | Winter, snow | <img src="./images/badges/badge_winter_day_512.png" width="48"> | <img src="./images/badges/badge_winter_night_512.png" width="48"> | ice blue |
+| `xmas` | Christmas edition (green tree, gold star) | <img src="./images/badges/badge_xmas_day_512.png" width="48"> | <img src="./images/badges/badge_xmas_night_512.png" width="48"> | red |
+| `halloween` | Halloween edition | <img src="./images/badges/badge_halloween_day_512.png" width="48"> | <img src="./images/badges/badge_halloween_night_512.png" width="48"> | orange |
+| `easter` | Easter edition | <img src="./images/badges/badge_easter_day_512.png" width="48"> | <img src="./images/badges/badge_easter_night_512.png" width="48"> | green |
+| `lunar_new_year` | Lunar New Year edition | <img src="./images/badges/badge_lunar_new_year_day_512.png" width="48"> | <img src="./images/badges/badge_lunar_new_year_night_512.png" width="48"> | gold |
+
+On the light (day) background the glyph is drawn in the border colour, on the dark (night) background it is white. The Christmas tree is green and its star gold on both; the Lunar New Year lantern is red and gold on both.
 
 ## Rules
 
-- **One badge per map variant.** A variant that combines several things gets a single badge of its own: a rainy night is `night_rain`, not `night` + `rain`. A snowy Christmas map is `xmas`, not `winter` + `xmas`.
-- **The default version gets a badge too** (`day`), so the badges always list every map in the item.
+- **One badge per map variant.** The background gives the time of day, the glyph the weather or event: a rainy night is the `rain` glyph on the night background.
+- **An event wins over the weather.** A snowy Halloween map gets the `halloween` glyph, not `winter`.
+- **The default version gets a badge too** (`day`, or `night` for a map that is night by default), so the badges always list every map in the item.
 - **Order:** the default version first, then the others in the order they were released.
-- A new combination (e.g. a snowy night) gets a new badge in the same style: a dark rounded square, a white glyph and a border colour no other badge uses.
-- **Night versions of a season badge** keep the season's glyph and border colour and add a small crescent moon in the top-right corner (e.g. `night_xmas`). Make one only when a map has both a day and a night version of that season; otherwise the season badge alone is enough.
+- **A new event or weather** gets a new glyph in the same style (a simple, bold shape) and a border colour no other badge uses. It automatically has a day and a night version.
 
 ## Usage
 
-The badge images (512 px, transparent) are in [`images/badges/`](./images/badges/), for use in an image editor. Every badge also has a **light** version (`badge_<key>_light_512.png`): a very light grey background, with the glyph drawn in the badge's border colour, for bright covers. To stamp them onto a cover image:
+The badge images (512 px, transparent) are in [`images/badges/`](./images/badges/), for use in an image editor. Files are named `badge_<key>_day_512.png` and `badge_<key>_night_512.png` (`badge_day_512.png` and `badge_night_512.png` for the plain day and night). To stamp them onto a cover image:
 
 ```
-python3 tools/variant_badges.py stamp cover.png cover_badges.png day,night_rain
+python3 tools/variant_badges.py stamp cover.png cover_badges.png day,rain:night
 ```
 
-Add `--light` for the light badges.
+A badge is written as `key` (day) or `key:night` (night).
 
 Each badge is 7.5 % of the cover's width by default, so they stay readable in the small Workshop preview without covering much of the picture. Use `--scale 0.09` (or any other share) to change it. To regenerate the images after changing a badge:
 
@@ -44,4 +47,4 @@ python3 tools/variant_badges.py icons docs/images/badges
 
 | Map | Badges |
 | :--- | :--- |
-| `de_dust2_long` | `day`, `night_rain` |
+| `de_dust2_long` | `day`, `rain:night` |

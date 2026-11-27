@@ -1,16 +1,18 @@
 """Variant badges for Workshop cover images.
 
 Small rounded icons in the top-right corner of a cover image that show which
-variants of the map exist. One badge per map variant (a rainy night is one
-badge, not "night" + "rain"). See docs/variant-badges.md.
+variants of the map exist. The background shows the time of day (light = day,
+dark = night), the glyph shows the weather or the event. See docs/variant-badges.md.
 
 Needs Python 3 and Pillow (pip install pillow).
 
 Usage (from the repository root):
-  python3 tools/variant_badges.py icons docs/images/badges          # write the badge PNGs (512 px, dark and light)
-  python3 tools/variant_badges.py stamp COVER OUT day,night_rain    # stamp badges onto a cover image
-  python3 tools/variant_badges.py stamp COVER OUT day,night_rain --scale 0.09   # badge size as a share of the width
-  python3 tools/variant_badges.py stamp COVER OUT day,night_rain --light        # light badges (dark glyph on light grey)
+  python3 tools/variant_badges.py icons docs/images/badges          # write the badge PNGs (512 px)
+  python3 tools/variant_badges.py stamp COVER OUT day,rain:night    # stamp badges onto a cover image
+  python3 tools/variant_badges.py stamp COVER OUT day,rain:night --scale 0.09   # badge size as a share of the width
+
+A badge is KEY or KEY:night. Without ":night" it is the day (light) version.
+"day" is always light and "night" is always dark.
 """
 import math, os, sys
 from PIL import Image, ImageChops, ImageDraw, ImageFilter
@@ -18,7 +20,8 @@ from PIL import Image, ImageChops, ImageDraw, ImageFilter
 SS = 4                      # supersampling for smooth edges
 BG = (14, 19, 27, 215)      # badge background
 WHITE = (240, 244, 248, 255)
-# light theme: very light grey background, the glyph in the badge's own border colour
+# day badges: very light grey background, the glyph in the badge's own border colour
+# night badges: dark background (BG), white glyph
 BG_LIGHT = (242, 243, 245, 250)
 # the Christmas tree is drawn in this marker colour, so badge() can find it and paint it green
 TREE = (239, 244, 248, 255)
@@ -29,13 +32,10 @@ VARIANTS = {
     'rain':   ((92, 160, 235),  'rain'),
     'winter': ((150, 215, 245), 'snow'),
     'night':  ((170, 150, 240), 'moon'),
-    'night_rain': ((120, 140, 245), 'moon_rain'),   # a rainy night: one variant, one badge
     'xmas':   ((225, 70, 70),   'tree'),             # Christmas edition (decorations), not just snow
     'halloween': ((240, 130, 40), 'pumpkin'),        # Halloween edition
     'easter': ((130, 205, 120), 'egg'),               # Easter edition
-    'night_xmas': ((225, 70, 70), 'tree_moon'),        # Christmas at night: the xmas badge with a moon
     'lunar_new_year': ((215, 170, 60), 'lantern'),   # Lunar New Year edition
-    'day_rain': ((50, 180, 190), 'sun_rain'),         # a rainy day: the sun behind the rain cloud
 }
 
 def _sun(d, s):
@@ -82,26 +82,6 @@ def _moon(d, s):
     o = s * 0.13
     d.ellipse([c-r+o, c-r-o*0.6, c+r+o, c+r-o*0.6], fill=(0, 0, 0, 0))
 
-def _moon_rain(d, s):
-    # crescent moon in the top right, the rain cloud in front of it, lower left
-    cx, cy, r = s*0.66, s*0.30, s*0.17
-    d.ellipse([cx-r, cy-r, cx+r, cy+r], fill=WHITE)
-    o = s*0.085
-    d.ellipse([cx-r+o, cy-r-o*0.7, cx+r+o, cy+r-o*0.7], fill=(0, 0, 0, 0))
-    dx, cyc, g = -0.05, 0.50, s*0.03
-    lobes = ((0.36, 0.03, 0.12), (0.51, -0.04, 0.15), (0.64, 0.04, 0.11))
-    for cxx, cyo, rr in lobes:   # transparent gap around the cloud, so moon and cloud read as two shapes
-        d.ellipse([s*(cxx+dx-rr)-g, s*(cyc+cyo-rr)-g, s*(cxx+dx+rr)+g, s*(cyc+cyo+rr)+g], fill=(0, 0, 0, 0))
-    d.rounded_rectangle([s*(0.24+dx)-g, s*(cyc+0.02)-g, s*(0.75+dx)+g, s*(cyc+0.15)+g], radius=s*0.07, fill=(0, 0, 0, 0))
-    for cxx, cyo, rr in lobes:
-        d.ellipse([s*(cxx+dx-rr), s*(cyc+cyo-rr), s*(cxx+dx+rr), s*(cyc+cyo+rr)], fill=WHITE)
-    d.rounded_rectangle([s*(0.24+dx), s*(cyc+0.02), s*(0.75+dx), s*(cyc+0.15)], radius=s*0.065, fill=WHITE)
-    w = s * 0.045
-    for x in (0.33, 0.46, 0.59):
-        x0, y0, x1, y1 = s*x, s*0.72, s*(x-0.05), s*0.84
-        d.line([(x0, y0), (x1, y1)], fill=WHITE, width=int(w))
-        for px, py in ((x0, y0), (x1, y1)): d.ellipse([px-w/2, py-w/2, px+w/2, py+w/2], fill=WHITE)
-
 def _tree(d, s):
     # three stacked tiers, a trunk and a star on top
     for top, bot, half in ((0.28, 0.46, 0.14), (0.39, 0.59, 0.19), (0.50, 0.72, 0.24)):
@@ -147,20 +127,6 @@ def _egg(d, s):
     for x, y in ((0.42, 0.36), (0.58, 0.36), (0.50, 0.30), (0.39, 0.74), (0.50, 0.77), (0.61, 0.74)):
         r = s*0.025; d.ellipse([s*x-r, s*y-r, s*x+r, s*y+r], fill=T)
 
-def _tree_moon(d, s):
-    # the Christmas tree, shifted left, with a small crescent moon in the top right corner
-    T = (0, 0, 0, 0); dx = -0.06
-    for top, bot, half in ((0.28, 0.46, 0.14), (0.39, 0.59, 0.19), (0.50, 0.72, 0.24)):
-        d.polygon([(s*(0.5+dx), s*top), (s*(0.5+dx+half), s*bot), (s*(0.5+dx-half), s*bot)], fill=TREE)
-    d.rectangle([s*(0.46+dx), s*0.72, s*(0.54+dx), s*0.80], fill=TREE)
-    cx, cy, R, r = s*(0.5+dx), s*0.235, s*0.07, s*0.03
-    pts = [(cx + (R if i % 2 == 0 else r)*math.sin(math.radians(i*36)), cy - (R if i % 2 == 0 else r)*math.cos(math.radians(i*36))) for i in range(10)]
-    d.polygon(pts, fill=(242, 182, 50, 255))
-    mx, my, mr = s*0.73, s*0.27, s*0.10
-    d.ellipse([mx-mr, my-mr, mx+mr, my+mr], fill=WHITE)
-    o = s*0.05
-    d.ellipse([mx-mr+o, my-mr-o*0.7, mx+mr+o, my+mr-o*0.7], fill=T)
-
 def _lantern(d, s):
     # red paper lantern with gold caps, ribs cut out of it and a tassel
     T = (0, 0, 0, 0); RED = (220, 55, 55, 255); GOLD = (242, 182, 50, 255)
@@ -174,34 +140,18 @@ def _lantern(d, s):
     for x in (0.45, 0.50, 0.55):                       # tassel
         d.line([(s*0.5, s*0.75), (s*x, s*0.88)], fill=GOLD, width=int(s*0.022))
 
-def _sun_rain(d, s):
-    # the sun peeking out behind the top right of the rain cloud (the day version of _moon_rain)
-    T = (0, 0, 0, 0)
-    cx, cy, r = s*0.65, s*0.32, s*0.10
-    d.ellipse([cx-r, cy-r, cx+r, cy+r], fill=WHITE)
-    w = s*0.032
-    for i in range(8):
-        a = math.radians(i*45)
-        x0, y0, x1, y1 = cx + math.cos(a)*s*0.14, cy + math.sin(a)*s*0.14, cx + math.cos(a)*s*0.185, cy + math.sin(a)*s*0.185
-        d.line([(x0, y0), (x1, y1)], fill=WHITE, width=int(w))
-        for x, y in ((x0, y0), (x1, y1)): d.ellipse([x-w/2, y-w/2, x+w/2, y+w/2], fill=WHITE)
-    dx, cyc, g = -0.05, 0.50, s*0.03
-    lobes = ((0.36, 0.03, 0.12), (0.51, -0.04, 0.15), (0.64, 0.04, 0.11))
-    for cxx, cyo, rr in lobes:   # transparent gap around the cloud, so the sun and the cloud read as two shapes
-        d.ellipse([s*(cxx+dx-rr)-g, s*(cyc+cyo-rr)-g, s*(cxx+dx+rr)+g, s*(cyc+cyo+rr)+g], fill=T)
-    d.rounded_rectangle([s*(0.24+dx)-g, s*(cyc+0.02)-g, s*(0.75+dx)+g, s*(cyc+0.15)+g], radius=s*0.07, fill=T)
-    for cxx, cyo, rr in lobes:
-        d.ellipse([s*(cxx+dx-rr), s*(cyc+cyo-rr), s*(cxx+dx+rr), s*(cyc+cyo+rr)], fill=WHITE)
-    d.rounded_rectangle([s*(0.24+dx), s*(cyc+0.02), s*(0.75+dx), s*(cyc+0.15)], radius=s*0.065, fill=WHITE)
-    w = s * 0.045
-    for x in (0.33, 0.46, 0.59):
-        x0, y0, x1, y1 = s*x, s*0.72, s*(x-0.05), s*0.84
-        d.line([(x0, y0), (x1, y1)], fill=WHITE, width=int(w))
-        for px, py in ((x0, y0), (x1, y1)): d.ellipse([px-w/2, py-w/2, px+w/2, py+w/2], fill=WHITE)
+GLYPHS = {'sun': _sun, 'rain': _rain, 'snow': _snow, 'moon': _moon, 'tree': _tree, 'pumpkin': _pumpkin, 'egg': _egg, 'lantern': _lantern}
 
-GLYPHS = {'sun': _sun, 'rain': _rain, 'snow': _snow, 'moon': _moon, 'moon_rain': _moon_rain, 'tree': _tree, 'pumpkin': _pumpkin, 'egg': _egg, 'tree_moon': _tree_moon, 'lantern': _lantern, 'sun_rain': _sun_rain}
+def parse(spec):
+    # 'rain:night' -> ('rain', True); 'day' is always day, 'night' always night
+    name, _, time = spec.partition(':')
+    if name not in VARIANTS: raise SystemExit(f'unknown badge: {name}')
+    night = (time == 'night') or name == 'night'
+    if name == 'day': night = False
+    return name, night
 
-def badge(name, size=512, light=False):
+def badge(spec, size=512):
+    name, night = parse(spec); light = not night
     accent, glyph = VARIANTS[name]
     S = size * SS
     im = Image.new('RGBA', (S, S), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
@@ -215,7 +165,7 @@ def badge(name, size=512, light=False):
         white = Image.eval(Image.merge('RGB', (r, gg, b)).convert('L'), lambda v: 255 if v > 225 else 0)
         ink = Image.new('RGBA', (S, S), accent + (255,)); ink.putalpha(Image.composite(a, Image.new('L', (S, S), 0), white))
         g = Image.composite(ink, g, white)
-    if glyph in ('tree', 'tree_moon'):
+    if glyph == 'tree':
         # the Christmas tree itself is green in both themes (found by its exact drawing colour)
         diff = ImageChops.difference(Image.merge('RGB', (r, gg, b)), Image.new('RGB', (S, S), TREE[:3])).split()
         tm = ImageChops.lighter(ImageChops.lighter(diff[0], diff[1]), diff[2]).point(lambda v: 255 if v == 0 else 0)
@@ -229,22 +179,24 @@ def badge(name, size=512, light=False):
     out = Image.new('RGBA', (size, size), (0, 0, 0, 0)); out.alpha_composite(sh, (int(size*0.01), int(size*0.02))); out.alpha_composite(im)
     return out
 
-def stamp(cover_path, out_path, names, scale=0.075, margin=0.025, gap=0.012, light=False):
+def stamp(cover_path, out_path, names, scale=0.075, margin=0.025, gap=0.012):
     cover = Image.open(cover_path).convert('RGBA'); W, H = cover.size
     b = round(W * scale)
     b = max(32, min(b, round(H * 0.28)))
     x = W - round(W * margin) - b; y = round(W * margin)
     for n in reversed(names):          # first variant ends up leftmost
-        cover.alpha_composite(badge(n, b, light), (x, y)); x -= b + round(W * gap)
+        cover.alpha_composite(badge(n, b), (x, y)); x -= b + round(W * gap)
     cover.convert('RGB').save(out_path)
 
 if __name__ == '__main__':
-    light = '--light' in sys.argv
     if sys.argv[1] == 'icons':
         os.makedirs(sys.argv[2], exist_ok=True)
         for n in VARIANTS:
-            badge(n).save(os.path.join(sys.argv[2], f'badge_{n}_512.png'))
-            badge(n, light=True).save(os.path.join(sys.argv[2], f'badge_{n}_light_512.png'))
+            if n == 'day': badge('day').save(os.path.join(sys.argv[2], 'badge_day_512.png'))
+            elif n == 'night': badge('night').save(os.path.join(sys.argv[2], 'badge_night_512.png'))
+            else:
+                badge(n).save(os.path.join(sys.argv[2], f'badge_{n}_day_512.png'))
+                badge(n + ':night').save(os.path.join(sys.argv[2], f'badge_{n}_night_512.png'))
     elif sys.argv[1] == 'stamp':
         scale = float(sys.argv[sys.argv.index('--scale') + 1]) if '--scale' in sys.argv else 0.075
-        stamp(sys.argv[2], sys.argv[3], sys.argv[4].split(','), scale=scale, light=light)
+        stamp(sys.argv[2], sys.argv[3], sys.argv[4].split(','), scale=scale)
