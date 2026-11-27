@@ -29,6 +29,7 @@ VARIANTS = {
     'easter': ((130, 205, 120), 'egg'),               # Easter edition
     'night_xmas': ((225, 70, 70), 'tree_moon'),        # Christmas at night: the xmas badge with a moon
     'lunar_new_year': ((215, 170, 60), 'lantern'),   # Lunar New Year edition
+    'day_rain': ((50, 180, 190), 'sun_rain'),         # a rainy day: the sun behind the rain cloud
 }
 
 def _sun(d, s):
@@ -167,7 +168,32 @@ def _lantern(d, s):
     for x in (0.45, 0.50, 0.55):                       # tassel
         d.line([(s*0.5, s*0.75), (s*x, s*0.88)], fill=GOLD, width=int(s*0.022))
 
-GLYPHS = {'sun': _sun, 'rain': _rain, 'snow': _snow, 'moon': _moon, 'moon_rain': _moon_rain, 'tree': _tree, 'pumpkin': _pumpkin, 'egg': _egg, 'tree_moon': _tree_moon, 'lantern': _lantern}
+def _sun_rain(d, s):
+    # the sun peeking out behind the top right of the rain cloud (the day version of _moon_rain)
+    T = (0, 0, 0, 0)
+    cx, cy, r = s*0.65, s*0.32, s*0.10
+    d.ellipse([cx-r, cy-r, cx+r, cy+r], fill=WHITE)
+    w = s*0.032
+    for i in range(8):
+        a = math.radians(i*45)
+        x0, y0, x1, y1 = cx + math.cos(a)*s*0.14, cy + math.sin(a)*s*0.14, cx + math.cos(a)*s*0.185, cy + math.sin(a)*s*0.185
+        d.line([(x0, y0), (x1, y1)], fill=WHITE, width=int(w))
+        for x, y in ((x0, y0), (x1, y1)): d.ellipse([x-w/2, y-w/2, x+w/2, y+w/2], fill=WHITE)
+    dx, cyc, g = -0.05, 0.50, s*0.03
+    lobes = ((0.36, 0.03, 0.12), (0.51, -0.04, 0.15), (0.64, 0.04, 0.11))
+    for cxx, cyo, rr in lobes:   # transparent gap around the cloud, so the sun and the cloud read as two shapes
+        d.ellipse([s*(cxx+dx-rr)-g, s*(cyc+cyo-rr)-g, s*(cxx+dx+rr)+g, s*(cyc+cyo+rr)+g], fill=T)
+    d.rounded_rectangle([s*(0.24+dx)-g, s*(cyc+0.02)-g, s*(0.75+dx)+g, s*(cyc+0.15)+g], radius=s*0.07, fill=T)
+    for cxx, cyo, rr in lobes:
+        d.ellipse([s*(cxx+dx-rr), s*(cyc+cyo-rr), s*(cxx+dx+rr), s*(cyc+cyo+rr)], fill=WHITE)
+    d.rounded_rectangle([s*(0.24+dx), s*(cyc+0.02), s*(0.75+dx), s*(cyc+0.15)], radius=s*0.065, fill=WHITE)
+    w = s * 0.045
+    for x in (0.33, 0.46, 0.59):
+        x0, y0, x1, y1 = s*x, s*0.72, s*(x-0.05), s*0.84
+        d.line([(x0, y0), (x1, y1)], fill=WHITE, width=int(w))
+        for px, py in ((x0, y0), (x1, y1)): d.ellipse([px-w/2, py-w/2, px+w/2, py+w/2], fill=WHITE)
+
+GLYPHS = {'sun': _sun, 'rain': _rain, 'snow': _snow, 'moon': _moon, 'moon_rain': _moon_rain, 'tree': _tree, 'pumpkin': _pumpkin, 'egg': _egg, 'tree_moon': _tree_moon, 'lantern': _lantern, 'sun_rain': _sun_rain}
 
 def badge(name, size=512):
     accent, glyph = VARIANTS[name]

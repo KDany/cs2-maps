@@ -5,7 +5,8 @@ Small icons in the top-right corner of a Workshop cover image. They show at a gl
 | Badge | Key | Variant | Border |
 | :---: | :--- | :--- | :--- |
 | <img src="./images/badges/badge_day_512.png" width="48"> | `day` | Day, the default version | yellow |
-| <img src="./images/badges/badge_rain_512.png" width="48"> | `rain` | Rain during the day | blue |
+| <img src="./images/badges/badge_rain_512.png" width="48"> | `rain` | Rain (on its own, e.g. a weather caption) | blue |
+| <img src="./images/badges/badge_day_rain_512.png" width="48"> | `day_rain` | Rainy day: the sun behind the rain cloud | teal |
 | <img src="./images/badges/badge_night_512.png" width="48"> | `night` | Clear night | purple |
 | <img src="./images/badges/badge_night_rain_512.png" width="48"> | `night_rain` | Rainy night | blue-purple |
 | <img src="./images/badges/badge_winter_512.png" width="48"> | `winter` | Winter, snow | ice blue |
