@@ -13,13 +13,16 @@ Usage (from the repository root):
   python3 tools/variant_badges.py stamp COVER OUT day,night_rain --light        # light badges (dark glyph on light grey)
 """
 import math, os, sys
-from PIL import Image, ImageDraw, ImageFilter
+from PIL import Image, ImageChops, ImageDraw, ImageFilter
 
 SS = 4                      # supersampling for smooth edges
 BG = (14, 19, 27, 215)      # badge background
 WHITE = (240, 244, 248, 255)
 # light theme: very light grey background, the glyph in the badge's own border colour
 BG_LIGHT = (242, 243, 245, 250)
+# the Christmas tree is drawn in this (practically white) colour, so the light theme can find it and paint it green
+TREE = (239, 244, 248, 255)
+TREE_GREEN = (52, 150, 80)
 VARIANTS = {
     #  name     accent colour       glyph
     'day':    ((242, 182, 50),  'sun'),
@@ -102,8 +105,8 @@ def _moon_rain(d, s):
 def _tree(d, s):
     # three stacked tiers, a trunk and a star on top
     for top, bot, half in ((0.28, 0.46, 0.14), (0.39, 0.59, 0.19), (0.50, 0.72, 0.24)):
-        d.polygon([(s*0.5, s*top), (s*(0.5+half), s*bot), (s*(0.5-half), s*bot)], fill=WHITE)
-    d.rectangle([s*0.46, s*0.72, s*0.54, s*0.80], fill=WHITE)
+        d.polygon([(s*0.5, s*top), (s*(0.5+half), s*bot), (s*(0.5-half), s*bot)], fill=TREE)
+    d.rectangle([s*0.46, s*0.72, s*0.54, s*0.80], fill=TREE)
     cx, cy, R, r = s*0.5, s*0.235, s*0.07, s*0.03
     pts = [(cx + (R if i % 2 == 0 else r)*math.sin(math.radians(i*36)), cy - (R if i % 2 == 0 else r)*math.cos(math.radians(i*36))) for i in range(10)]
     d.polygon(pts, fill=(242, 182, 50, 255))
@@ -148,8 +151,8 @@ def _tree_moon(d, s):
     # the Christmas tree, shifted left, with a small crescent moon in the top right corner
     T = (0, 0, 0, 0); dx = -0.06
     for top, bot, half in ((0.28, 0.46, 0.14), (0.39, 0.59, 0.19), (0.50, 0.72, 0.24)):
-        d.polygon([(s*(0.5+dx), s*top), (s*(0.5+dx+half), s*bot), (s*(0.5+dx-half), s*bot)], fill=WHITE)
-    d.rectangle([s*(0.46+dx), s*0.72, s*(0.54+dx), s*0.80], fill=WHITE)
+        d.polygon([(s*(0.5+dx), s*top), (s*(0.5+dx+half), s*bot), (s*(0.5+dx-half), s*bot)], fill=TREE)
+    d.rectangle([s*(0.46+dx), s*0.72, s*(0.54+dx), s*0.80], fill=TREE)
     cx, cy, R, r = s*(0.5+dx), s*0.235, s*0.07, s*0.03
     pts = [(cx + (R if i % 2 == 0 else r)*math.sin(math.radians(i*36)), cy - (R if i % 2 == 0 else r)*math.cos(math.radians(i*36))) for i in range(10)]
     d.polygon(pts, fill=(242, 182, 50, 255))
@@ -212,6 +215,12 @@ def badge(name, size=512, light=False):
         white = Image.eval(Image.merge('RGB', (r, gg, b)).convert('L'), lambda v: 255 if v > 225 else 0)
         ink = Image.new('RGBA', (S, S), accent + (255,)); ink.putalpha(Image.composite(a, Image.new('L', (S, S), 0), white))
         g = Image.composite(ink, g, white)
+        if glyph in ('tree', 'tree_moon'):
+            # the Christmas tree itself is green in the light theme (found by its exact drawing colour)
+            diff = ImageChops.difference(Image.merge('RGB', (r, gg, b)), Image.new('RGB', (S, S), TREE[:3])).split()
+            tm = ImageChops.lighter(ImageChops.lighter(diff[0], diff[1]), diff[2]).point(lambda v: 255 if v == 0 else 0)
+            green = Image.new('RGBA', (S, S), TREE_GREEN + (255,)); green.putalpha(Image.composite(a, Image.new('L', (S, S), 0), tm))
+            g = Image.composite(green, g, tm)
     im.alpha_composite(g)
     im = im.resize((size, size), Image.LANCZOS)
     # soft shadow so the badge reads on bright covers too
