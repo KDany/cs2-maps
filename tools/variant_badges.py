@@ -18,7 +18,7 @@ import math, os, sys
 from PIL import Image, ImageChops, ImageDraw, ImageFilter
 
 SS = 4                      # supersampling for smooth edges
-BG = (14, 19, 27, 215)      # badge background
+BG = (14, 19, 27, 248)      # night badge background (opaque enough that the cover does not show through)
 WHITE = (240, 244, 248, 255)
 # day badges: very light grey background, the glyph in the badge's own border colour
 # night badges: dark background (BG), white glyph
@@ -26,6 +26,7 @@ BG_LIGHT = (242, 243, 245, 250)
 # the Christmas tree is drawn in this marker colour, so badge() can find it and paint it green
 TREE = (239, 244, 248, 255)
 TREE_GREEN = (52, 150, 80)
+SHADOW_ROOM = 0.08          # transparent room around a badge for its shadow, as a share of its size
 VARIANTS = {
     #  name     accent colour       glyph
     'day':    ((242, 182, 50),  'sun'),
@@ -172,12 +173,21 @@ def badge(spec, size=512):
         green = Image.new('RGBA', (S, S), TREE_GREEN + (255,)); green.putalpha(Image.composite(a, Image.new('L', (S, S), 0), tm))
         g = Image.composite(green, g, tm)
     im.alpha_composite(g)
-    im = im.resize((size, size), Image.LANCZOS)
-    # soft shadow so the badge reads on bright covers too
-    sh = Image.new('RGBA', (size, size), (0, 0, 0, 0)); sh.putalpha(im.getchannel('A').point(lambda v: v*0.55))
-    sh = sh.filter(ImageFilter.GaussianBlur(size*0.03))
-    out = Image.new('RGBA', (size, size), (0, 0, 0, 0)); out.alpha_composite(sh, (int(size*0.01), int(size*0.02))); out.alpha_composite(im)
-    return out
+    # soft shadow so the badge reads on bright covers too. It is drawn on a larger canvas (SHADOW_ROOM
+    # on every side) and blurred before scaling down, so it is smooth and never cut off at the edge.
+    M = round(S * SHADOW_ROOM)
+    out = Image.new('RGBA', (S + 2*M, S + 2*M), (0, 0, 0, 0))
+    sh = Image.new('RGBA', out.size, (0, 0, 0, 0))
+    sh.paste((0, 0, 0, 255), (M + int(S*0.01), M + int(S*0.025)), im.getchannel('A').point(lambda v: int(v*0.5)))
+    out.alpha_composite(sh.filter(ImageFilter.GaussianBlur(S*0.03)))
+    out.alpha_composite(im, (M, M))
+    full = size + 2*round(size*SHADOW_ROOM)
+    return out.resize((full, full), Image.LANCZOS)
+
+def badge_canvas(spec, total=512):
+    # a badge with its shadow, the whole image exactly `total` pixels wide (for the PNG files)
+    inner = round(total / (1 + 2*SHADOW_ROOM))
+    return badge(spec, inner).resize((total, total), Image.LANCZOS)
 
 def stamp(cover_path, out_path, names, scale=0.075, margin=0.025, gap=0.012):
     cover = Image.open(cover_path).convert('RGBA'); W, H = cover.size
@@ -185,18 +195,19 @@ def stamp(cover_path, out_path, names, scale=0.075, margin=0.025, gap=0.012):
     b = max(32, min(b, round(H * 0.28)))
     x = W - round(W * margin) - b; y = round(W * margin)
     for n in reversed(names):          # first variant ends up leftmost
-        cover.alpha_composite(badge(n, b), (x, y)); x -= b + round(W * gap)
+        img = badge(n, b); m = (img.width - b) // 2          # the badge itself is b wide, plus its shadow room
+        cover.alpha_composite(img, (x - m, y - m)); x -= b + round(W * gap)
     cover.convert('RGB').save(out_path)
 
 if __name__ == '__main__':
     if sys.argv[1] == 'icons':
         os.makedirs(sys.argv[2], exist_ok=True)
         for n in VARIANTS:
-            if n == 'day': badge('day').save(os.path.join(sys.argv[2], 'badge_day_512.png'))
-            elif n == 'night': badge('night').save(os.path.join(sys.argv[2], 'badge_night_512.png'))
+            if n == 'day': badge_canvas('day').save(os.path.join(sys.argv[2], 'badge_day_512.png'))
+            elif n == 'night': badge_canvas('night').save(os.path.join(sys.argv[2], 'badge_night_512.png'))
             else:
-                badge(n).save(os.path.join(sys.argv[2], f'badge_{n}_day_512.png'))
-                badge(n + ':night').save(os.path.join(sys.argv[2], f'badge_{n}_night_512.png'))
+                badge_canvas(n).save(os.path.join(sys.argv[2], f'badge_{n}_day_512.png'))
+                badge_canvas(n + ':night').save(os.path.join(sys.argv[2], f'badge_{n}_night_512.png'))
     elif sys.argv[1] == 'stamp':
         scale = float(sys.argv[sys.argv.index('--scale') + 1]) if '--scale' in sys.argv else 0.075
         stamp(sys.argv[2], sys.argv[3], sys.argv[4].split(','), scale=scale)
